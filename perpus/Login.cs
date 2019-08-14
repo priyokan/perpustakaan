@@ -99,5 +99,12 @@ namespace perpus
                 txtpassword.PasswordChar = '*';
             }
         }
+
+        private void Linkmember_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            memberForm member = new memberForm();
+            member.Show();
+            this.Hide();
+        }
     }
 }

@@ -1,7 +1,6 @@
 C:\Users\Priyo Nugroho\source\repos\perpus\perpus\bin\Debug\perpus.exe.config
 C:\Users\Priyo Nugroho\source\repos\perpus\perpus\bin\Debug\perpus.exe
 C:\Users\Priyo Nugroho\source\repos\perpus\perpus\bin\Debug\perpus.pdb
-C:\Users\Priyo Nugroho\source\repos\perpus\perpus\obj\Debug\perpus.csprojAssemblyReference.cache
 C:\Users\Priyo Nugroho\source\repos\perpus\perpus\obj\Debug\perpus.Login.resources
 C:\Users\Priyo Nugroho\source\repos\perpus\perpus\obj\Debug\perpus.Properties.Resources.resources
 C:\Users\Priyo Nugroho\source\repos\perpus\perpus\obj\Debug\perpus.csproj.GenerateResource.cache
@@ -10,3 +9,6 @@ C:\Users\Priyo Nugroho\source\repos\perpus\perpus\obj\Debug\RdlCompile.compiled
 C:\Users\Priyo Nugroho\source\repos\perpus\perpus\obj\Debug\perpus.csproj.CoreCompileInputs.cache
 C:\Users\Priyo Nugroho\source\repos\perpus\perpus\obj\Debug\perpus.exe
 C:\Users\Priyo Nugroho\source\repos\perpus\perpus\obj\Debug\perpus.pdb
+C:\Users\Priyo Nugroho\source\repos\perpus\perpus\obj\Debug\perpus.csprojAssemblyReference.cache
+C:\Users\Priyo Nugroho\source\repos\perpus\perpus\obj\Debug\perpus.memberForm.resources
+C:\Users\Priyo Nugroho\source\repos\perpus\perpus\obj\Debug\perpus.userControlAbsen.resources
