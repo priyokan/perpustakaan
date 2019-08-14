@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace perpus
 {
@@ -29,6 +30,16 @@ namespace perpus
 
         private void TxtEmail_Leave(object sender, EventArgs e)
         {
+            string pattern = "^[a-z0-9]+[@]+[a-z]+[.]+[a-z]{2,5}$";
+            if (Regex.IsMatch(txtEmail.Text, pattern))
+            {
+                errorProvider1.Clear();
+            }
+            else
+            {
+                errorProvider1.SetError(txtEmail, "email invalid");
+            }
+
             if(txtEmail.Text == string.Empty)
             {
                 txtEmail.Text = "masukan email...";
@@ -47,7 +58,7 @@ namespace perpus
 
         private void Btnlogin_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(txtpassword.Text);
+
         }
 
         private void TxtEmail_KeyPress(object sender, KeyPressEventArgs e)
