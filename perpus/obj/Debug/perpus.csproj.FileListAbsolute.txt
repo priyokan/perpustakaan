@@ -12,3 +12,4 @@ C:\Users\Priyo Nugroho\source\repos\perpus\perpus\obj\Debug\perpus.pdb
 C:\Users\Priyo Nugroho\source\repos\perpus\perpus\obj\Debug\perpus.csprojAssemblyReference.cache
 C:\Users\Priyo Nugroho\source\repos\perpus\perpus\obj\Debug\perpus.memberForm.resources
 C:\Users\Priyo Nugroho\source\repos\perpus\perpus\obj\Debug\perpus.userControlAbsen.resources
+C:\Users\Priyo Nugroho\source\repos\perpus\perpus\obj\Debug\perpus.adminMenu.resources

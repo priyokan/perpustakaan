@@ -29,29 +29,40 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.picBack = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.userControlAbsen1 = new perpus.userControlAbsen();
-            this.picBack = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBack)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.LightSlateGray;
+            this.panel1.BackColor = System.Drawing.Color.DarkSlateGray;
             this.panel1.Controls.Add(this.picBack);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1123, 33);
             this.panel1.TabIndex = 0;
+            // 
+            // picBack
+            // 
+            this.picBack.BackgroundImage = global::perpus.Properties.Resources.circled_chevron_left_50px;
+            this.picBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.picBack.Location = new System.Drawing.Point(12, 4);
+            this.picBack.Name = "picBack";
+            this.picBack.Size = new System.Drawing.Size(28, 24);
+            this.picBack.TabIndex = 2;
+            this.picBack.TabStop = false;
+            this.picBack.Click += new System.EventHandler(this.PicBack_Click);
             // 
             // button1
             // 
@@ -83,51 +94,13 @@
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel2_Paint);
             // 
-            // button2
+            // panel3
             // 
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(12, 128);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(215, 39);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Absen";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.Button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(12, 173);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(215, 39);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Lihat daftar buku";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(12, 218);
-            this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button4.Size = new System.Drawing.Size(215, 39);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Baca buku digital";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.UseVisualStyleBackColor = true;
+            this.panel3.BackColor = System.Drawing.Color.LightSlateGray;
+            this.panel3.Location = new System.Drawing.Point(12, 128);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(5, 39);
+            this.panel3.TabIndex = 6;
             // 
             // button5
             // 
@@ -144,37 +117,68 @@
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.UseVisualStyleBackColor = true;
             // 
-            // panel3
+            // button4
             // 
-            this.panel3.BackColor = System.Drawing.Color.LightSlateGray;
-            this.panel3.Location = new System.Drawing.Point(12, 128);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(5, 39);
-            this.panel3.TabIndex = 6;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(12, 218);
+            this.button4.Name = "button4";
+            this.button4.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.button4.Size = new System.Drawing.Size(215, 39);
+            this.button4.TabIndex = 4;
+            this.button4.Text = "Baca buku digital";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(12, 173);
+            this.button3.Name = "button3";
+            this.button3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.button3.Size = new System.Drawing.Size(215, 39);
+            this.button3.TabIndex = 3;
+            this.button3.Text = "Lihat daftar buku";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(12, 128);
+            this.button2.Name = "button2";
+            this.button2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.button2.Size = new System.Drawing.Size(215, 39);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Absen";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // userControlAbsen1
             // 
-            this.userControlAbsen1.Location = new System.Drawing.Point(284, 39);
+            this.userControlAbsen1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.userControlAbsen1.Location = new System.Drawing.Point(247, 39);
             this.userControlAbsen1.Name = "userControlAbsen1";
-            this.userControlAbsen1.Size = new System.Drawing.Size(791, 412);
+            this.userControlAbsen1.Size = new System.Drawing.Size(862, 494);
             this.userControlAbsen1.TabIndex = 2;
-            // 
-            // picBack
-            // 
-            this.picBack.BackgroundImage = global::perpus.Properties.Resources.circled_chevron_left_50px;
-            this.picBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picBack.Location = new System.Drawing.Point(12, 4);
-            this.picBack.Name = "picBack";
-            this.picBack.Size = new System.Drawing.Size(28, 24);
-            this.picBack.TabIndex = 2;
-            this.picBack.TabStop = false;
-            this.picBack.Click += new System.EventHandler(this.PicBack_Click);
+            this.userControlAbsen1.Load += new System.EventHandler(this.UserControlAbsen1_Load);
+            this.userControlAbsen1.Click += new System.EventHandler(this.UserControlAbsen1_Click);
+            this.userControlAbsen1.ControlAdded += new System.Windows.Forms.ControlEventHandler(this.UserControlAbsen1_ControlAdded);
             // 
             // memberForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(45)))), ((int)(((byte)(76)))));
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1121, 613);
             this.Controls.Add(this.userControlAbsen1);
             this.Controls.Add(this.panel2);
@@ -183,9 +187,10 @@
             this.Name = "memberForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "memberForm";
+            this.Load += new System.EventHandler(this.MemberForm_Load);
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picBack)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

@@ -17,6 +17,8 @@ namespace perpus
             InitializeComponent();
         }
 
+        public static string anu;
+
         private void Button1_Click(object sender, EventArgs e)
         {
 
@@ -35,6 +37,28 @@ namespace perpus
         }
 
         private void Button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MemberForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UserControlAbsen1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UserControlAbsen1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        
+
+        private void UserControlAbsen1_ControlAdded(object sender, ControlEventArgs e)
         {
 
         }

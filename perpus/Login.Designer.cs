@@ -39,9 +39,12 @@
             this.txtpassword = new System.Windows.Forms.TextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.linkmember = new System.Windows.Forms.LinkLabel();
+            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.lblWrongpass = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -50,7 +53,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label1.ForeColor = System.Drawing.Color.Teal;
             this.label1.Location = new System.Drawing.Point(170, 57);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(63, 25);
@@ -59,10 +62,10 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(45)))), ((int)(((byte)(76)))));
+            this.txtEmail.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmail.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.ForeColor = System.Drawing.Color.Cornsilk;
+            this.txtEmail.ForeColor = System.Drawing.Color.LightSeaGreen;
             this.txtEmail.Location = new System.Drawing.Point(89, 153);
             this.txtEmail.Multiline = true;
             this.txtEmail.Name = "txtEmail";
@@ -74,7 +77,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackColor = System.Drawing.Color.Teal;
             this.panel1.Location = new System.Drawing.Point(68, 176);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(274, 1);
@@ -82,7 +85,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.BackColor = System.Drawing.Color.Teal;
             this.panel2.Location = new System.Drawing.Point(68, 245);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(274, 1);
@@ -90,11 +93,11 @@
             // 
             // btnlogin
             // 
-            this.btnlogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(45)))), ((int)(((byte)(76)))));
+            this.btnlogin.BackColor = System.Drawing.Color.Transparent;
             this.btnlogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnlogin.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnlogin.ForeColor = System.Drawing.Color.White;
-            this.btnlogin.Location = new System.Drawing.Point(68, 302);
+            this.btnlogin.ForeColor = System.Drawing.Color.Teal;
+            this.btnlogin.Location = new System.Drawing.Point(68, 322);
             this.btnlogin.Name = "btnlogin";
             this.btnlogin.Size = new System.Drawing.Size(271, 43);
             this.btnlogin.TabIndex = 5;
@@ -119,7 +122,7 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.LightSlateGray;
+            this.panel4.BackColor = System.Drawing.Color.DarkSlateGray;
             this.panel4.Location = new System.Drawing.Point(0, -1);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(411, 33);
@@ -127,10 +130,10 @@
             // 
             // txtpassword
             // 
-            this.txtpassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(45)))), ((int)(((byte)(76)))));
+            this.txtpassword.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtpassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtpassword.Font = new System.Drawing.Font("Nirmala UI", 11.25F);
-            this.txtpassword.ForeColor = System.Drawing.Color.White;
+            this.txtpassword.ForeColor = System.Drawing.Color.LightSeaGreen;
             this.txtpassword.Location = new System.Drawing.Point(89, 222);
             this.txtpassword.Name = "txtpassword";
             this.txtpassword.Size = new System.Drawing.Size(253, 20);
@@ -147,15 +150,33 @@
             // 
             // linkmember
             // 
+            this.linkmember.ActiveLinkColor = System.Drawing.Color.LightGreen;
             this.linkmember.AutoSize = true;
-            this.linkmember.LinkColor = System.Drawing.Color.Aqua;
-            this.linkmember.Location = new System.Drawing.Point(169, 389);
+            this.linkmember.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.linkmember.LinkColor = System.Drawing.Color.Teal;
+            this.linkmember.Location = new System.Drawing.Point(169, 409);
             this.linkmember.Name = "linkmember";
             this.linkmember.Size = new System.Drawing.Size(71, 13);
             this.linkmember.TabIndex = 12;
             this.linkmember.TabStop = true;
             this.linkmember.Text = "Member Form";
             this.linkmember.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Linkmember_LinkClicked);
+            // 
+            // errorProvider2
+            // 
+            this.errorProvider2.ContainerControl = this;
+            // 
+            // lblWrongpass
+            // 
+            this.lblWrongpass.AutoSize = true;
+            this.lblWrongpass.Font = new System.Drawing.Font("MS PGothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWrongpass.ForeColor = System.Drawing.Color.Red;
+            this.lblWrongpass.Location = new System.Drawing.Point(128, 269);
+            this.lblWrongpass.Name = "lblWrongpass";
+            this.lblWrongpass.Size = new System.Drawing.Size(157, 13);
+            this.lblWrongpass.TabIndex = 13;
+            this.lblWrongpass.Text = "Maaf, akun tidak ditemukan";
+            this.lblWrongpass.Visible = false;
             // 
             // pictureBox2
             // 
@@ -182,8 +203,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(45)))), ((int)(((byte)(76)))));
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(411, 487);
+            this.Controls.Add(this.lblWrongpass);
             this.Controls.Add(this.linkmember);
             this.Controls.Add(this.txtpassword);
             this.Controls.Add(this.panel4);
@@ -195,12 +217,14 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label1);
+            this.ForeColor = System.Drawing.Color.LightSeaGreen;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -222,6 +246,8 @@
         private System.Windows.Forms.TextBox txtpassword;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.LinkLabel linkmember;
+        private System.Windows.Forms.ErrorProvider errorProvider2;
+        private System.Windows.Forms.Label lblWrongpass;
     }
 }
 

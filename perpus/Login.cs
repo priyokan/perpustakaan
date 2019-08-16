@@ -13,6 +13,8 @@ namespace perpus
 {
     public partial class Login : Form
     {
+
+        DataClasses1DataContext db = new DataClasses1DataContext();
         public Login()
         {
             InitializeComponent();
@@ -28,8 +30,9 @@ namespace perpus
 
         }
 
-        private void TxtEmail_Leave(object sender, EventArgs e)
+        private void email_validation()
         {
+
             string pattern = "^[a-z0-9]+[@]+[a-z]+[.]+[a-z]{2,5}$";
             if (Regex.IsMatch(txtEmail.Text, pattern))
             {
@@ -38,9 +41,15 @@ namespace perpus
             else
             {
                 errorProvider1.SetError(txtEmail, "email invalid");
+                return;
             }
 
-            if(txtEmail.Text == string.Empty)
+        }
+
+        private void TxtEmail_Leave(object sender, EventArgs e)
+        {
+            email_validation();
+            if (txtEmail.Text == string.Empty)
             {
                 txtEmail.Text = "masukan email...";
             }
@@ -58,7 +67,40 @@ namespace perpus
 
         private void Btnlogin_Click(object sender, EventArgs e)
         {
-
+            errorProvider1.Clear();
+            errorProvider2.Clear();
+            lblWrongpass.Visible = false; 
+            email_validation();
+            var login = (from a in db.employees
+                         where a.email == txtEmail.Text &&
+                         a.password == txtpassword.Text
+                         select a).FirstOrDefault();
+            if (login!=null)
+            {
+                if(login.role == "admin")
+                {
+                    adminMenu adminMEnu = new adminMenu();
+                    adminMEnu.Show();
+                    this.Hide();
+                }
+            }
+            else if (txtEmail.Text == "masukan email..." && txtpassword.Text == "masukan password...")
+            {
+                errorProvider1.SetError(txtEmail, "email harus di isi");
+                errorProvider2.SetError(txtpassword, "password haurs di isi");
+            }
+            else if (txtpassword.Text == "masukan password...")
+            {                
+                errorProvider2.SetError(txtpassword, "password haurs di isi");
+            }
+            else if (txtEmail.Text == "masukan email...")
+            {
+                errorProvider1.SetError(txtEmail, "email harus di isi");                
+            }
+            else
+            {
+                lblWrongpass.Visible = true;
+            }
         }
 
         private void TxtEmail_KeyPress(object sender, KeyPressEventArgs e)

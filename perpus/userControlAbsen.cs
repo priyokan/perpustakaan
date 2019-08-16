@@ -16,5 +16,28 @@ namespace perpus
         {
             InitializeComponent();
         }
+
+        public event EventHandler ButtonClick;
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            //if(this.ButtonClick != null)            
+                this.ButtonClick(this, e);            
+        }
+
+        private void TextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UserControlAbsen_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
