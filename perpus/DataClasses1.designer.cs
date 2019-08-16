@@ -33,6 +33,9 @@ namespace perpus
     partial void Insertemployee(employee instance);
     partial void Updateemployee(employee instance);
     partial void Deleteemployee(employee instance);
+    partial void Insertmember(member instance);
+    partial void Updatemember(member instance);
+    partial void Deletemember(member instance);
     #endregion
 		
 		public DataClasses1DataContext() : 
@@ -70,6 +73,14 @@ namespace perpus
 			get
 			{
 				return this.GetTable<employee>();
+			}
+		}
+		
+		public System.Data.Linq.Table<member> members
+		{
+			get
+			{
+				return this.GetTable<member>();
 			}
 		}
 	}
@@ -207,6 +218,164 @@ namespace perpus
 					this._role = value;
 					this.SendPropertyChanged("role");
 					this.OnroleChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.member")]
+	public partial class member : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _nis;
+		
+		private string _nama;
+		
+		private string _email;
+		
+		private string _handphone;
+		
+		private System.DateTime _joindate;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnnisChanging(int value);
+    partial void OnnisChanged();
+    partial void OnnamaChanging(string value);
+    partial void OnnamaChanged();
+    partial void OnemailChanging(string value);
+    partial void OnemailChanged();
+    partial void OnhandphoneChanging(string value);
+    partial void OnhandphoneChanged();
+    partial void OnjoindateChanging(System.DateTime value);
+    partial void OnjoindateChanged();
+    #endregion
+		
+		public member()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nis", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int nis
+		{
+			get
+			{
+				return this._nis;
+			}
+			set
+			{
+				if ((this._nis != value))
+				{
+					this.OnnisChanging(value);
+					this.SendPropertyChanging();
+					this._nis = value;
+					this.SendPropertyChanged("nis");
+					this.OnnisChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nama", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string nama
+		{
+			get
+			{
+				return this._nama;
+			}
+			set
+			{
+				if ((this._nama != value))
+				{
+					this.OnnamaChanging(value);
+					this.SendPropertyChanging();
+					this._nama = value;
+					this.SendPropertyChanged("nama");
+					this.OnnamaChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_email", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string email
+		{
+			get
+			{
+				return this._email;
+			}
+			set
+			{
+				if ((this._email != value))
+				{
+					this.OnemailChanging(value);
+					this.SendPropertyChanging();
+					this._email = value;
+					this.SendPropertyChanged("email");
+					this.OnemailChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_handphone", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string handphone
+		{
+			get
+			{
+				return this._handphone;
+			}
+			set
+			{
+				if ((this._handphone != value))
+				{
+					this.OnhandphoneChanging(value);
+					this.SendPropertyChanging();
+					this._handphone = value;
+					this.SendPropertyChanged("handphone");
+					this.OnhandphoneChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_joindate", DbType="Date NOT NULL")]
+		public System.DateTime joindate
+		{
+			get
+			{
+				return this._joindate;
+			}
+			set
+			{
+				if ((this._joindate != value))
+				{
+					this.OnjoindateChanging(value);
+					this.SendPropertyChanging();
+					this._joindate = value;
+					this.SendPropertyChanged("joindate");
+					this.OnjoindateChanged();
 				}
 			}
 		}

@@ -30,7 +30,7 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.picBack = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
@@ -47,7 +47,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkSlateGray;
             this.panel1.Controls.Add(this.picBack);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnClose);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1123, 33);
@@ -64,21 +64,21 @@
             this.picBack.TabStop = false;
             this.picBack.Click += new System.EventHandler(this.PicBack_Click);
             // 
-            // button1
+            // btnClose
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Maroon;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(1074, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(47, 24);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "X";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Maroon;
+            this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnClose.Location = new System.Drawing.Point(1074, 0);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(47, 24);
+            this.btnClose.TabIndex = 1;
+            this.btnClose.Text = "X";
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.Button1_Click);
             // 
             // panel2
             // 
@@ -88,9 +88,9 @@
             this.panel2.Controls.Add(this.button4);
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.button2);
-            this.panel2.Location = new System.Drawing.Point(0, 34);
+            this.panel2.Location = new System.Drawing.Point(0, 33);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(230, 579);
+            this.panel2.Size = new System.Drawing.Size(230, 585);
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel2_Paint);
             // 
@@ -198,7 +198,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox picBack;
         private System.Windows.Forms.Button button2;
