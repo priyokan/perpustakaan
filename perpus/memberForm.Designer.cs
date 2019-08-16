@@ -88,9 +88,9 @@
             this.panel2.Controls.Add(this.button4);
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.button2);
-            this.panel2.Location = new System.Drawing.Point(0, 34);
+            this.panel2.Location = new System.Drawing.Point(0, 33);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(230, 579);
+            this.panel2.Size = new System.Drawing.Size(230, 585);
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel2_Paint);
             // 

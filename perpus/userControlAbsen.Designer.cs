@@ -28,31 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNIS = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtNIS
             // 
-            this.textBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBox1.Font = new System.Drawing.Font("Yu Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.SeaGreen;
-            this.textBox1.Location = new System.Drawing.Point(291, 155);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(268, 31);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "Masukan NIS...";
-            this.textBox1.TextChanged += new System.EventHandler(this.TextBox1_TextChanged);
+            this.txtNIS.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtNIS.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNIS.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNIS.Font = new System.Drawing.Font("Yu Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNIS.ForeColor = System.Drawing.Color.SeaGreen;
+            this.txtNIS.Location = new System.Drawing.Point(291, 155);
+            this.txtNIS.Name = "txtNIS";
+            this.txtNIS.Size = new System.Drawing.Size(268, 31);
+            this.txtNIS.TabIndex = 0;
+            this.txtNIS.Text = "Masukan NIS...";
+            this.txtNIS.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNIS_KeyPress);
+            this.txtNIS.Leave += new System.EventHandler(this.TxtNIS_Leave);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SeaGreen;
-            this.panel1.Location = new System.Drawing.Point(291, 182);
+            this.panel1.Location = new System.Drawing.Point(291, 183);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(268, 2);
             this.panel1.TabIndex = 1;
@@ -103,7 +104,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtNIS);
             this.Name = "userControlAbsen";
             this.Size = new System.Drawing.Size(907, 466);
             this.Load += new System.EventHandler(this.UserControlAbsen_Load);
@@ -114,7 +115,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNIS;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;

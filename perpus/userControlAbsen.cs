@@ -39,5 +39,26 @@ namespace perpus
         {
 
         }
+
+        private void TxtNIS_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(txtNIS.Text == "Masukan NIS...")
+            {
+                txtNIS.Text = "";
+            }
+            
+            if(!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TxtNIS_Leave(object sender, EventArgs e)
+        {
+            if(txtNIS.Text == "")
+            {
+                txtNIS.Text = "Masukan NIS...";
+            }
+        }
     }
 }
