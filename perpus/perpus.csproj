@@ -78,6 +78,12 @@
     <Compile Include="userControlAbsen.Designer.cs">
       <DependentUpon>userControlAbsen.cs</DependentUpon>
     </Compile>
+    <Compile Include="userControlDaftaBuku.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userControlDaftaBuku.Designer.cs">
+      <DependentUpon>userControlDaftaBuku.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="adminMenu.resx">
       <DependentUpon>adminMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -95,6 +101,9 @@
     <EmbeddedResource Include="Report1.rdlc" />
     <EmbeddedResource Include="userControlAbsen.resx">
       <DependentUpon>userControlAbsen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userControlDaftaBuku.resx">
+      <DependentUpon>userControlDaftaBuku.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="DataClasses1.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>

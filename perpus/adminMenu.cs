@@ -16,5 +16,10 @@ namespace perpus
         {
             InitializeComponent();
         }
+
+        private void AdminMenu_Load(object sender, EventArgs e)
+        {
+            lblnama.Text = Login.nama;
+        }
     }
 }

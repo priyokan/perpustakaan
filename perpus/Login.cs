@@ -14,6 +14,7 @@ namespace perpus
     public partial class Login : Form
     {
 
+        public static string nama;
         DataClasses1DataContext db = new DataClasses1DataContext();
         public Login()
         {
@@ -77,6 +78,7 @@ namespace perpus
                          select a).FirstOrDefault();
             if (login!=null)
             {
+                nama = login.name;
                 if(login.role == "admin")
                 {
                     adminMenu adminMEnu = new adminMenu();

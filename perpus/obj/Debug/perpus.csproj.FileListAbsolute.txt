@@ -13,3 +13,4 @@ C:\Users\Priyo Nugroho\source\repos\perpus\perpus\obj\Debug\RdlCompile.compiled
 C:\Users\Priyo Nugroho\source\repos\perpus\perpus\obj\Debug\perpus.csproj.CoreCompileInputs.cache
 C:\Users\Priyo Nugroho\source\repos\perpus\perpus\obj\Debug\perpus.exe
 C:\Users\Priyo Nugroho\source\repos\perpus\perpus\obj\Debug\perpus.pdb
+C:\Users\Priyo Nugroho\source\repos\perpus\perpus\obj\Debug\perpus.userControlDaftaBuku.resources
