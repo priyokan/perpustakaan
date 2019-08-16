@@ -134,7 +134,7 @@
             this.txtpassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtpassword.Font = new System.Drawing.Font("Nirmala UI", 11.25F);
             this.txtpassword.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.txtpassword.Location = new System.Drawing.Point(89, 222);
+            this.txtpassword.Location = new System.Drawing.Point(89, 223);
             this.txtpassword.Name = "txtpassword";
             this.txtpassword.Size = new System.Drawing.Size(253, 20);
             this.txtpassword.TabIndex = 2;
@@ -184,7 +184,7 @@
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox2.Location = new System.Drawing.Point(59, 222);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(35, 21);
+            this.pictureBox2.Size = new System.Drawing.Size(35, 24);
             this.pictureBox2.TabIndex = 10;
             this.pictureBox2.TabStop = false;
             // 
@@ -194,7 +194,7 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Location = new System.Drawing.Point(59, 153);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(35, 21);
+            this.pictureBox1.Size = new System.Drawing.Size(35, 24);
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.PictureBox1_Click);
@@ -240,14 +240,14 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnlogin;
         private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox txtpassword;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.LinkLabel linkmember;
         private System.Windows.Forms.ErrorProvider errorProvider2;
         private System.Windows.Forms.Label lblWrongpass;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

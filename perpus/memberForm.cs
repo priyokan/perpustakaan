@@ -21,7 +21,7 @@ namespace perpus
 
         private void Button1_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void PicBack_Click(object sender, EventArgs e)
