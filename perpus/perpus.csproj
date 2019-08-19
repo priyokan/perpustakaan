@@ -76,6 +76,12 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="manageBuku.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="manageBuku.Designer.cs">
+      <DependentUpon>manageBuku.cs</DependentUpon>
+    </Compile>
     <Compile Include="memberForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manageBuku.resx">
+      <DependentUpon>manageBuku.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="memberForm.resx">
       <DependentUpon>memberForm.cs</DependentUpon>

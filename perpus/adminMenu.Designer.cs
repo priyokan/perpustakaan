@@ -33,7 +33,7 @@
             this.btnclose = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnMasterDenda = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnactive = new System.Windows.Forms.Panel();
             this.lblnama = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnReport = new System.Windows.Forms.Button();
@@ -41,6 +41,7 @@
             this.btnManageBuku = new System.Windows.Forms.Button();
             this.btnManagekaryawan = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
+            this.manageBuku1 = new perpus.manageBuku();
             this.manageKaryawan1 = new perpus.Resources.manageKaryawan();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -87,7 +88,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel1.Controls.Add(this.btnMasterDenda);
-            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.btnactive);
             this.panel1.Controls.Add(this.lblnama);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btnReport);
@@ -104,6 +105,7 @@
             // 
             this.btnMasterDenda.BackColor = System.Drawing.Color.Transparent;
             this.btnMasterDenda.FlatAppearance.BorderSize = 0;
+            this.btnMasterDenda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.btnMasterDenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMasterDenda.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMasterDenda.ForeColor = System.Drawing.Color.White;
@@ -115,23 +117,24 @@
             this.btnMasterDenda.Text = "Master Denda";
             this.btnMasterDenda.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMasterDenda.UseVisualStyleBackColor = false;
+            this.btnMasterDenda.Click += new System.EventHandler(this.BtnMasterDenda_Click);
             // 
-            // panel3
+            // btnactive
             // 
-            this.panel3.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.panel3.Location = new System.Drawing.Point(13, 143);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(3, 43);
-            this.panel3.TabIndex = 21;
+            this.btnactive.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnactive.Location = new System.Drawing.Point(13, 143);
+            this.btnactive.Name = "btnactive";
+            this.btnactive.Size = new System.Drawing.Size(3, 43);
+            this.btnactive.TabIndex = 21;
             // 
             // lblnama
             // 
             this.lblnama.AutoSize = true;
-            this.lblnama.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblnama.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblnama.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.lblnama.Location = new System.Drawing.Point(26, 53);
+            this.lblnama.Location = new System.Drawing.Point(26, 54);
             this.lblnama.Name = "lblnama";
-            this.lblnama.Size = new System.Drawing.Size(56, 16);
+            this.lblnama.Size = new System.Drawing.Size(66, 18);
             this.lblnama.TabIndex = 20;
             this.lblnama.Text = "[Nama]";
             // 
@@ -150,6 +153,7 @@
             // 
             this.btnReport.BackColor = System.Drawing.Color.Transparent;
             this.btnReport.FlatAppearance.BorderSize = 0;
+            this.btnReport.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.btnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReport.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReport.ForeColor = System.Drawing.Color.White;
@@ -161,11 +165,13 @@
             this.btnReport.Text = "Laporan";
             this.btnReport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReport.UseVisualStyleBackColor = false;
+            this.btnReport.Click += new System.EventHandler(this.BtnReport_Click);
             // 
             // btnManageMember
             // 
             this.btnManageMember.BackColor = System.Drawing.Color.Transparent;
             this.btnManageMember.FlatAppearance.BorderSize = 0;
+            this.btnManageMember.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.btnManageMember.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnManageMember.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnManageMember.ForeColor = System.Drawing.Color.White;
@@ -177,11 +183,13 @@
             this.btnManageMember.Text = "Manage member";
             this.btnManageMember.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnManageMember.UseVisualStyleBackColor = false;
+            this.btnManageMember.Click += new System.EventHandler(this.BtnManageMember_Click);
             // 
             // btnManageBuku
             // 
             this.btnManageBuku.BackColor = System.Drawing.Color.Transparent;
             this.btnManageBuku.FlatAppearance.BorderSize = 0;
+            this.btnManageBuku.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.btnManageBuku.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnManageBuku.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnManageBuku.ForeColor = System.Drawing.Color.White;
@@ -193,11 +201,13 @@
             this.btnManageBuku.Text = "Manage buku";
             this.btnManageBuku.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnManageBuku.UseVisualStyleBackColor = false;
+            this.btnManageBuku.Click += new System.EventHandler(this.BtnManageBuku_Click);
             // 
             // btnManagekaryawan
             // 
             this.btnManagekaryawan.BackColor = System.Drawing.Color.Transparent;
             this.btnManagekaryawan.FlatAppearance.BorderSize = 0;
+            this.btnManagekaryawan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.btnManagekaryawan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnManagekaryawan.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnManagekaryawan.ForeColor = System.Drawing.Color.White;
@@ -209,11 +219,13 @@
             this.btnManagekaryawan.Text = "Manage karyawan";
             this.btnManagekaryawan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnManagekaryawan.UseVisualStyleBackColor = false;
+            this.btnManagekaryawan.Click += new System.EventHandler(this.BtnManagekaryawan_Click);
             // 
             // btnLogout
             // 
             this.btnLogout.BackColor = System.Drawing.Color.Transparent;
             this.btnLogout.FlatAppearance.BorderSize = 0;
+            this.btnLogout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.Color.White;
@@ -225,12 +237,22 @@
             this.btnLogout.Text = "logout";
             this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.BtnLogout_Click);
+            // 
+            // manageBuku1
+            // 
+            this.manageBuku1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.manageBuku1.Location = new System.Drawing.Point(225, 39);
+            this.manageBuku1.Name = "manageBuku1";
+            this.manageBuku1.Size = new System.Drawing.Size(956, 525);
+            this.manageBuku1.TabIndex = 15;
+            this.manageBuku1.Load += new System.EventHandler(this.ManageBuku1_Load);
             // 
             // manageKaryawan1
             // 
             this.manageKaryawan1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.manageKaryawan1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.manageKaryawan1.Location = new System.Drawing.Point(228, 39);
+            this.manageKaryawan1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.manageKaryawan1.Location = new System.Drawing.Point(225, 39);
             this.manageKaryawan1.Name = "manageKaryawan1";
             this.manageKaryawan1.Size = new System.Drawing.Size(976, 525);
             this.manageKaryawan1.TabIndex = 14;
@@ -242,6 +264,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1256, 591);
+            this.Controls.Add(this.manageBuku1);
             this.Controls.Add(this.manageKaryawan1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel4);
@@ -272,8 +295,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblnama;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel btnactive;
         private System.Windows.Forms.Button btnMasterDenda;
         private Resources.manageKaryawan manageKaryawan1;
+        private manageBuku manageBuku1;
     }
 }
