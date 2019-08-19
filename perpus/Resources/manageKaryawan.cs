@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Microsoft.Reporting.WinForms;
+using System.Text.RegularExpressions;
 
 namespace perpus.Resources
 {
@@ -28,19 +28,25 @@ namespace perpus.Resources
 
         private void txtValidation()
         {
-            if(txtnama.Text == null)
+            errorProvider1.Clear();
+            errorProvider2.Clear();
+            errorProvider3.Clear();
+            errorProvider4.Clear();
+
+            errorProvider1.Clear();
+            if (txtnama.Text == "")
             {
                 errorProvider1.SetError(txtnama, "Nama Harus di isi");
             }
-            if (txtemail.Text == null)
+            if (txtemail.Text == "")
             {
                 errorProvider2.SetError(txtemail, "Email Harus di isi");
             }
-            if (txtpassword.Text == null)
+            if (txtpassword.Text == "")
             {
-                errorProvider3.SetError(txtnama, "Password Harus di isi");
+                errorProvider3.SetError(txtpassword, "Password Harus di isi");
             }
-            if (comborole.Text == null)
+            if (comborole.Text == "")
             {
                 errorProvider4.SetError(comborole, "Role Harus di isi");
             }
@@ -63,6 +69,11 @@ namespace perpus.Resources
             ID = 0;
             btnEdit.Enabled = false;
             btnHapus.Enabled = false;
+
+            errorProvider1.Clear();
+            errorProvider2.Clear();
+            errorProvider3.Clear();
+            errorProvider4.Clear();
         }
 
         private void ManageKaryawan_Load(object sender, EventArgs e)
@@ -115,26 +126,43 @@ namespace perpus.Resources
 
         private void BtnTambah_Click(object sender, EventArgs e)
         {
-            employee employ = new employee();
-            employ.name = txtnama.Text;
-            employ.email = txtemail.Text;
-            employ.password = txtpassword.Text;
-            employ.role = comborole.Text;
-            db.employees.InsertOnSubmit(employ);
-            db.SubmitChanges();
-            load();
+            if( txtnama.Text != "" && txtemail.Text != "" 
+                && txtpassword.Text != "" && comborole.Text != "")
+            {
+                employee employ = new employee();
+                employ.name = txtnama.Text;
+                employ.email = txtemail.Text;
+                employ.password = txtpassword.Text;
+                employ.role = comborole.Text;
+                db.employees.InsertOnSubmit(employ);
+                db.SubmitChanges();
+                load();
+            }
+            else
+            {
+                txtValidation();
+            }
+            
         }
 
         private void BtnEdit_Click(object sender, EventArgs e)
         {
-            employee employe = new employee();
-            employe = db.employees.Single(x => x.user_id == ID);
-            employe.name = txtnama.Text;
-            employe.email = txtemail.Text;
-            employe.password = txtemail.Text;
-            employe.role = comborole.Text;
-            db.SubmitChanges();
-            load();
+            if (txtnama.Text != "" && txtemail.Text != ""
+                && txtpassword.Text != "" && comborole.Text != "")
+            {
+                employee employe = new employee();
+                employe = db.employees.Single(x => x.user_id == ID);
+                employe.name = txtnama.Text;
+                employe.email = txtemail.Text;
+                employe.password = txtemail.Text;
+                employe.role = comborole.Text;
+                db.SubmitChanges();
+                load();
+            }
+            else
+            {
+                txtValidation();
+            }
         }
 
         private void BtnHapus_Click(object sender, EventArgs e)
@@ -144,6 +172,18 @@ namespace perpus.Resources
             db.employees.DeleteOnSubmit(employ);
             db.SubmitChanges();
             load();
+        }
+
+        private void Txtemail_Leave(object sender, EventArgs e)
+        {
+            string pattern = "^[a-z0-9]+@+[a-z]+[.]+[a-z.][2,5]";
+            if(Regex.IsMatch(txtemail.Text , pattern)){
+                errorProvider2.Clear();
+            }
+            else
+            {
+                errorProvider2.SetError(txtemail, "Email Invlaid");
+            }
         }
     }
 }
