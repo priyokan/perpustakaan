@@ -30,8 +30,9 @@
         {
             this.panel4 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnclose = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnMasterDenda = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblnama = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -40,7 +41,7 @@
             this.btnManageBuku = new System.Windows.Forms.Button();
             this.btnManagekaryawan = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
-            this.btnMasterDenda = new System.Windows.Forms.Button();
+            this.manageKaryawan1 = new perpus.Resources.manageKaryawan();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -49,7 +50,7 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.DarkSlateGray;
             this.panel4.Controls.Add(this.label3);
-            this.panel4.Controls.Add(this.button6);
+            this.panel4.Controls.Add(this.btnclose);
             this.panel4.Location = new System.Drawing.Point(-1, 0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1257, 33);
@@ -66,20 +67,21 @@
             this.label3.TabIndex = 15;
             this.label3.Text = "Admin";
             // 
-            // button6
+            // btnclose
             // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Maroon;
-            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button6.Location = new System.Drawing.Point(1209, 0);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(47, 24);
-            this.button6.TabIndex = 14;
-            this.button6.Text = "X";
-            this.button6.UseVisualStyleBackColor = false;
+            this.btnclose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnclose.FlatAppearance.BorderSize = 0;
+            this.btnclose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Maroon;
+            this.btnclose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btnclose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnclose.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnclose.Location = new System.Drawing.Point(1209, 0);
+            this.btnclose.Name = "btnclose";
+            this.btnclose.Size = new System.Drawing.Size(47, 24);
+            this.btnclose.TabIndex = 14;
+            this.btnclose.Text = "X";
+            this.btnclose.UseVisualStyleBackColor = false;
+            this.btnclose.Click += new System.EventHandler(this.Btnclose_Click);
             // 
             // panel1
             // 
@@ -97,6 +99,22 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(223, 562);
             this.panel1.TabIndex = 13;
+            // 
+            // btnMasterDenda
+            // 
+            this.btnMasterDenda.BackColor = System.Drawing.Color.Transparent;
+            this.btnMasterDenda.FlatAppearance.BorderSize = 0;
+            this.btnMasterDenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMasterDenda.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMasterDenda.ForeColor = System.Drawing.Color.White;
+            this.btnMasterDenda.Location = new System.Drawing.Point(13, 290);
+            this.btnMasterDenda.Name = "btnMasterDenda";
+            this.btnMasterDenda.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnMasterDenda.Size = new System.Drawing.Size(200, 43);
+            this.btnMasterDenda.TabIndex = 22;
+            this.btnMasterDenda.Text = "Master Denda";
+            this.btnMasterDenda.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMasterDenda.UseVisualStyleBackColor = false;
             // 
             // panel3
             // 
@@ -208,21 +226,15 @@
             this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLogout.UseVisualStyleBackColor = false;
             // 
-            // btnMasterDenda
+            // manageKaryawan1
             // 
-            this.btnMasterDenda.BackColor = System.Drawing.Color.Transparent;
-            this.btnMasterDenda.FlatAppearance.BorderSize = 0;
-            this.btnMasterDenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMasterDenda.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMasterDenda.ForeColor = System.Drawing.Color.White;
-            this.btnMasterDenda.Location = new System.Drawing.Point(13, 290);
-            this.btnMasterDenda.Name = "btnMasterDenda";
-            this.btnMasterDenda.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnMasterDenda.Size = new System.Drawing.Size(200, 43);
-            this.btnMasterDenda.TabIndex = 22;
-            this.btnMasterDenda.Text = "Master Denda";
-            this.btnMasterDenda.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMasterDenda.UseVisualStyleBackColor = false;
+            this.manageKaryawan1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.manageKaryawan1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.manageKaryawan1.Location = new System.Drawing.Point(228, 39);
+            this.manageKaryawan1.Name = "manageKaryawan1";
+            this.manageKaryawan1.Size = new System.Drawing.Size(976, 525);
+            this.manageKaryawan1.TabIndex = 14;
+            this.manageKaryawan1.Load += new System.EventHandler(this.ManageKaryawan1_Load);
             // 
             // adminMenu
             // 
@@ -230,10 +242,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1256, 591);
+            this.Controls.Add(this.manageKaryawan1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.ImeMode = System.Windows.Forms.ImeMode.On;
             this.Name = "adminMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "adminMenu";
             this.Load += new System.EventHandler(this.AdminMenu_Load);
             this.panel4.ResumeLayout(false);
@@ -253,11 +268,12 @@
         private System.Windows.Forms.Button btnManageMember;
         private System.Windows.Forms.Button btnManageBuku;
         private System.Windows.Forms.Button btnManagekaryawan;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnclose;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblnama;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnMasterDenda;
+        private Resources.manageKaryawan manageKaryawan1;
     }
 }

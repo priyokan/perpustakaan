@@ -1,0 +1,149 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Drawing;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using Microsoft.Reporting.WinForms;
+
+namespace perpus.Resources
+{
+    public partial class manageKaryawan : UserControl
+    {
+        public manageKaryawan()
+        {
+            InitializeComponent();
+        }
+
+        int ID;
+
+        private void Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        DataClasses1DataContext db = new DataClasses1DataContext();
+
+        private void txtValidation()
+        {
+            if(txtnama.Text == null)
+            {
+                errorProvider1.SetError(txtnama, "Nama Harus di isi");
+            }
+            if (txtemail.Text == null)
+            {
+                errorProvider2.SetError(txtemail, "Email Harus di isi");
+            }
+            if (txtpassword.Text == null)
+            {
+                errorProvider3.SetError(txtnama, "Password Harus di isi");
+            }
+            if (comborole.Text == null)
+            {
+                errorProvider4.SetError(comborole, "Role Harus di isi");
+            }
+        }
+
+        private void load()
+        {
+            try
+            {
+                this.employeeTableAdapter.FillBy2(this.perpusDataSet.employee);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+            txtnama.Text = null;
+            txtemail.Text = null;
+            txtpassword.Text = null;
+            comborole.Text = null;
+            ID = 0;
+            btnEdit.Enabled = false;
+            btnHapus.Enabled = false;
+        }
+
+        private void ManageKaryawan_Load(object sender, EventArgs e)
+        {
+            load();  
+        }
+
+
+        private void FillBy1ToolStripButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FillBy2ToolStripButton_Click(object sender, EventArgs e)
+        {
+            
+
+        }
+
+        private void ReportViewer1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtCari_KeyUp(object sender, KeyEventArgs e)
+        {
+
+            try
+            {
+                this.employeeTableAdapter.FillBy1(this.perpusDataSet.employee, txtCari.Text);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void DataGridEmployee_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow ro = dataGridEmployee.CurrentRow;
+            txtnama.Text = ro.Cells[1].Value.ToString();
+            txtemail.Text = ro.Cells[2].Value.ToString();
+            txtpassword.Text = ro.Cells[3].Value.ToString();
+            comborole.Text = ro.Cells[4].Value.ToString();
+            ID = Convert.ToInt32( ro.Cells[0].Value);
+
+            btnEdit.Enabled = true;
+            btnHapus.Enabled = true;
+        }
+
+        private void BtnTambah_Click(object sender, EventArgs e)
+        {
+            employee employ = new employee();
+            employ.name = txtnama.Text;
+            employ.email = txtemail.Text;
+            employ.password = txtpassword.Text;
+            employ.role = comborole.Text;
+            db.employees.InsertOnSubmit(employ);
+            db.SubmitChanges();
+            load();
+        }
+
+        private void BtnEdit_Click(object sender, EventArgs e)
+        {
+            employee employe = new employee();
+            employe = db.employees.Single(x => x.user_id == ID);
+            employe.name = txtnama.Text;
+            employe.email = txtemail.Text;
+            employe.password = txtemail.Text;
+            employe.role = comborole.Text;
+            db.SubmitChanges();
+            load();
+        }
+
+        private void BtnHapus_Click(object sender, EventArgs e)
+        {
+            employee employ = new employee();
+            employ = db.employees.Single(x => x.user_id == ID);
+            db.employees.DeleteOnSubmit(employ);
+            db.SubmitChanges();
+            load();
+        }
+    }
+}

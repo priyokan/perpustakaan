@@ -21,5 +21,15 @@ namespace perpus
         {
             lblnama.Text = Login.nama;
         }
+
+        private void Btnclose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void ManageKaryawan1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
