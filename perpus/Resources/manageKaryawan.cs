@@ -19,6 +19,7 @@ namespace perpus.Resources
         }
 
         int ID;
+        Boolean emailValid;
 
         private void Panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -127,7 +128,7 @@ namespace perpus.Resources
         private void BtnTambah_Click(object sender, EventArgs e)
         {
             if( txtnama.Text != "" && txtemail.Text != "" 
-                && txtpassword.Text != "" && comborole.Text != "")
+                && txtpassword.Text != "" && comborole.Text != "" && emailValid==true)
             {
                 employee employ = new employee();
                 employ.name = txtnama.Text;
@@ -148,7 +149,7 @@ namespace perpus.Resources
         private void BtnEdit_Click(object sender, EventArgs e)
         {
             if (txtnama.Text != "" && txtemail.Text != ""
-                && txtpassword.Text != "" && comborole.Text != "")
+                && txtpassword.Text != "" && comborole.Text != "" && emailValid == true)
             {
                 employee employe = new employee();
                 employe = db.employees.Single(x => x.user_id == ID);
@@ -176,13 +177,15 @@ namespace perpus.Resources
 
         private void Txtemail_Leave(object sender, EventArgs e)
         {
-            string pattern = "^[a-z0-9]+@+[a-z]+[.]+[a-z.][2,5]";
+            string pattern = "^[a-z0-9]+@+([a-z]+[.])+[a-z]{2,5}$";
             if(Regex.IsMatch(txtemail.Text , pattern)){
                 errorProvider2.Clear();
+                emailValid = true;
             }
             else
             {
                 errorProvider2.SetError(txtemail, "Email Invlaid");
+                emailValid = false;
             }
         }
     }
