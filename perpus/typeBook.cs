@@ -93,5 +93,14 @@ namespace perpus
             db.SubmitChanges();
             loadTable();
         }
+
+        private void DataGridtypebook_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow ro = dataGridtypebook.CurrentRow;
+            ID = Convert.ToInt32(ro.Cells[0].Value);
+            txttype.Text = ro.Cells[1].Value.ToString();
+            btnEdit.Enabled = true;
+            btnHapus.Enabled = true;
+        }
     }
 }
