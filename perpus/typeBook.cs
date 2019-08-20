@@ -17,9 +17,15 @@ namespace perpus
             InitializeComponent();
         }
 
+        DataClasses1DataContext db = new DataClasses1DataContext();
+        int ID;
+
         private void BtnTambah_Click(object sender, EventArgs e)
         {
-
+            type typeBook = new type();
+            typeBook.type_name = txttype.Text;
+            db.types.InsertOnSubmit(typeBook);
+            db.SubmitChanges();            
         }
 
         private void loadTable()
