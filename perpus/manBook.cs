@@ -129,5 +129,21 @@ namespace perpus
         {
                 e.Handled = true;           
         }
+
+        DataClasses1DataContext db = new DataClasses1DataContext();
+        int ID;
+
+        private void BtnSaveTambah_Click(object sender, EventArgs e)
+        {
+            book msBook = new book();
+            msBook.book_title = txtjudulTambah.Text;
+            msBook.book_type = Convert.ToInt32(comboType.SelectedValue);
+            msBook.books_on_the_rack = Convert.ToInt32(txtTotalTambah.Text);
+            msBook.books_borrowed = 0;
+            msBook.total_books = Convert.ToInt32(txtTotalTambah.Text);
+            msBook.photo_book = txtPictambah.Text;
+            db.books.InsertOnSubmit(msBook);
+            db.SubmitChanges();
+        }
     }
 }
