@@ -68,5 +68,14 @@ namespace perpus
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
         }
+
+        private void BtnEdit_Click(object sender, EventArgs e)
+        {
+            type typeBook = new type();
+            typeBook = db.types.Single(x => x.type_id == ID);
+            typeBook.type_name = txttype.Text;
+            db.SubmitChanges();
+
+        }
     }
 }
