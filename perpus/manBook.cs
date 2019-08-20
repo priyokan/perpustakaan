@@ -34,6 +34,19 @@ namespace perpus
         {
             loadCombo();
 
+            panelDelete.Visible = false;
+            panelEdit.Visible = false;
+            panelTambah.Visible = false;
+
+            txteditjudul.Text = "";
+            txtedittotal.Text = "";
+            txtjudulTambah.Text = "";
+            txtpicedit.Text = ""; ;
+            txtPictambah.Text = "";
+            txtTotalTambah.Text = "";
+            comboEdittype.Text = "";
+            comboType.Text = "";
+
             try
             {
                 this.bookTableAdapter.FillBy(this.perpusDataSet1.book);
@@ -71,7 +84,7 @@ namespace perpus
 
         private void BtnCloseTambah_Click(object sender, EventArgs e)
         {
-            panelTambah.Visible = false;
+            loadManbook();
         }
 
         private void FillByToolStripButton1_Click(object sender, EventArgs e)
@@ -88,7 +101,7 @@ namespace perpus
 
         private void Btncloseedit_Click(object sender, EventArgs e)
         {
-            panelEdit.Visible = false;
+            loadManbook();
         }
 
         private void BtnHapus_Click(object sender, EventArgs e)
@@ -101,12 +114,15 @@ namespace perpus
 
         private void BtncloseDelete_Click(object sender, EventArgs e)
         {
-            panelDelete.Visible = false;
+            loadManbook();
         }
 
-        private void ComboType_SelectionChangeCommitted(object sender, EventArgs e)
+        private void TxtTotalTambah_KeyPress(object sender, KeyPressEventArgs e)
         {
-            txtCari.Text = comboType.SelectedValue.ToString();
+            if (!char.IsControl(e.KeyChar)&&!char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }
