@@ -25,7 +25,8 @@ namespace perpus
             type typeBook = new type();
             typeBook.type_name = txttype.Text;
             db.types.InsertOnSubmit(typeBook);
-            db.SubmitChanges();            
+            db.SubmitChanges();
+            loadTable();
         }
 
         private void loadTable()
@@ -39,6 +40,12 @@ namespace perpus
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
 
+            txttype.Text = "";
+
+            btnEdit.Enabled = false;
+            btnHapus.Enabled = false;
+
+            errorProvider1.Clear();
         }
 
         private void FillByToolStripButton_Click(object sender, EventArgs e)
@@ -75,7 +82,7 @@ namespace perpus
             typeBook = db.types.Single(x => x.type_id == ID);
             typeBook.type_name = txttype.Text;
             db.SubmitChanges();
-
+            loadTable();
         }
 
         private void BtnHapus_Click(object sender, EventArgs e)
@@ -84,6 +91,7 @@ namespace perpus
             typeBook = db.types.Single(x => x.type_id == ID);            
             db.types.DeleteOnSubmit(typeBook);
             db.SubmitChanges();
+            loadTable();
         }
     }
 }
