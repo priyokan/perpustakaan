@@ -30,6 +30,43 @@ namespace perpus
 
         }
 
+        private void inputValidation()
+        {
+            if(txtjudulTambah.Text == "")
+            {
+                errorProvider1.SetError(txtjudulTambah, "judul harus di isi");
+            }
+            if (comboType.Text == "")
+            {
+                errorProvider2.SetError(comboType, "judul harus di isi");
+            }
+            if (txtTotalTambah.Text == "")
+            {
+                errorProvider3.SetError(txtTotalTambah, "judul harus di isi");
+            }
+            if (txtPictambah.Text == "")
+            {
+                errorProvider4.SetError(btnSrcTambah, "judul harus di isi");
+            }
+
+            if (txteditjudul.Text == "")
+            {
+                errorProvider1.SetError(txteditjudul, "judul harus di isi");
+            }
+            if (comboEdittype.Text == "")
+            {
+                errorProvider2.SetError(comboEdittype, "judul harus di isi");
+            }
+            if (txtedittotal.Text == "")
+            {
+                errorProvider3.SetError(txtedittotal, "judul harus di isi");
+            }
+            if (txtpicedit.Text == "")
+            {
+                errorProvider4.SetError(btnsrcedit, "judul harus di isi");
+            }
+        }
+
         public void loadManbook()
         {
             loadCombo();
@@ -135,7 +172,8 @@ namespace perpus
 
         private void BtnSaveTambah_Click(object sender, EventArgs e)
         {
-            if(txtjudulTambah.Text != "" && txtPictambah.Text != "" && comboType.Text != ""&& txtTotalTambah.Text != "")
+            if(txtjudulTambah.Text != "" && txtPictambah.Text != ""
+                && comboType.Text != ""&& txtTotalTambah.Text != "")
             {
                 book msBook = new book();
                 msBook.book_title = txtjudulTambah.Text;
@@ -147,6 +185,10 @@ namespace perpus
                 db.books.InsertOnSubmit(msBook);
                 db.SubmitChanges();
                 loadManbook();
+            }
+            else
+            {
+                inputValidation();
             }
         }
 
