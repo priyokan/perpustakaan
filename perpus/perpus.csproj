@@ -82,6 +82,12 @@
     <Compile Include="manageBuku.Designer.cs">
       <DependentUpon>manageBuku.cs</DependentUpon>
     </Compile>
+    <Compile Include="manBook.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="manBook.Designer.cs">
+      <DependentUpon>manBook.cs</DependentUpon>
+    </Compile>
     <Compile Include="memberForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>perpusDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="perpusDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>perpusDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -131,6 +142,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="manageBuku.resx">
       <DependentUpon>manageBuku.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manBook.resx">
+      <DependentUpon>manBook.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="memberForm.resx">
       <DependentUpon>memberForm.cs</DependentUpon>
@@ -172,6 +186,17 @@
     </None>
     <None Include="perpusDataSet.xss">
       <DependentUpon>perpusDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="perpusDataSet1.xsc">
+      <DependentUpon>perpusDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="perpusDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>perpusDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="perpusDataSet1.xss">
+      <DependentUpon>perpusDataSet1.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

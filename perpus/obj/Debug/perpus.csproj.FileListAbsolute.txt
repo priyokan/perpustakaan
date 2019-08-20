@@ -76,3 +76,4 @@ C:\Users\Priyo Nugroho\source\repos\perpus\perpus\bin\Debug\zh-CHT\Microsoft.Rep
 C:\Users\Priyo Nugroho\source\repos\perpus\perpus\obj\Debug\perpus.csproj.CopyComplete
 C:\Users\Priyo Nugroho\source\repos\perpus\perpus\obj\Debug\perpus.manageBuku.resources
 C:\Users\Priyo Nugroho\source\repos\perpus\perpus\obj\Debug\perpus.typeBook.resources
+C:\Users\Priyo Nugroho\source\repos\perpus\perpus\obj\Debug\perpus.manBook.resources

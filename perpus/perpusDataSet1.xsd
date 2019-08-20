@@ -75,7 +75,16 @@ SELECT book_id, book_title, book_type, books_on_the_rack, books_borrowed, total_
               <Mapping SourceColumn="total_books" DataSetColumn="total_books" />
               <Mapping SourceColumn="photo_book" DataSetColumn="photo_book" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="perpusConnectionString (Settings)" DbObjectName="perpus.dbo.book" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT book_id, book_title, book_type, books_on_the_rack, books_borrowed, total_books, photo_book FROM dbo.book</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="employeeTableAdapter" GeneratorDataComponentClassName="employeeTableAdapter" Name="employee" UserDataComponentName="employeeTableAdapter">
             <MainSource>
@@ -295,7 +304,16 @@ SELECT type_id, type_name FROM type WHERE (type_id = @type_id)</CommandText>
               <Mapping SourceColumn="type_id" DataSetColumn="type_id" />
               <Mapping SourceColumn="type_name" DataSetColumn="type_name" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="perpusConnectionString (Settings)" DbObjectName="perpus.dbo.type" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT type_id, type_name FROM dbo.type</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
         </Tables>
         <Sources />
@@ -305,7 +323,7 @@ SELECT type_id, type_name FROM type WHERE (type_id = @type_id)</CommandText>
   <xs:element name="perpusDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="perpusDataSet1" msprop:Generator_UserDSName="perpusDataSet1">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="book" msprop:Generator_TableClassName="bookDataTable" msprop:Generator_TableVarName="tablebook" msprop:Generator_TablePropName="book" msprop:Generator_RowDeletingName="bookRowDeleting" msprop:Generator_RowChangingName="bookRowChanging" msprop:Generator_RowEvHandlerName="bookRowChangeEventHandler" msprop:Generator_RowDeletedName="bookRowDeleted" msprop:Generator_UserTableName="book" msprop:Generator_RowChangedName="bookRowChanged" msprop:Generator_RowEvArgName="bookRowChangeEvent" msprop:Generator_RowClassName="bookRow">
+        <xs:element name="book" msprop:Generator_TableClassName="bookDataTable" msprop:Generator_TableVarName="tablebook" msprop:Generator_RowChangedName="bookRowChanged" msprop:Generator_TablePropName="book" msprop:Generator_RowDeletingName="bookRowDeleting" msprop:Generator_RowChangingName="bookRowChanging" msprop:Generator_RowEvHandlerName="bookRowChangeEventHandler" msprop:Generator_RowDeletedName="bookRowDeleted" msprop:Generator_RowClassName="bookRow" msprop:Generator_UserTableName="book" msprop:Generator_RowEvArgName="bookRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="book_id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnbook_id" msprop:Generator_ColumnPropNameInRow="book_id" msprop:Generator_ColumnPropNameInTable="book_idColumn" msprop:Generator_UserColumnName="book_id" type="xs:int" />
@@ -330,7 +348,7 @@ SELECT type_id, type_name FROM type WHERE (type_id = @type_id)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="employee" msprop:Generator_TableClassName="employeeDataTable" msprop:Generator_TableVarName="tableemployee" msprop:Generator_TablePropName="employee" msprop:Generator_RowDeletingName="employeeRowDeleting" msprop:Generator_RowChangingName="employeeRowChanging" msprop:Generator_RowEvHandlerName="employeeRowChangeEventHandler" msprop:Generator_RowDeletedName="employeeRowDeleted" msprop:Generator_UserTableName="employee" msprop:Generator_RowChangedName="employeeRowChanged" msprop:Generator_RowEvArgName="employeeRowChangeEvent" msprop:Generator_RowClassName="employeeRow">
+        <xs:element name="employee" msprop:Generator_TableClassName="employeeDataTable" msprop:Generator_TableVarName="tableemployee" msprop:Generator_RowChangedName="employeeRowChanged" msprop:Generator_TablePropName="employee" msprop:Generator_RowDeletingName="employeeRowDeleting" msprop:Generator_RowChangingName="employeeRowChanging" msprop:Generator_RowEvHandlerName="employeeRowChangeEventHandler" msprop:Generator_RowDeletedName="employeeRowDeleted" msprop:Generator_RowClassName="employeeRow" msprop:Generator_UserTableName="employee" msprop:Generator_RowEvArgName="employeeRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="user_id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnuser_id" msprop:Generator_ColumnPropNameInRow="user_id" msprop:Generator_ColumnPropNameInTable="user_idColumn" msprop:Generator_UserColumnName="user_id" type="xs:int" />
@@ -365,7 +383,7 @@ SELECT type_id, type_name FROM type WHERE (type_id = @type_id)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="fine" msprop:Generator_TableClassName="fineDataTable" msprop:Generator_TableVarName="tablefine" msprop:Generator_TablePropName="fine" msprop:Generator_RowDeletingName="fineRowDeleting" msprop:Generator_RowChangingName="fineRowChanging" msprop:Generator_RowEvHandlerName="fineRowChangeEventHandler" msprop:Generator_RowDeletedName="fineRowDeleted" msprop:Generator_UserTableName="fine" msprop:Generator_RowChangedName="fineRowChanged" msprop:Generator_RowEvArgName="fineRowChangeEvent" msprop:Generator_RowClassName="fineRow">
+        <xs:element name="fine" msprop:Generator_TableClassName="fineDataTable" msprop:Generator_TableVarName="tablefine" msprop:Generator_RowChangedName="fineRowChanged" msprop:Generator_TablePropName="fine" msprop:Generator_RowDeletingName="fineRowDeleting" msprop:Generator_RowChangingName="fineRowChanging" msprop:Generator_RowEvHandlerName="fineRowChangeEventHandler" msprop:Generator_RowDeletedName="fineRowDeleted" msprop:Generator_RowClassName="fineRow" msprop:Generator_UserTableName="fine" msprop:Generator_RowEvArgName="fineRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="fine_id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnfine_id" msprop:Generator_ColumnPropNameInRow="fine_id" msprop:Generator_ColumnPropNameInTable="fine_idColumn" msprop:Generator_UserColumnName="fine_id" type="xs:int" />
@@ -379,7 +397,7 @@ SELECT type_id, type_name FROM type WHERE (type_id = @type_id)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="member" msprop:Generator_TableClassName="memberDataTable" msprop:Generator_TableVarName="tablemember" msprop:Generator_TablePropName="member" msprop:Generator_RowDeletingName="memberRowDeleting" msprop:Generator_RowChangingName="memberRowChanging" msprop:Generator_RowEvHandlerName="memberRowChangeEventHandler" msprop:Generator_RowDeletedName="memberRowDeleted" msprop:Generator_UserTableName="member" msprop:Generator_RowChangedName="memberRowChanged" msprop:Generator_RowEvArgName="memberRowChangeEvent" msprop:Generator_RowClassName="memberRow">
+        <xs:element name="member" msprop:Generator_TableClassName="memberDataTable" msprop:Generator_TableVarName="tablemember" msprop:Generator_RowChangedName="memberRowChanged" msprop:Generator_TablePropName="member" msprop:Generator_RowDeletingName="memberRowDeleting" msprop:Generator_RowChangingName="memberRowChanging" msprop:Generator_RowEvHandlerName="memberRowChangeEventHandler" msprop:Generator_RowDeletedName="memberRowDeleted" msprop:Generator_RowClassName="memberRow" msprop:Generator_UserTableName="member" msprop:Generator_RowEvArgName="memberRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="nis" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnnis" msprop:Generator_ColumnPropNameInRow="nis" msprop:Generator_ColumnPropNameInTable="nisColumn" msprop:Generator_UserColumnName="nis" type="xs:int" />
@@ -408,7 +426,7 @@ SELECT type_id, type_name FROM type WHERE (type_id = @type_id)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="type" msprop:Generator_TableClassName="typeDataTable" msprop:Generator_TableVarName="tabletype" msprop:Generator_TablePropName="type" msprop:Generator_RowDeletingName="typeRowDeleting" msprop:Generator_RowChangingName="typeRowChanging" msprop:Generator_RowEvHandlerName="typeRowChangeEventHandler" msprop:Generator_RowDeletedName="typeRowDeleted" msprop:Generator_UserTableName="type" msprop:Generator_RowChangedName="typeRowChanged" msprop:Generator_RowEvArgName="typeRowChangeEvent" msprop:Generator_RowClassName="typeRow">
+        <xs:element name="type" msprop:Generator_TableClassName="typeDataTable" msprop:Generator_TableVarName="tabletype" msprop:Generator_RowChangedName="typeRowChanged" msprop:Generator_TablePropName="type" msprop:Generator_RowDeletingName="typeRowDeleting" msprop:Generator_RowChangingName="typeRowChanging" msprop:Generator_RowEvHandlerName="typeRowChangeEventHandler" msprop:Generator_RowDeletedName="typeRowDeleted" msprop:Generator_RowClassName="typeRow" msprop:Generator_UserTableName="type" msprop:Generator_RowEvArgName="typeRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="type_id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columntype_id" msprop:Generator_ColumnPropNameInRow="type_id" msprop:Generator_ColumnPropNameInTable="type_idColumn" msprop:Generator_UserColumnName="type_id" type="xs:int" />

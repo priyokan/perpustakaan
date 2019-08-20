@@ -36,6 +36,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.panelActive = new System.Windows.Forms.Panel();
             this.typeBook1 = new perpus.typeBook();
+            this.manBook1 = new perpus.manBook();
             this.panelManageBuku.SuspendLayout();
             this.panelManageType.SuspendLayout();
             this.SuspendLayout();
@@ -50,7 +51,7 @@
             this.panelManageBuku.Name = "panelManageBuku";
             this.panelManageBuku.Size = new System.Drawing.Size(232, 70);
             this.panelManageBuku.TabIndex = 2;
-            this.panelManageBuku.Click += new System.EventHandler(this.PanelManageBuku_Click);
+            this.panelManageBuku.Click += new System.EventHandler(this.PanelManageBuku_Click_1);
             // 
             // label2
             // 
@@ -62,7 +63,7 @@
             this.label2.Size = new System.Drawing.Size(151, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "Form Management buku";
-            this.label2.Click += new System.EventHandler(this.Label1_Click);
+            this.label2.Click += new System.EventHandler(this.PanelManageBuku_Click_1);
             // 
             // label1
             // 
@@ -74,7 +75,7 @@
             this.label1.Size = new System.Drawing.Size(144, 26);
             this.label1.TabIndex = 0;
             this.label1.Text = "Manage Buku";
-            this.label1.Click += new System.EventHandler(this.Label1_Click);
+            this.label1.Click += new System.EventHandler(this.PanelManageBuku_Click_1);
             // 
             // panelManageType
             // 
@@ -86,7 +87,7 @@
             this.panelManageType.Name = "panelManageType";
             this.panelManageType.Size = new System.Drawing.Size(237, 70);
             this.panelManageType.TabIndex = 27;
-            this.panelManageType.Click += new System.EventHandler(this.PanelManageType_Click);
+            this.panelManageType.Click += new System.EventHandler(this.PanelManageType_Click_1);
             // 
             // label3
             // 
@@ -98,7 +99,7 @@
             this.label3.Size = new System.Drawing.Size(180, 16);
             this.label3.TabIndex = 1;
             this.label3.Text = "Form Management type buku";
-            this.label3.Click += new System.EventHandler(this.Label4_Click_1);
+            this.label3.Click += new System.EventHandler(this.PanelManageType_Click_1);
             // 
             // label4
             // 
@@ -110,7 +111,7 @@
             this.label4.Size = new System.Drawing.Size(193, 26);
             this.label4.TabIndex = 0;
             this.label4.Text = "Manage type Buku";
-            this.label4.Click += new System.EventHandler(this.Label4_Click_1);
+            this.label4.Click += new System.EventHandler(this.PanelManageType_Click_1);
             // 
             // panelActive
             // 
@@ -123,16 +124,25 @@
             // typeBook1
             // 
             this.typeBook1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.typeBook1.Location = new System.Drawing.Point(-1, 111);
+            this.typeBook1.Location = new System.Drawing.Point(0, 111);
             this.typeBook1.Name = "typeBook1";
             this.typeBook1.Size = new System.Drawing.Size(956, 404);
             this.typeBook1.TabIndex = 29;
+            // 
+            // manBook1
+            // 
+            this.manBook1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.manBook1.Location = new System.Drawing.Point(0, 111);
+            this.manBook1.Name = "manBook1";
+            this.manBook1.Size = new System.Drawing.Size(956, 411);
+            this.manBook1.TabIndex = 30;
             // 
             // manageBuku
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Controls.Add(this.manBook1);
             this.Controls.Add(this.typeBook1);
             this.Controls.Add(this.panelActive);
             this.Controls.Add(this.panelManageType);
@@ -157,5 +167,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panelActive;
         private typeBook typeBook1;
+        private manBook manBook1;
     }
 }
