@@ -135,21 +135,25 @@ namespace perpus
 
         private void BtnSaveTambah_Click(object sender, EventArgs e)
         {
-            book msBook = new book();
-            msBook.book_title = txtjudulTambah.Text;
-            msBook.book_type = Convert.ToInt32(comboType.SelectedValue);
-            msBook.books_on_the_rack = Convert.ToInt32(txtTotalTambah.Text);
-            msBook.books_borrowed = 0;
-            msBook.total_books = Convert.ToInt32(txtTotalTambah.Text);
-            msBook.photo_book = txtPictambah.Text;
-            db.books.InsertOnSubmit(msBook);
-            db.SubmitChanges();
+            if(txtjudulTambah.Text != "" && txtPictambah.Text != "" && comboType.Text != ""&& txtTotalTambah.Text != "")
+            {
+                book msBook = new book();
+                msBook.book_title = txtjudulTambah.Text;
+                msBook.book_type = Convert.ToInt32(comboType.SelectedValue);
+                msBook.books_on_the_rack = Convert.ToInt32(txtTotalTambah.Text);
+                msBook.books_borrowed = 0;
+                msBook.total_books = Convert.ToInt32(txtTotalTambah.Text);
+                msBook.photo_book = txtPictambah.Text;
+                db.books.InsertOnSubmit(msBook);
+                db.SubmitChanges();
+                loadManbook();
+            }
         }
 
         private void BtnSrcTambah_Click(object sender, EventArgs e)
         {
             OpenFileDialog open = new OpenFileDialog();
-            open.Filter = "Image files(*.jpg,*.png,*.jpeg)||*.jpg;*.png;*.jpeg;";            
+            open.Filter = "Image files(*.jpg,*.png,*.jpeg)|*.jpg;*.png;*.jpeg;";            
             if (open.ShowDialog() == DialogResult.OK)
             {
                 txtPictambah.Text = open.FileName;
