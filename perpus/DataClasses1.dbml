@@ -22,10 +22,16 @@
     <Type Name="book">
       <Column Name="book_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="book_title" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="book_type" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="book_type" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="books_on_the_rack" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="books_borrowed" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="total_books" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.type" Member="types">
+    <Type Name="type">
+      <Column Name="type_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="type_name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

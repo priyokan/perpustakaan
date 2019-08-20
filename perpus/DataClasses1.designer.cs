@@ -39,6 +39,9 @@ namespace perpus
     partial void Insertbook(book instance);
     partial void Updatebook(book instance);
     partial void Deletebook(book instance);
+    partial void Inserttype(type instance);
+    partial void Updatetype(type instance);
+    partial void Deletetype(type instance);
     #endregion
 		
 		public DataClasses1DataContext() : 
@@ -92,6 +95,14 @@ namespace perpus
 			get
 			{
 				return this.GetTable<book>();
+			}
+		}
+		
+		public System.Data.Linq.Table<type> types
+		{
+			get
+			{
+				return this.GetTable<type>();
 			}
 		}
 	}
@@ -422,7 +433,7 @@ namespace perpus
 		
 		private string _book_title;
 		
-		private string _book_type;
+		private int _book_type;
 		
 		private int _books_on_the_rack;
 		
@@ -438,7 +449,7 @@ namespace perpus
     partial void Onbook_idChanged();
     partial void Onbook_titleChanging(string value);
     partial void Onbook_titleChanged();
-    partial void Onbook_typeChanging(string value);
+    partial void Onbook_typeChanging(int value);
     partial void Onbook_typeChanged();
     partial void Onbooks_on_the_rackChanging(int value);
     partial void Onbooks_on_the_rackChanged();
@@ -493,8 +504,8 @@ namespace perpus
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_book_type", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-		public string book_type
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_book_type", DbType="Int NOT NULL")]
+		public int book_type
 		{
 			get
 			{
@@ -569,6 +580,92 @@ namespace perpus
 					this._total_books = value;
 					this.SendPropertyChanged("total_books");
 					this.Ontotal_booksChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.type")]
+	public partial class type : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _type_id;
+		
+		private string _type_name;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void Ontype_idChanging(int value);
+    partial void Ontype_idChanged();
+    partial void Ontype_nameChanging(string value);
+    partial void Ontype_nameChanged();
+    #endregion
+		
+		public type()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_type_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int type_id
+		{
+			get
+			{
+				return this._type_id;
+			}
+			set
+			{
+				if ((this._type_id != value))
+				{
+					this.Ontype_idChanging(value);
+					this.SendPropertyChanging();
+					this._type_id = value;
+					this.SendPropertyChanged("type_id");
+					this.Ontype_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_type_name", DbType="VarChar(50)")]
+		public string type_name
+		{
+			get
+			{
+				return this._type_name;
+			}
+			set
+			{
+				if ((this._type_name != value))
+				{
+					this.Ontype_nameChanging(value);
+					this.SendPropertyChanging();
+					this._type_name = value;
+					this.SendPropertyChanged("type_name");
+					this.Ontype_nameChanged();
 				}
 			}
 		}

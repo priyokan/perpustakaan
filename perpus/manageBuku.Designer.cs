@@ -35,6 +35,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panelActive = new System.Windows.Forms.Panel();
+            this.typeBook1 = new perpus.typeBook();
             this.panelManageBuku.SuspendLayout();
             this.panelManageType.SuspendLayout();
             this.SuspendLayout();
@@ -119,11 +120,20 @@
             this.panelActive.Size = new System.Drawing.Size(10, 70);
             this.panelActive.TabIndex = 28;
             // 
+            // typeBook1
+            // 
+            this.typeBook1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.typeBook1.Location = new System.Drawing.Point(-1, 111);
+            this.typeBook1.Name = "typeBook1";
+            this.typeBook1.Size = new System.Drawing.Size(956, 404);
+            this.typeBook1.TabIndex = 29;
+            // 
             // manageBuku
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Controls.Add(this.typeBook1);
             this.Controls.Add(this.panelActive);
             this.Controls.Add(this.panelManageType);
             this.Controls.Add(this.panelManageBuku);
@@ -146,5 +156,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panelActive;
+        private typeBook typeBook1;
     }
 }

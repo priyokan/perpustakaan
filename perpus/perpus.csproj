@@ -105,6 +105,12 @@
       <DependentUpon>manageKaryawan.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="typeBook.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="typeBook.Designer.cs">
+      <DependentUpon>typeBook.cs</DependentUpon>
+    </Compile>
     <Compile Include="userControlAbsen.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -137,6 +143,9 @@
     <EmbeddedResource Include="Report1.rdlc" />
     <EmbeddedResource Include="Resources\manageKaryawan.resx">
       <DependentUpon>manageKaryawan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="typeBook.resx">
+      <DependentUpon>typeBook.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="userControlAbsen.resx">
       <DependentUpon>userControlAbsen.cs</DependentUpon>
