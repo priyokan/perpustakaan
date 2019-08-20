@@ -145,5 +145,16 @@ namespace perpus
             db.books.InsertOnSubmit(msBook);
             db.SubmitChanges();
         }
+
+        private void BtnSrcTambah_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog open = new OpenFileDialog();
+            open.Filter = "Image files(*.jpg,*.png,*.jpeg)||*.jpg;*.png;*.jpeg;";            
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                txtPictambah.Text = open.FileName;
+                picTambah.ImageLocation = open.FileName;
+            }
+        }
     }
 }
