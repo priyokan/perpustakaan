@@ -77,5 +77,13 @@ namespace perpus
             db.SubmitChanges();
 
         }
+
+        private void BtnHapus_Click(object sender, EventArgs e)
+        {
+            type typeBook = new type();
+            typeBook = db.types.Single(x => x.type_id == ID);            
+            db.types.DeleteOnSubmit(typeBook);
+            db.SubmitChanges();
+        }
     }
 }
