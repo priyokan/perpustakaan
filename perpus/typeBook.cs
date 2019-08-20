@@ -20,13 +20,13 @@ namespace perpus
         DataClasses1DataContext db = new DataClasses1DataContext();
         int ID;
 
-        private void BtnTambah_Click(object sender, EventArgs e)
+        private void inputValidation()
         {
-            type typeBook = new type();
-            typeBook.type_name = txttype.Text;
-            db.types.InsertOnSubmit(typeBook);
-            db.SubmitChanges();
-            loadTable();
+            errorProvider1.Clear();
+            if(txttype.Text == "")
+            {
+                errorProvider1.SetError(txttype, "cannot null");
+            }
         }
 
         private void loadTable()
@@ -76,22 +76,52 @@ namespace perpus
             }
         }
 
+        private void BtnTambah_Click(object sender, EventArgs e)
+        {
+            if(txttype.Text != "")
+            {
+                type typeBook = new type();
+                typeBook.type_name = txttype.Text;
+                db.types.InsertOnSubmit(typeBook);
+                db.SubmitChanges();
+                loadTable();
+            }
+            else
+            {
+                inputValidation();
+            }
+        }
+
         private void BtnEdit_Click(object sender, EventArgs e)
         {
-            type typeBook = new type();
-            typeBook = db.types.Single(x => x.type_id == ID);
-            typeBook.type_name = txttype.Text;
-            db.SubmitChanges();
-            loadTable();
+            if (txttype.Text != "")
+            {
+                type typeBook = new type();
+                typeBook = db.types.Single(x => x.type_id == ID);
+                typeBook.type_name = txttype.Text;
+                db.SubmitChanges();
+                loadTable();
+            }
+            else
+            {
+                inputValidation();
+            }
         }
 
         private void BtnHapus_Click(object sender, EventArgs e)
         {
-            type typeBook = new type();
-            typeBook = db.types.Single(x => x.type_id == ID);            
-            db.types.DeleteOnSubmit(typeBook);
-            db.SubmitChanges();
-            loadTable();
+            if (txttype.Text != "")
+            {
+                type typeBook = new type();
+                typeBook = db.types.Single(x => x.type_id == ID);
+                db.types.DeleteOnSubmit(typeBook);
+                db.SubmitChanges();
+                loadTable();
+            }
+            else
+            {
+                inputValidation();
+            }
         }
 
         private void DataGridtypebook_CellClick(object sender, DataGridViewCellEventArgs e)
