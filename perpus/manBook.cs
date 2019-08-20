@@ -102,7 +102,7 @@ namespace perpus
         private void Btncloseedit_Click(object sender, EventArgs e)
         {
             loadManbook();
-        }
+        }   
 
         private void BtnHapus_Click(object sender, EventArgs e)
         {
@@ -123,6 +123,11 @@ namespace perpus
             {
                 e.Handled = true;
             }
+        }
+
+        private void ComboType_KeyPress(object sender, KeyPressEventArgs e)
+        {
+                e.Handled = true;           
         }
     }
 }
