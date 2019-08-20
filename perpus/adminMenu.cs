@@ -35,7 +35,7 @@ namespace perpus
 
         private void BtnManageBuku_Click(object sender, EventArgs e)
         {
-            btnactive.Location = btnManageBuku.Location;
+            btnactive.Location = btnManageBuku.Location;            
             manageBuku1.BringToFront();
         }
 

@@ -29,7 +29,7 @@ namespace perpus
             }
         }
 
-        private void loadTable()
+        public void loadTableType()
         {
             try
             {
@@ -55,7 +55,7 @@ namespace perpus
 
         private void TypeBook_Load(object sender, EventArgs e)
         {
-            loadTable();
+            loadTableType();
         }
 
         private void FillBy1ToolStripButton_Click(object sender, EventArgs e)
@@ -84,7 +84,7 @@ namespace perpus
                 typeBook.type_name = txttype.Text;
                 db.types.InsertOnSubmit(typeBook);
                 db.SubmitChanges();
-                loadTable();
+                loadTableType();
             }
             else
             {
@@ -100,7 +100,7 @@ namespace perpus
                 typeBook = db.types.Single(x => x.type_id == ID);
                 typeBook.type_name = txttype.Text;
                 db.SubmitChanges();
-                loadTable();
+                loadTableType();
             }
             else
             {
@@ -110,18 +110,11 @@ namespace perpus
 
         private void BtnHapus_Click(object sender, EventArgs e)
         {
-            if (txttype.Text != "")
-            {
-                type typeBook = new type();
-                typeBook = db.types.Single(x => x.type_id == ID);
-                db.types.DeleteOnSubmit(typeBook);
-                db.SubmitChanges();
-                loadTable();
-            }
-            else
-            {
-                inputValidation();
-            }
+            type typeBook = new type();
+            typeBook = db.types.Single(x => x.type_id == ID);
+            db.types.DeleteOnSubmit(typeBook);
+            db.SubmitChanges();
+            loadTableType();
         }
 
         private void DataGridtypebook_CellClick(object sender, DataGridViewCellEventArgs e)
