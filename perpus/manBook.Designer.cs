@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label7 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.txtCari = new System.Windows.Forms.TextBox();
@@ -40,22 +40,12 @@
             this.txtjudulTambah = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridbook = new System.Windows.Forms.DataGridView();
-            this.bookidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.booktitleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.booktypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.booksontherackDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.booksborrowedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totalbooksDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.photobookDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bookBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.perpusDataSet1 = new perpus.perpusDataSet1();
             this.btnHapus = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnTambah = new System.Windows.Forms.Button();
             this.panelTambah = new System.Windows.Forms.Panel();
             this.comboType = new System.Windows.Forms.ComboBox();
-            this.typeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnSrcTambah = new System.Windows.Forms.Button();
             this.btnSaveTambah = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -72,8 +62,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.fillByToolStrip = new System.Windows.Forms.ToolStrip();
             this.fillByToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.bookTableAdapter = new perpus.perpusDataSet1TableAdapters.bookTableAdapter();
-            this.typeTableAdapter = new perpus.perpusDataSet1TableAdapters.typeTableAdapter();
             this.panelEdit = new System.Windows.Forms.Panel();
             this.comboEdittype = new System.Windows.Forms.ComboBox();
             this.btnsrcedit = new System.Windows.Forms.Button();
@@ -94,6 +82,8 @@
             this.label11 = new System.Windows.Forms.Label();
             this.txteditjudul = new System.Windows.Forms.TextBox();
             this.panelDelete = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.lblhapus = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.btndeleteOK = new System.Windows.Forms.Button();
             this.panel14 = new System.Windows.Forms.Panel();
@@ -105,13 +95,24 @@
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider4 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.lblhapus = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.fillBy1ToolStrip = new System.Windows.Forms.ToolStrip();
+            this.titleToolStripLabel = new System.Windows.Forms.ToolStripLabel();
+            this.titleToolStripTextBox = new System.Windows.Forms.ToolStripTextBox();
+            this.fillBy1ToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.typeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.perpusDataSet1 = new perpus.perpusDataSet1();
+            this.bookidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.booktitleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.booktypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.booksontherackDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.booksborrowedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalbooksDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.photobookDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bookBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bookTableAdapter = new perpus.perpusDataSet1TableAdapters.bookTableAdapter();
+            this.typeTableAdapter = new perpus.perpusDataSet1TableAdapters.typeTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridbook)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.perpusDataSet1)).BeginInit();
             this.panelTambah.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.typeBindingSource)).BeginInit();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picTambah)).BeginInit();
             this.fillByToolStrip.SuspendLayout();
@@ -125,6 +126,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider4)).BeginInit();
+            this.fillBy1ToolStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.typeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.perpusDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label7
@@ -155,6 +160,7 @@
             this.txtCari.Name = "txtCari";
             this.txtCari.Size = new System.Drawing.Size(258, 17);
             this.txtCari.TabIndex = 49;
+            this.txtCari.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TxtCari_KeyUp);
             // 
             // panel2
             // 
@@ -192,22 +198,22 @@
             this.dataGridbook.AllowUserToAddRows = false;
             this.dataGridbook.AllowUserToDeleteRows = false;
             this.dataGridbook.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridbook.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridbook.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridbook.AutoGenerateColumns = false;
             this.dataGridbook.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridbook.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridbook.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.dataGridbook.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.AliceBlue;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridbook.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.AliceBlue;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridbook.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridbook.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridbook.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.bookidDataGridViewTextBoxColumn,
@@ -220,48 +226,31 @@
             this.photobookDataGridViewTextBoxColumn});
             this.dataGridbook.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.dataGridbook.DataSource = this.bookBindingSource;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridbook.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridbook.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridbook.GridColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridbook.Location = new System.Drawing.Point(51, 47);
             this.dataGridbook.Name = "dataGridbook";
             this.dataGridbook.ReadOnly = true;
             this.dataGridbook.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridbook.RowHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridbook.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridbook.RowHeadersVisible = false;
             this.dataGridbook.Size = new System.Drawing.Size(844, 356);
             this.dataGridbook.TabIndex = 42;
             this.dataGridbook.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridbook_CellClick);
-            // 
-            // bookidDataGridViewTextBoxColumn
-            // 
-            this.bookidDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.bookidDataGridViewTextBoxColumn.DataPropertyName = "book_id";
-            this.bookidDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.bookidDataGridViewTextBoxColumn.Name = "bookidDataGridViewTextBoxColumn";
-            this.bookidDataGridViewTextBoxColumn.ReadOnly = true;
-            this.bookidDataGridViewTextBoxColumn.Width = 47;
-            // 
-            // booktitleDataGridViewTextBoxColumn
-            // 
-            this.booktitleDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.booktitleDataGridViewTextBoxColumn.DataPropertyName = "book_title";
-            this.booktitleDataGridViewTextBoxColumn.HeaderText = "Judul";
-            this.booktitleDataGridViewTextBoxColumn.Name = "booktitleDataGridViewTextBoxColumn";
-            this.booktitleDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // Type
             // 
@@ -269,59 +258,6 @@
             this.Type.HeaderText = "Type";
             this.Type.Name = "Type";
             this.Type.ReadOnly = true;
-            // 
-            // booktypeDataGridViewTextBoxColumn
-            // 
-            this.booktypeDataGridViewTextBoxColumn.DataPropertyName = "book_type";
-            this.booktypeDataGridViewTextBoxColumn.HeaderText = "book_type";
-            this.booktypeDataGridViewTextBoxColumn.Name = "booktypeDataGridViewTextBoxColumn";
-            this.booktypeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.booktypeDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // booksontherackDataGridViewTextBoxColumn
-            // 
-            this.booksontherackDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.booksontherackDataGridViewTextBoxColumn.DataPropertyName = "books_on_the_rack";
-            this.booksontherackDataGridViewTextBoxColumn.HeaderText = "Buku di rak";
-            this.booksontherackDataGridViewTextBoxColumn.Name = "booksontherackDataGridViewTextBoxColumn";
-            this.booksontherackDataGridViewTextBoxColumn.ReadOnly = true;
-            this.booksontherackDataGridViewTextBoxColumn.Width = 107;
-            // 
-            // booksborrowedDataGridViewTextBoxColumn
-            // 
-            this.booksborrowedDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.booksborrowedDataGridViewTextBoxColumn.DataPropertyName = "books_borrowed";
-            this.booksborrowedDataGridViewTextBoxColumn.HeaderText = "Buku dipinjam";
-            this.booksborrowedDataGridViewTextBoxColumn.Name = "booksborrowedDataGridViewTextBoxColumn";
-            this.booksborrowedDataGridViewTextBoxColumn.ReadOnly = true;
-            this.booksborrowedDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // totalbooksDataGridViewTextBoxColumn
-            // 
-            this.totalbooksDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.totalbooksDataGridViewTextBoxColumn.DataPropertyName = "total_books";
-            this.totalbooksDataGridViewTextBoxColumn.HeaderText = "Total Buku";
-            this.totalbooksDataGridViewTextBoxColumn.Name = "totalbooksDataGridViewTextBoxColumn";
-            this.totalbooksDataGridViewTextBoxColumn.ReadOnly = true;
-            this.totalbooksDataGridViewTextBoxColumn.Width = 96;
-            // 
-            // photobookDataGridViewTextBoxColumn
-            // 
-            this.photobookDataGridViewTextBoxColumn.DataPropertyName = "photo_book";
-            this.photobookDataGridViewTextBoxColumn.HeaderText = "photo_book";
-            this.photobookDataGridViewTextBoxColumn.Name = "photobookDataGridViewTextBoxColumn";
-            this.photobookDataGridViewTextBoxColumn.ReadOnly = true;
-            this.photobookDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // bookBindingSource
-            // 
-            this.bookBindingSource.DataMember = "book";
-            this.bookBindingSource.DataSource = this.perpusDataSet1;
-            // 
-            // perpusDataSet1
-            // 
-            this.perpusDataSet1.DataSetName = "perpusDataSet1";
-            this.perpusDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btnHapus
             // 
@@ -408,11 +344,6 @@
             this.comboType.TabIndex = 60;
             this.comboType.ValueMember = "type_id";
             this.comboType.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ComboType_KeyPress);
-            // 
-            // typeBindingSource
-            // 
-            this.typeBindingSource.DataMember = "type";
-            this.typeBindingSource.DataSource = this.perpusDataSet1;
             // 
             // btnSrcTambah
             // 
@@ -589,14 +520,6 @@
             this.fillByToolStripButton.Size = new System.Drawing.Size(39, 22);
             this.fillByToolStripButton.Text = "FillBy";
             this.fillByToolStripButton.Click += new System.EventHandler(this.FillByToolStripButton_Click);
-            // 
-            // bookTableAdapter
-            // 
-            this.bookTableAdapter.ClearBeforeFill = true;
-            // 
-            // typeTableAdapter
-            // 
-            this.typeTableAdapter.ClearBeforeFill = true;
             // 
             // panelEdit
             // 
@@ -842,6 +765,28 @@
             this.panelDelete.TabIndex = 58;
             this.panelDelete.Visible = false;
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label14.Location = new System.Drawing.Point(16, 75);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(59, 18);
+            this.label14.TabIndex = 61;
+            this.label14.Text = "Hapus";
+            // 
+            // lblhapus
+            // 
+            this.lblhapus.AutoSize = true;
+            this.lblhapus.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblhapus.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.lblhapus.Location = new System.Drawing.Point(16, 102);
+            this.lblhapus.Name = "lblhapus";
+            this.lblhapus.Size = new System.Drawing.Size(126, 18);
+            this.lblhapus.TabIndex = 60;
+            this.lblhapus.Text = "[Hapus Nama]";
+            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -937,33 +882,128 @@
             // 
             this.errorProvider4.ContainerControl = this;
             // 
-            // lblhapus
+            // fillBy1ToolStrip
             // 
-            this.lblhapus.AutoSize = true;
-            this.lblhapus.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblhapus.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lblhapus.Location = new System.Drawing.Point(16, 102);
-            this.lblhapus.Name = "lblhapus";
-            this.lblhapus.Size = new System.Drawing.Size(126, 18);
-            this.lblhapus.TabIndex = 60;
-            this.lblhapus.Text = "[Hapus Nama]";
+            this.fillBy1ToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.titleToolStripLabel,
+            this.titleToolStripTextBox,
+            this.fillBy1ToolStripButton});
+            this.fillBy1ToolStrip.Location = new System.Drawing.Point(0, 0);
+            this.fillBy1ToolStrip.Name = "fillBy1ToolStrip";
+            this.fillBy1ToolStrip.Size = new System.Drawing.Size(975, 25);
+            this.fillBy1ToolStrip.TabIndex = 60;
+            this.fillBy1ToolStrip.Text = "fillBy1ToolStrip";
+            this.fillBy1ToolStrip.Visible = false;
             // 
-            // label14
+            // titleToolStripLabel
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label14.Location = new System.Drawing.Point(16, 75);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(59, 18);
-            this.label14.TabIndex = 61;
-            this.label14.Text = "Hapus";
+            this.titleToolStripLabel.Name = "titleToolStripLabel";
+            this.titleToolStripLabel.Size = new System.Drawing.Size(30, 22);
+            this.titleToolStripLabel.Text = "title:";
+            // 
+            // titleToolStripTextBox
+            // 
+            this.titleToolStripTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.titleToolStripTextBox.Name = "titleToolStripTextBox";
+            this.titleToolStripTextBox.Size = new System.Drawing.Size(100, 25);
+            // 
+            // fillBy1ToolStripButton
+            // 
+            this.fillBy1ToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.fillBy1ToolStripButton.Name = "fillBy1ToolStripButton";
+            this.fillBy1ToolStripButton.Size = new System.Drawing.Size(45, 22);
+            this.fillBy1ToolStripButton.Text = "FillBy1";
+            this.fillBy1ToolStripButton.Click += new System.EventHandler(this.FillBy1ToolStripButton_Click);
+            // 
+            // typeBindingSource
+            // 
+            this.typeBindingSource.DataMember = "type";
+            this.typeBindingSource.DataSource = this.perpusDataSet1;
+            // 
+            // perpusDataSet1
+            // 
+            this.perpusDataSet1.DataSetName = "perpusDataSet1";
+            this.perpusDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // bookidDataGridViewTextBoxColumn
+            // 
+            this.bookidDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.bookidDataGridViewTextBoxColumn.DataPropertyName = "book_id";
+            this.bookidDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.bookidDataGridViewTextBoxColumn.Name = "bookidDataGridViewTextBoxColumn";
+            this.bookidDataGridViewTextBoxColumn.ReadOnly = true;
+            this.bookidDataGridViewTextBoxColumn.Width = 47;
+            // 
+            // booktitleDataGridViewTextBoxColumn
+            // 
+            this.booktitleDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.booktitleDataGridViewTextBoxColumn.DataPropertyName = "book_title";
+            this.booktitleDataGridViewTextBoxColumn.HeaderText = "Judul";
+            this.booktitleDataGridViewTextBoxColumn.Name = "booktitleDataGridViewTextBoxColumn";
+            this.booktitleDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // booktypeDataGridViewTextBoxColumn
+            // 
+            this.booktypeDataGridViewTextBoxColumn.DataPropertyName = "book_type";
+            this.booktypeDataGridViewTextBoxColumn.HeaderText = "book_type";
+            this.booktypeDataGridViewTextBoxColumn.Name = "booktypeDataGridViewTextBoxColumn";
+            this.booktypeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.booktypeDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // booksontherackDataGridViewTextBoxColumn
+            // 
+            this.booksontherackDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.booksontherackDataGridViewTextBoxColumn.DataPropertyName = "books_on_the_rack";
+            this.booksontherackDataGridViewTextBoxColumn.HeaderText = "Buku di rak";
+            this.booksontherackDataGridViewTextBoxColumn.Name = "booksontherackDataGridViewTextBoxColumn";
+            this.booksontherackDataGridViewTextBoxColumn.ReadOnly = true;
+            this.booksontherackDataGridViewTextBoxColumn.Width = 107;
+            // 
+            // booksborrowedDataGridViewTextBoxColumn
+            // 
+            this.booksborrowedDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.booksborrowedDataGridViewTextBoxColumn.DataPropertyName = "books_borrowed";
+            this.booksborrowedDataGridViewTextBoxColumn.HeaderText = "Buku dipinjam";
+            this.booksborrowedDataGridViewTextBoxColumn.Name = "booksborrowedDataGridViewTextBoxColumn";
+            this.booksborrowedDataGridViewTextBoxColumn.ReadOnly = true;
+            this.booksborrowedDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // totalbooksDataGridViewTextBoxColumn
+            // 
+            this.totalbooksDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.totalbooksDataGridViewTextBoxColumn.DataPropertyName = "total_books";
+            this.totalbooksDataGridViewTextBoxColumn.HeaderText = "Total Buku";
+            this.totalbooksDataGridViewTextBoxColumn.Name = "totalbooksDataGridViewTextBoxColumn";
+            this.totalbooksDataGridViewTextBoxColumn.ReadOnly = true;
+            this.totalbooksDataGridViewTextBoxColumn.Width = 104;
+            // 
+            // photobookDataGridViewTextBoxColumn
+            // 
+            this.photobookDataGridViewTextBoxColumn.DataPropertyName = "photo_book";
+            this.photobookDataGridViewTextBoxColumn.HeaderText = "photo_book";
+            this.photobookDataGridViewTextBoxColumn.Name = "photobookDataGridViewTextBoxColumn";
+            this.photobookDataGridViewTextBoxColumn.ReadOnly = true;
+            this.photobookDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // bookBindingSource
+            // 
+            this.bookBindingSource.DataMember = "book";
+            this.bookBindingSource.DataSource = this.perpusDataSet1;
+            // 
+            // bookTableAdapter
+            // 
+            this.bookTableAdapter.ClearBeforeFill = true;
+            // 
+            // typeTableAdapter
+            // 
+            this.typeTableAdapter.ClearBeforeFill = true;
             // 
             // manBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Controls.Add(this.fillBy1ToolStrip);
             this.Controls.Add(this.fillByToolStrip1);
             this.Controls.Add(this.panelDelete);
             this.Controls.Add(this.panelEdit);
@@ -977,14 +1017,11 @@
             this.Controls.Add(this.txtCari);
             this.Controls.Add(this.dataGridbook);
             this.Name = "manBook";
-            this.Size = new System.Drawing.Size(956, 457);
+            this.Size = new System.Drawing.Size(975, 457);
             this.Load += new System.EventHandler(this.ManBook_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridbook)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.perpusDataSet1)).EndInit();
             this.panelTambah.ResumeLayout(false);
             this.panelTambah.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.typeBindingSource)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picTambah)).EndInit();
@@ -1005,6 +1042,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider4)).EndInit();
+            this.fillBy1ToolStrip.ResumeLayout(false);
+            this.fillBy1ToolStrip.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.typeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.perpusDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1086,5 +1128,9 @@
         private System.Windows.Forms.ErrorProvider errorProvider4;
         private System.Windows.Forms.Label lblhapus;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.ToolStrip fillBy1ToolStrip;
+        private System.Windows.Forms.ToolStripLabel titleToolStripLabel;
+        private System.Windows.Forms.ToolStripTextBox titleToolStripTextBox;
+        private System.Windows.Forms.ToolStripButton fillBy1ToolStripButton;
     }
 }

@@ -67,6 +67,16 @@ namespace perpus
             }
         }
 
+        private void GEtTyepeText()
+        {
+            for (int i = 0; i < dataGridbook.RowCount; i++)
+            {
+                type tBook = new type();
+                tBook = db.types.Single(x => x.type_id == Convert.ToInt32(dataGridbook.Rows[i].Cells[3].Value));
+                dataGridbook.Rows[i].Cells[2].Value = tBook.type_name;
+            }
+        }
+
         public void loadManbook()
         {
             loadCombo();
@@ -95,14 +105,7 @@ namespace perpus
             {
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
-
-
-            for (int i = 0; i < dataGridbook.RowCount; i++)
-            {
-                type tBook = new type();
-                tBook = db.types.Single(x => x.type_id == Convert.ToInt32(dataGridbook.Rows[i].Cells[3].Value));
-                dataGridbook.Rows[i].Cells[2].Value = tBook.type_name;
-            }
+            GEtTyepeText();
 
         }
 
@@ -271,6 +274,25 @@ namespace perpus
             db.books.DeleteOnSubmit(Book);
             db.SubmitChanges();
             loadManbook();
+        }
+
+        private void TxtCari_KeyUp(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                this.bookTableAdapter.FillBy1(this.perpusDataSet1.book, txtCari.Text);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+            GEtTyepeText();
+        }
+
+        private void FillBy1ToolStripButton_Click(object sender, EventArgs e)
+        {
+          
+
         }
     }
 }
