@@ -233,10 +233,26 @@ namespace perpus
             txtedittotal.Text = ro.Cells[6].Value.ToString();
             txtpicedit.Text = ro.Cells[7].Value.ToString();
 
+            lblhapus.Text = ro.Cells[1].Value.ToString();
+
             picedit.ImageLocation = txtpicedit.Text;
 
             btnHapus.Enabled = true;
             btnEdit.Enabled = true;
+
+        }
+
+        private void Btnsimpanedit_Click(object sender, EventArgs e)
+        {
+            book Book = new book();
+            Book = db.books.Single(x => x.book_id == ID);
+            Book.book_title = txteditjudul.Text;
+            Book.book_type = Convert.ToInt32(comboEdittype.SelectedValue);
+            Book.total_books = Convert.ToInt32(txtedittotal.Text);
+            Book.books_on_the_rack = Convert.ToInt32(txtedittotal.Text) - Book.books_borrowed;
+            Book.photo_book = txtpicedit.Text;
+            db.books.InsertOnSubmit(Book);
+            db.SubmitChanges();
 
         }
     }
