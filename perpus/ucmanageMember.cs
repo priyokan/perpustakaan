@@ -93,6 +93,7 @@ namespace perpus
 
         private void BtnTambah_Click(object sender, EventArgs e)
         {
+            if(txtnama.Text != ""&&txtemail.Text !=""&&txthandphone.Text!="") 
             member memm = new member();
             memm.nama = txtnama.Text;
             memm.email = txtemail.Text;
