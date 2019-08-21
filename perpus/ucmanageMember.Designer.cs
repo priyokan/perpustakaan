@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelActive = new System.Windows.Forms.Panel();
             this.panelCetakKartu = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -55,34 +55,45 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtnama = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.dataGridEmployee = new System.Windows.Forms.DataGridView();
-            this.nisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.namaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.handphoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.joindateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.memberBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.perpusDataSet1 = new perpus.perpusDataSet1();
-            this.memberTableAdapter = new perpus.perpusDataSet1TableAdapters.memberTableAdapter();
+            this.dataGridMember = new System.Windows.Forms.DataGridView();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnSrc = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtPic = new System.Windows.Forms.TextBox();
+            this.picture = new System.Windows.Forms.PictureBox();
+            this.errorProvider4 = new System.Windows.Forms.ErrorProvider(this.components);
             this.fillByToolStrip = new System.Windows.Forms.ToolStrip();
             this.fillByToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.fillBy1ToolStrip = new System.Windows.Forms.ToolStrip();
             this.namaToolStripLabel = new System.Windows.Forms.ToolStripLabel();
             this.namaToolStripTextBox = new System.Windows.Forms.ToolStripTextBox();
             this.fillBy1ToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.nisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.namaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.handphoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.joindateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pohotoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.memberBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.perpusDataSet2 = new perpus.perpusDataSet2();
+            this.perpusDataSet2BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.memberTableAdapter = new perpus.perpusDataSet2TableAdapters.memberTableAdapter();
             this.panelCetakKartu.SuspendLayout();
             this.panelBtnManageMember.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridEmployee)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memberBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.perpusDataSet1)).BeginInit();
-            this.fillByToolStrip.SuspendLayout();
-            this.fillBy1ToolStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridMember)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider4)).BeginInit();
+            this.fillByToolStrip.SuspendLayout();
+            this.fillBy1ToolStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.memberBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.perpusDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.perpusDataSet2BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panelActive
@@ -200,7 +211,7 @@
             this.btnHapus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHapus.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHapus.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnHapus.Location = new System.Drawing.Point(818, 290);
+            this.btnHapus.Location = new System.Drawing.Point(820, 449);
             this.btnHapus.Name = "btnHapus";
             this.btnHapus.Size = new System.Drawing.Size(85, 35);
             this.btnHapus.TabIndex = 46;
@@ -214,7 +225,7 @@
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnEdit.Location = new System.Drawing.Point(720, 290);
+            this.btnEdit.Location = new System.Drawing.Point(722, 449);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(85, 35);
             this.btnEdit.TabIndex = 45;
@@ -228,7 +239,7 @@
             this.btnTambah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTambah.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTambah.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnTambah.Location = new System.Drawing.Point(620, 290);
+            this.btnTambah.Location = new System.Drawing.Point(622, 449);
             this.btnTambah.Name = "btnTambah";
             this.btnTambah.Size = new System.Drawing.Size(85, 35);
             this.btnTambah.TabIndex = 44;
@@ -328,114 +339,132 @@
             this.label9.TabIndex = 32;
             this.label9.Text = "Nama";
             // 
-            // dataGridEmployee
+            // dataGridMember
             // 
-            this.dataGridEmployee.AllowUserToAddRows = false;
-            this.dataGridEmployee.AllowUserToDeleteRows = false;
-            this.dataGridEmployee.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridEmployee.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
-            this.dataGridEmployee.AutoGenerateColumns = false;
-            this.dataGridEmployee.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.dataGridEmployee.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridEmployee.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.AliceBlue;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridEmployee.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
-            this.dataGridEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridEmployee.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridMember.AllowUserToAddRows = false;
+            this.dataGridMember.AllowUserToDeleteRows = false;
+            this.dataGridMember.AllowUserToOrderColumns = true;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridMember.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridMember.AutoGenerateColumns = false;
+            this.dataGridMember.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridMember.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridMember.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.AliceBlue;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridMember.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridMember.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridMember.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nisDataGridViewTextBoxColumn,
             this.namaDataGridViewTextBoxColumn,
             this.emailDataGridViewTextBoxColumn,
             this.handphoneDataGridViewTextBoxColumn,
-            this.joindateDataGridViewTextBoxColumn});
-            this.dataGridEmployee.DataSource = this.memberBindingSource;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridEmployee.DefaultCellStyle = dataGridViewCellStyle11;
-            this.dataGridEmployee.GridColor = System.Drawing.Color.WhiteSmoke;
-            this.dataGridEmployee.Location = new System.Drawing.Point(37, 140);
-            this.dataGridEmployee.Name = "dataGridEmployee";
-            this.dataGridEmployee.ReadOnly = true;
-            this.dataGridEmployee.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridEmployee.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
-            this.dataGridEmployee.RowHeadersVisible = false;
-            this.dataGridEmployee.Size = new System.Drawing.Size(558, 344);
-            this.dataGridEmployee.TabIndex = 31;
+            this.joindateDataGridViewTextBoxColumn,
+            this.pohotoDataGridViewTextBoxColumn});
+            this.dataGridMember.DataSource = this.memberBindingSource;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridMember.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridMember.GridColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridMember.Location = new System.Drawing.Point(37, 140);
+            this.dataGridMember.Name = "dataGridMember";
+            this.dataGridMember.ReadOnly = true;
+            this.dataGridMember.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridMember.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridMember.RowHeadersVisible = false;
+            this.dataGridMember.Size = new System.Drawing.Size(558, 344);
+            this.dataGridMember.TabIndex = 31;
+            this.dataGridMember.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridMember_CellClick);
             // 
-            // nisDataGridViewTextBoxColumn
+            // errorProvider1
             // 
-            this.nisDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.nisDataGridViewTextBoxColumn.DataPropertyName = "nis";
-            this.nisDataGridViewTextBoxColumn.HeaderText = "nis";
-            this.nisDataGridViewTextBoxColumn.Name = "nisDataGridViewTextBoxColumn";
-            this.nisDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nisDataGridViewTextBoxColumn.Width = 52;
+            this.errorProvider1.ContainerControl = this;
             // 
-            // namaDataGridViewTextBoxColumn
+            // errorProvider2
             // 
-            this.namaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.namaDataGridViewTextBoxColumn.DataPropertyName = "nama";
-            this.namaDataGridViewTextBoxColumn.HeaderText = "nama";
-            this.namaDataGridViewTextBoxColumn.Name = "namaDataGridViewTextBoxColumn";
-            this.namaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.errorProvider2.ContainerControl = this;
             // 
-            // emailDataGridViewTextBoxColumn
+            // errorProvider3
             // 
-            this.emailDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "email";
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
+            this.errorProvider3.ContainerControl = this;
             // 
-            // handphoneDataGridViewTextBoxColumn
+            // btnSrc
             // 
-            this.handphoneDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.handphoneDataGridViewTextBoxColumn.DataPropertyName = "handphone";
-            this.handphoneDataGridViewTextBoxColumn.HeaderText = "handphone";
-            this.handphoneDataGridViewTextBoxColumn.Name = "handphoneDataGridViewTextBoxColumn";
-            this.handphoneDataGridViewTextBoxColumn.ReadOnly = true;
+            this.btnSrc.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.btnSrc.FlatAppearance.BorderSize = 0;
+            this.btnSrc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSrc.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSrc.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnSrc.Location = new System.Drawing.Point(870, 412);
+            this.btnSrc.Name = "btnSrc";
+            this.btnSrc.Size = new System.Drawing.Size(34, 20);
+            this.btnSrc.TabIndex = 64;
+            this.btnSrc.Text = "...";
+            this.btnSrc.UseVisualStyleBackColor = false;
+            this.btnSrc.Click += new System.EventHandler(this.BtnSrc_Click);
             // 
-            // joindateDataGridViewTextBoxColumn
+            // panel5
             // 
-            this.joindateDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.joindateDataGridViewTextBoxColumn.DataPropertyName = "joindate";
-            this.joindateDataGridViewTextBoxColumn.HeaderText = "joindate";
-            this.joindateDataGridViewTextBoxColumn.Name = "joindateDataGridViewTextBoxColumn";
-            this.joindateDataGridViewTextBoxColumn.ReadOnly = true;
-            this.joindateDataGridViewTextBoxColumn.Width = 84;
+            this.panel5.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.panel5.Location = new System.Drawing.Point(703, 430);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(200, 2);
+            this.panel5.TabIndex = 63;
             // 
-            // memberBindingSource
+            // label6
             // 
-            this.memberBindingSource.DataMember = "member";
-            this.memberBindingSource.DataSource = this.perpusDataSet1;
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.label6.Location = new System.Drawing.Point(619, 416);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(46, 16);
+            this.label6.TabIndex = 61;
+            this.label6.Text = "Photo";
             // 
-            // perpusDataSet1
+            // txtPic
             // 
-            this.perpusDataSet1.DataSetName = "perpusDataSet1";
-            this.perpusDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.txtPic.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtPic.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPic.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPic.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.txtPic.Location = new System.Drawing.Point(703, 414);
+            this.txtPic.Name = "txtPic";
+            this.txtPic.Size = new System.Drawing.Size(161, 16);
+            this.txtPic.TabIndex = 62;
             // 
-            // memberTableAdapter
+            // picture
             // 
-            this.memberTableAdapter.ClearBeforeFill = true;
+            this.picture.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picture.Location = new System.Drawing.Point(703, 280);
+            this.picture.Name = "picture";
+            this.picture.Size = new System.Drawing.Size(200, 126);
+            this.picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picture.TabIndex = 60;
+            this.picture.TabStop = false;
+            // 
+            // errorProvider4
+            // 
+            this.errorProvider4.ContainerControl = this;
             // 
             // fillByToolStrip
             // 
@@ -444,7 +473,7 @@
             this.fillByToolStrip.Location = new System.Drawing.Point(0, 0);
             this.fillByToolStrip.Name = "fillByToolStrip";
             this.fillByToolStrip.Size = new System.Drawing.Size(956, 25);
-            this.fillByToolStrip.TabIndex = 50;
+            this.fillByToolStrip.TabIndex = 65;
             this.fillByToolStrip.Text = "fillByToolStrip";
             this.fillByToolStrip.Visible = false;
             // 
@@ -454,7 +483,7 @@
             this.fillByToolStripButton.Name = "fillByToolStripButton";
             this.fillByToolStripButton.Size = new System.Drawing.Size(39, 22);
             this.fillByToolStripButton.Text = "FillBy";
-            this.fillByToolStripButton.Click += new System.EventHandler(this.FillByToolStripButton_Click);
+            this.fillByToolStripButton.Click += new System.EventHandler(this.FillByToolStripButton_Click_1);
             // 
             // fillBy1ToolStrip
             // 
@@ -465,7 +494,7 @@
             this.fillBy1ToolStrip.Location = new System.Drawing.Point(0, 0);
             this.fillBy1ToolStrip.Name = "fillBy1ToolStrip";
             this.fillBy1ToolStrip.Size = new System.Drawing.Size(956, 25);
-            this.fillBy1ToolStrip.TabIndex = 51;
+            this.fillBy1ToolStrip.TabIndex = 66;
             this.fillBy1ToolStrip.Text = "fillBy1ToolStrip";
             this.fillBy1ToolStrip.Visible = false;
             // 
@@ -487,19 +516,68 @@
             this.fillBy1ToolStripButton.Name = "fillBy1ToolStripButton";
             this.fillBy1ToolStripButton.Size = new System.Drawing.Size(45, 22);
             this.fillBy1ToolStripButton.Text = "FillBy1";
-            this.fillBy1ToolStripButton.Click += new System.EventHandler(this.FillBy1ToolStripButton_Click);
+            this.fillBy1ToolStripButton.Click += new System.EventHandler(this.FillBy1ToolStripButton_Click_1);
             // 
-            // errorProvider1
+            // nisDataGridViewTextBoxColumn
             // 
-            this.errorProvider1.ContainerControl = this;
+            this.nisDataGridViewTextBoxColumn.DataPropertyName = "nis";
+            this.nisDataGridViewTextBoxColumn.HeaderText = "nis";
+            this.nisDataGridViewTextBoxColumn.Name = "nisDataGridViewTextBoxColumn";
+            this.nisDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // errorProvider2
+            // namaDataGridViewTextBoxColumn
             // 
-            this.errorProvider2.ContainerControl = this;
+            this.namaDataGridViewTextBoxColumn.DataPropertyName = "nama";
+            this.namaDataGridViewTextBoxColumn.HeaderText = "nama";
+            this.namaDataGridViewTextBoxColumn.Name = "namaDataGridViewTextBoxColumn";
+            this.namaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // errorProvider3
+            // emailDataGridViewTextBoxColumn
             // 
-            this.errorProvider3.ContainerControl = this;
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "email";
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // handphoneDataGridViewTextBoxColumn
+            // 
+            this.handphoneDataGridViewTextBoxColumn.DataPropertyName = "handphone";
+            this.handphoneDataGridViewTextBoxColumn.HeaderText = "handphone";
+            this.handphoneDataGridViewTextBoxColumn.Name = "handphoneDataGridViewTextBoxColumn";
+            this.handphoneDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // joindateDataGridViewTextBoxColumn
+            // 
+            this.joindateDataGridViewTextBoxColumn.DataPropertyName = "joindate";
+            this.joindateDataGridViewTextBoxColumn.HeaderText = "joindate";
+            this.joindateDataGridViewTextBoxColumn.Name = "joindateDataGridViewTextBoxColumn";
+            this.joindateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // pohotoDataGridViewTextBoxColumn
+            // 
+            this.pohotoDataGridViewTextBoxColumn.DataPropertyName = "pohoto";
+            this.pohotoDataGridViewTextBoxColumn.HeaderText = "pohoto";
+            this.pohotoDataGridViewTextBoxColumn.Name = "pohotoDataGridViewTextBoxColumn";
+            this.pohotoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // memberBindingSource
+            // 
+            this.memberBindingSource.DataMember = "member";
+            this.memberBindingSource.DataSource = this.perpusDataSet2;
+            // 
+            // perpusDataSet2
+            // 
+            this.perpusDataSet2.DataSetName = "perpusDataSet2";
+            this.perpusDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // perpusDataSet2BindingSource
+            // 
+            this.perpusDataSet2BindingSource.DataSource = this.perpusDataSet2;
+            this.perpusDataSet2BindingSource.Position = 0;
+            // 
+            // memberTableAdapter
+            // 
+            this.memberTableAdapter.ClearBeforeFill = true;
             // 
             // ucmanageMember
             // 
@@ -508,6 +586,11 @@
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.Controls.Add(this.fillBy1ToolStrip);
             this.Controls.Add(this.fillByToolStrip);
+            this.Controls.Add(this.btnSrc);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txtPic);
+            this.Controls.Add(this.picture);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.txtCari);
@@ -523,7 +606,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.txtnama);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.dataGridEmployee);
+            this.Controls.Add(this.dataGridMember);
             this.Controls.Add(this.panelCetakKartu);
             this.Controls.Add(this.panelBtnManageMember);
             this.Name = "ucmanageMember";
@@ -533,16 +616,19 @@
             this.panelCetakKartu.PerformLayout();
             this.panelBtnManageMember.ResumeLayout(false);
             this.panelBtnManageMember.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridEmployee)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memberBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.perpusDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridMember)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider4)).EndInit();
             this.fillByToolStrip.ResumeLayout(false);
             this.fillByToolStrip.PerformLayout();
             this.fillBy1ToolStrip.ResumeLayout(false);
             this.fillBy1ToolStrip.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memberBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.perpusDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.perpusDataSet2BindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -572,23 +658,31 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txtnama;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.DataGridView dataGridEmployee;
+        private System.Windows.Forms.DataGridView dataGridMember;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ErrorProvider errorProvider2;
+        private System.Windows.Forms.ErrorProvider errorProvider3;
+        private System.Windows.Forms.Button btnSrc;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtPic;
+        private System.Windows.Forms.PictureBox picture;
+        private System.Windows.Forms.ErrorProvider errorProvider4;
         private System.Windows.Forms.DataGridViewTextBoxColumn nisDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn namaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn handphoneDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn joindateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pohotoDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource memberBindingSource;
-        private perpusDataSet1 perpusDataSet1;
-        private perpusDataSet1TableAdapters.memberTableAdapter memberTableAdapter;
+        private perpusDataSet2 perpusDataSet2;
         private System.Windows.Forms.ToolStrip fillByToolStrip;
         private System.Windows.Forms.ToolStripButton fillByToolStripButton;
+        private System.Windows.Forms.BindingSource perpusDataSet2BindingSource;
+        private perpusDataSet2TableAdapters.memberTableAdapter memberTableAdapter;
         private System.Windows.Forms.ToolStrip fillBy1ToolStrip;
         private System.Windows.Forms.ToolStripLabel namaToolStripLabel;
         private System.Windows.Forms.ToolStripTextBox namaToolStripTextBox;
         private System.Windows.Forms.ToolStripButton fillBy1ToolStripButton;
-        private System.Windows.Forms.ErrorProvider errorProvider1;
-        private System.Windows.Forms.ErrorProvider errorProvider2;
-        private System.Windows.Forms.ErrorProvider errorProvider3;
     }
 }

@@ -30,7 +30,7 @@ namespace perpus
         {
             try
             {
-                this.memberTableAdapter.FillBy(this.perpusDataSet1.member);
+                this.memberTableAdapter.FillBy(this.perpusDataSet2.member);
             }
             catch (System.Exception ex)
             {
@@ -49,6 +49,10 @@ namespace perpus
             errorProvider1.Clear();
             errorProvider2.Clear();
             errorProvider3.Clear();
+
+
+            btnEdit.Enabled = false;
+            btnHapus.Enabled = false;
         }
         private void inputValidation()
         {
@@ -67,6 +71,10 @@ namespace perpus
             if (txthandphone.Text == "")
             {
                 errorProvider3.SetError(txthandphone, "handphone harus diisi");
+            }
+            if (txtPic.Text == "")
+            {
+                errorProvider4.SetError(btnSrc, "photo harus diisi");
             }
         }
 
@@ -89,21 +97,11 @@ namespace perpus
 
         }
 
-        private void FillByToolStripButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FillBy1ToolStripButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void TxtCari_KeyUp(object sender, KeyEventArgs e)
         {
             try
             {
-                this.memberTableAdapter.FillBy1(this.perpusDataSet1.member, txtCari.Text);
+                this.memberTableAdapter.FillBy1(this.perpusDataSet2.member, txtCari.Text);
             }
             catch (System.Exception ex)
             {
@@ -126,8 +124,41 @@ namespace perpus
             }
             else
             {
-
+                inputValidation();
             }
+        }
+
+        private void DataGridMember_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = dataGridMember.CurrentRow;
+            ID = Convert.ToInt32(row.Cells[0].Value);
+            txtnama.Text = row.Cells[1].Value.ToString();
+            txtemail.Text = row.Cells[2].Value.ToString();
+            txthandphone.Text = row.Cells[3].Value.ToString();
+
+            btnEdit.Enabled = true;
+            btnHapus.Enabled = true;
+        }
+
+        private void BtnSrc_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog open = new OpenFileDialog();
+            open.Filter = "Image files(*.jpg,*.png,*.jpeg)|*.jpg;*.png;*.jpeg";
+            if(open.ShowDialog() == DialogResult.OK)
+            {
+                txtPic.Text = open.FileName;
+                picture.ImageLocation = open.FileName;
+            }
+        }
+
+        private void FillByToolStripButton_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FillBy1ToolStripButton_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
