@@ -244,16 +244,25 @@ namespace perpus
 
         private void Btnsimpanedit_Click(object sender, EventArgs e)
         {
-            book Book = new book();
-            Book = db.books.Single(x => x.book_id == ID);
-            Book.book_title = txteditjudul.Text;
-            Book.book_type = Convert.ToInt32(comboEdittype.SelectedValue);
-            Book.total_books = Convert.ToInt32(txtedittotal.Text);
-            Book.books_on_the_rack = Convert.ToInt32(txtedittotal.Text) - Book.books_borrowed;
-            Book.photo_book = txtpicedit.Text;
-            db.books.InsertOnSubmit(Book);
-            db.SubmitChanges();
-            loadManbook();
+            if (txtjudulTambah.Text != "" && txtPictambah.Text != ""
+                 && comboType.Text != "" && txtTotalTambah.Text != "")
+            {
+                book Book = new book();
+                Book = db.books.Single(x => x.book_id == ID);
+                Book.book_title = txteditjudul.Text;
+                Book.book_type = Convert.ToInt32(comboEdittype.SelectedValue);
+                Book.total_books = Convert.ToInt32(txtedittotal.Text);
+                Book.books_on_the_rack = Convert.ToInt32(txtedittotal.Text) - Book.books_borrowed;
+                Book.photo_book = txtpicedit.Text;
+                db.books.InsertOnSubmit(Book);
+                db.SubmitChanges();
+                loadManbook();
+            }
+            else
+            {
+                inputValidation();
+            }
+          
         }
     }
 }
