@@ -48,6 +48,7 @@ namespace perpus
         private void BtnManageMember_Click(object sender, EventArgs e)
         {
             btnactive.Location = btnManageMember.Location;
+            ucmanageMember1.BringToFront();
         }
 
         private void BtnMasterDenda_Click(object sender, EventArgs e)
@@ -69,6 +70,11 @@ namespace perpus
         }
 
         private void ManageBuku1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UcmanageMember1_Load(object sender, EventArgs e)
         {
 
         }

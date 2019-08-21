@@ -122,6 +122,12 @@
     <Compile Include="typeBook.Designer.cs">
       <DependentUpon>typeBook.cs</DependentUpon>
     </Compile>
+    <Compile Include="ucmanageMember.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucmanageMember.Designer.cs">
+      <DependentUpon>ucmanageMember.cs</DependentUpon>
+    </Compile>
     <Compile Include="userControlAbsen.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -160,6 +166,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="typeBook.resx">
       <DependentUpon>typeBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucmanageMember.resx">
+      <DependentUpon>ucmanageMember.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="userControlAbsen.resx">
       <DependentUpon>userControlAbsen.cs</DependentUpon>

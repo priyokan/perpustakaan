@@ -35,8 +35,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panelActive = new System.Windows.Forms.Panel();
-            this.typeBook1 = new perpus.typeBook();
             this.manBook1 = new perpus.manBook();
+            this.typeBook1 = new perpus.typeBook();
             this.panelManageBuku.SuspendLayout();
             this.panelManageType.SuspendLayout();
             this.SuspendLayout();
@@ -121,14 +121,6 @@
             this.panelActive.Size = new System.Drawing.Size(10, 70);
             this.panelActive.TabIndex = 28;
             // 
-            // typeBook1
-            // 
-            this.typeBook1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.typeBook1.Location = new System.Drawing.Point(0, 111);
-            this.typeBook1.Name = "typeBook1";
-            this.typeBook1.Size = new System.Drawing.Size(956, 404);
-            this.typeBook1.TabIndex = 29;
-            // 
             // manBook1
             // 
             this.manBook1.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -136,6 +128,14 @@
             this.manBook1.Name = "manBook1";
             this.manBook1.Size = new System.Drawing.Size(956, 411);
             this.manBook1.TabIndex = 30;
+            // 
+            // typeBook1
+            // 
+            this.typeBook1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.typeBook1.Location = new System.Drawing.Point(0, 111);
+            this.typeBook1.Name = "typeBook1";
+            this.typeBook1.Size = new System.Drawing.Size(956, 404);
+            this.typeBook1.TabIndex = 29;
             // 
             // manageBuku
             // 
@@ -149,6 +149,7 @@
             this.Controls.Add(this.panelManageBuku);
             this.Name = "manageBuku";
             this.Size = new System.Drawing.Size(956, 525);
+            this.Load += new System.EventHandler(this.ManageBuku_Load);
             this.panelManageBuku.ResumeLayout(false);
             this.panelManageBuku.PerformLayout();
             this.panelManageType.ResumeLayout(false);

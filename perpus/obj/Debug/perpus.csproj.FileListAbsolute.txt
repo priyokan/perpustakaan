@@ -77,3 +77,4 @@ C:\Users\Priyo Nugroho\source\repos\perpus\perpus\obj\Debug\perpus.csproj.CopyCo
 C:\Users\Priyo Nugroho\source\repos\perpus\perpus\obj\Debug\perpus.manageBuku.resources
 C:\Users\Priyo Nugroho\source\repos\perpus\perpus\obj\Debug\perpus.typeBook.resources
 C:\Users\Priyo Nugroho\source\repos\perpus\perpus\obj\Debug\perpus.manBook.resources
+C:\Users\Priyo Nugroho\source\repos\perpus\perpus\obj\Debug\perpus.ucmanageMember.resources

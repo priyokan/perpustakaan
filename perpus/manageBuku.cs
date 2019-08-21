@@ -50,5 +50,10 @@ namespace perpus
             manBook1.Visible = false;
             typeBook1.BringToFront();
         }
+
+        private void ManageBuku_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

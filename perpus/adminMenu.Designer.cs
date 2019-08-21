@@ -43,6 +43,7 @@
             this.btnLogout = new System.Windows.Forms.Button();
             this.manageBuku1 = new perpus.manageBuku();
             this.manageKaryawan1 = new perpus.Resources.manageKaryawan();
+            this.ucmanageMember1 = new perpus.ucmanageMember();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -251,12 +252,21 @@
             // manageKaryawan1
             // 
             this.manageKaryawan1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.manageKaryawan1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.manageKaryawan1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.manageKaryawan1.Location = new System.Drawing.Point(225, 39);
             this.manageKaryawan1.Name = "manageKaryawan1";
             this.manageKaryawan1.Size = new System.Drawing.Size(976, 525);
             this.manageKaryawan1.TabIndex = 14;
             this.manageKaryawan1.Load += new System.EventHandler(this.ManageKaryawan1_Load);
+            // 
+            // ucmanageMember1
+            // 
+            this.ucmanageMember1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ucmanageMember1.Location = new System.Drawing.Point(225, 39);
+            this.ucmanageMember1.Name = "ucmanageMember1";
+            this.ucmanageMember1.Size = new System.Drawing.Size(956, 525);
+            this.ucmanageMember1.TabIndex = 16;
+            this.ucmanageMember1.Load += new System.EventHandler(this.UcmanageMember1_Load);
             // 
             // adminMenu
             // 
@@ -264,6 +274,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1256, 591);
+            this.Controls.Add(this.ucmanageMember1);
             this.Controls.Add(this.manageBuku1);
             this.Controls.Add(this.manageKaryawan1);
             this.Controls.Add(this.panel1);
@@ -299,5 +310,6 @@
         private System.Windows.Forms.Button btnMasterDenda;
         private Resources.manageKaryawan manageKaryawan1;
         private manageBuku manageBuku1;
+        private ucmanageMember ucmanageMember1;
     }
 }

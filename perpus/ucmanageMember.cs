@@ -16,5 +16,18 @@ namespace perpus
         {
             InitializeComponent();
         }
+
+        private void UcmanageMember_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Txtpassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
