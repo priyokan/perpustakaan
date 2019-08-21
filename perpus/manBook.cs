@@ -75,6 +75,9 @@ namespace perpus
             panelEdit.Visible = false;
             panelTambah.Visible = false;
 
+            btnEdit.Enabled = false;
+            btnHapus.Enabled = false;
+
             txteditjudul.Text = "";
             txtedittotal.Text = "";
             txtjudulTambah.Text = "";
@@ -93,6 +96,13 @@ namespace perpus
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
 
+
+            for (int i = 0; i < dataGridbook.RowCount; i++)
+            {
+                type tBook = new type();
+                tBook = db.types.Single(x => x.type_id == Convert.ToInt32(dataGridbook.Rows[i].Cells[3].Value));
+                dataGridbook.Rows[i].Cells[2].Value = tBook.type_name;
+            }
 
         }
 
@@ -212,6 +222,22 @@ namespace perpus
                 picedit.ImageLocation = open.FileName;
                 txtpicedit.Text = open.FileName;
             }
+        }
+
+        private void DataGridbook_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow ro = dataGridbook.CurrentRow;
+            ID = Convert.ToInt32(ro.Cells[0].Value);
+            txteditjudul.Text = ro.Cells[1].Value.ToString();
+            comboEdittype.SelectedValue = ro.Cells[3].Value.ToString();
+            txtedittotal.Text = ro.Cells[6].Value.ToString();
+            txtpicedit.Text = ro.Cells[7].Value.ToString();
+
+            picedit.ImageLocation = txtpicedit.Text;
+
+            btnHapus.Enabled = true;
+            btnEdit.Enabled = true;
+
         }
     }
 }

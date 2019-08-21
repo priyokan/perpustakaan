@@ -39,7 +39,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtjudulTambah = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.dataGridtypebook = new System.Windows.Forms.DataGridView();
+            this.dataGridbook = new System.Windows.Forms.DataGridView();
             this.bookidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.booktitleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -105,7 +105,8 @@
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider4 = new System.Windows.Forms.ErrorProvider(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridtypebook)).BeginInit();
+            this.lblhapus = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridbook)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.perpusDataSet1)).BeginInit();
             this.panelTambah.SuspendLayout();
@@ -185,19 +186,19 @@
             this.label3.TabIndex = 43;
             this.label3.Text = "Judul";
             // 
-            // dataGridtypebook
+            // dataGridbook
             // 
-            this.dataGridtypebook.AllowUserToAddRows = false;
-            this.dataGridtypebook.AllowUserToDeleteRows = false;
-            this.dataGridtypebook.AllowUserToOrderColumns = true;
+            this.dataGridbook.AllowUserToAddRows = false;
+            this.dataGridbook.AllowUserToDeleteRows = false;
+            this.dataGridbook.AllowUserToOrderColumns = true;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridtypebook.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridtypebook.AutoGenerateColumns = false;
-            this.dataGridtypebook.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.dataGridtypebook.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridtypebook.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
-            this.dataGridtypebook.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dataGridbook.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridbook.AutoGenerateColumns = false;
+            this.dataGridbook.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridbook.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridbook.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
+            this.dataGridbook.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -205,9 +206,9 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HotTrack;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridtypebook.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridtypebook.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridtypebook.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridbook.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridbook.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridbook.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.bookidDataGridViewTextBoxColumn,
             this.booktitleDataGridViewTextBoxColumn,
             this.Type,
@@ -216,8 +217,8 @@
             this.booksborrowedDataGridViewTextBoxColumn,
             this.totalbooksDataGridViewTextBoxColumn,
             this.photobookDataGridViewTextBoxColumn});
-            this.dataGridtypebook.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.dataGridtypebook.DataSource = this.bookBindingSource;
+            this.dataGridbook.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.dataGridbook.DataSource = this.bookBindingSource;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -225,12 +226,12 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridtypebook.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridtypebook.GridColor = System.Drawing.Color.WhiteSmoke;
-            this.dataGridtypebook.Location = new System.Drawing.Point(51, 47);
-            this.dataGridtypebook.Name = "dataGridtypebook";
-            this.dataGridtypebook.ReadOnly = true;
-            this.dataGridtypebook.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGridbook.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridbook.GridColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridbook.Location = new System.Drawing.Point(51, 47);
+            this.dataGridbook.Name = "dataGridbook";
+            this.dataGridbook.ReadOnly = true;
+            this.dataGridbook.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -238,10 +239,11 @@
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.GrayText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridtypebook.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridtypebook.RowHeadersVisible = false;
-            this.dataGridtypebook.Size = new System.Drawing.Size(844, 356);
-            this.dataGridtypebook.TabIndex = 42;
+            this.dataGridbook.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridbook.RowHeadersVisible = false;
+            this.dataGridbook.Size = new System.Drawing.Size(844, 356);
+            this.dataGridbook.TabIndex = 42;
+            this.dataGridbook.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridbook_CellClick);
             // 
             // bookidDataGridViewTextBoxColumn
             // 
@@ -282,7 +284,7 @@
             this.booksontherackDataGridViewTextBoxColumn.HeaderText = "Buku di rak";
             this.booksontherackDataGridViewTextBoxColumn.Name = "booksontherackDataGridViewTextBoxColumn";
             this.booksontherackDataGridViewTextBoxColumn.ReadOnly = true;
-            this.booksontherackDataGridViewTextBoxColumn.Width = 79;
+            this.booksontherackDataGridViewTextBoxColumn.Width = 107;
             // 
             // booksborrowedDataGridViewTextBoxColumn
             // 
@@ -291,7 +293,7 @@
             this.booksborrowedDataGridViewTextBoxColumn.HeaderText = "Buku dipinjam";
             this.booksborrowedDataGridViewTextBoxColumn.Name = "booksborrowedDataGridViewTextBoxColumn";
             this.booksborrowedDataGridViewTextBoxColumn.ReadOnly = true;
-            this.booksborrowedDataGridViewTextBoxColumn.Width = 114;
+            this.booksborrowedDataGridViewTextBoxColumn.Width = 125;
             // 
             // totalbooksDataGridViewTextBoxColumn
             // 
@@ -825,6 +827,7 @@
             // panelDelete
             // 
             this.panelDelete.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panelDelete.Controls.Add(this.lblhapus);
             this.panelDelete.Controls.Add(this.label13);
             this.panelDelete.Controls.Add(this.btndeleteOK);
             this.panelDelete.Controls.Add(this.panel14);
@@ -832,7 +835,7 @@
             this.panelDelete.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.panelDelete.Location = new System.Drawing.Point(668, 84);
             this.panelDelete.Name = "panelDelete";
-            this.panelDelete.Size = new System.Drawing.Size(287, 76);
+            this.panelDelete.Size = new System.Drawing.Size(287, 111);
             this.panelDelete.TabIndex = 58;
             this.panelDelete.Visible = false;
             // 
@@ -854,7 +857,7 @@
             this.btndeleteOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btndeleteOK.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btndeleteOK.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btndeleteOK.Location = new System.Drawing.Point(209, 40);
+            this.btndeleteOK.Location = new System.Drawing.Point(209, 75);
             this.btndeleteOK.Name = "btndeleteOK";
             this.btndeleteOK.Size = new System.Drawing.Size(77, 35);
             this.btndeleteOK.TabIndex = 58;
@@ -930,6 +933,17 @@
             // 
             this.errorProvider4.ContainerControl = this;
             // 
+            // lblhapus
+            // 
+            this.lblhapus.AutoSize = true;
+            this.lblhapus.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblhapus.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.lblhapus.Location = new System.Drawing.Point(26, 82);
+            this.lblhapus.Name = "lblhapus";
+            this.lblhapus.Size = new System.Drawing.Size(126, 18);
+            this.lblhapus.TabIndex = 60;
+            this.lblhapus.Text = "[Hapus Nama]";
+            // 
             // manBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -946,11 +960,11 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.txtCari);
-            this.Controls.Add(this.dataGridtypebook);
+            this.Controls.Add(this.dataGridbook);
             this.Name = "manBook";
             this.Size = new System.Drawing.Size(956, 457);
             this.Load += new System.EventHandler(this.ManBook_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridtypebook)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridbook)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.perpusDataSet1)).EndInit();
             this.panelTambah.ResumeLayout(false);
@@ -989,7 +1003,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txtjudulTambah;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridView dataGridtypebook;
+        private System.Windows.Forms.DataGridView dataGridbook;
         private System.Windows.Forms.Button btnHapus;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnTambah;
@@ -1055,5 +1069,6 @@
         private System.Windows.Forms.ErrorProvider errorProvider2;
         private System.Windows.Forms.ErrorProvider errorProvider3;
         private System.Windows.Forms.ErrorProvider errorProvider4;
+        private System.Windows.Forms.Label lblhapus;
     }
 }
