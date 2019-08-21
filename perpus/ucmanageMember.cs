@@ -17,9 +17,34 @@ namespace perpus
             InitializeComponent();
         }
 
+        private void loadTable()
+        {
+            try
+            {
+                this.memberTableAdapter.FillBy(this.perpusDataSet1.member);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void loadManMember()
+        {
+            loadTable();
+
+            txtnama.Text = "";
+            txtemail.Text = "";
+            txthandphone.Text = "";
+
+            errorProvider1.Clear();
+            errorProvider2.Clear();
+            errorProvider3.Clear();
+        }
+
         private void UcmanageMember_Load(object sender, EventArgs e)
         {
-
+            loadManMember();
         }
 
         private void Txtpassword_KeyPress(object sender, KeyPressEventArgs e)
@@ -37,14 +62,6 @@ namespace perpus
 
         private void FillByToolStripButton_Click(object sender, EventArgs e)
         {
-            try
-            {
-                this.memberTableAdapter.FillBy(this.perpusDataSet1.member);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
 
         }
 
