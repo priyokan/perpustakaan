@@ -17,6 +17,15 @@ namespace perpus
             InitializeComponent();
         }
 
+        int ID;
+        DataClasses1DataContext db = new DataClasses1DataContext();
+        private string getDate()
+        {
+            DateTimePicker date = new DateTimePicker();
+            string today = date.Value.ToString();
+            return today; 
+        }
+
         private void loadTable()
         {
             try
@@ -80,6 +89,18 @@ namespace perpus
             {
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
+        }
+
+        private void BtnTambah_Click(object sender, EventArgs e)
+        {
+            member memm = new member();
+            memm.nama = txtnama.Text;
+            memm.email = txtemail.Text;
+            memm.handphone = txthandphone.Text;
+            memm.joindate = Convert.ToDateTime(getDate());
+            db.members.InsertOnSubmit(memm);
+            db.SubmitChanges();
+            loadManMember();
         }
     }
 }
