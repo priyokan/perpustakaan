@@ -50,6 +50,26 @@ namespace perpus
             errorProvider2.Clear();
             errorProvider3.Clear();
         }
+        private void inputValidation()
+        {
+            errorProvider1.Clear();
+            errorProvider2.Clear();
+            errorProvider3.Clear();
+
+            if(txtnama.Text == "")
+            {
+                errorProvider1.SetError(txtnama, "nama harus diisi");
+            }
+            if (txtemail.Text == "")
+            {
+                errorProvider2.SetError(txtemail, "email harus diisi");
+            }
+            if (txthandphone.Text == "")
+            {
+                errorProvider3.SetError(txthandphone, "handphone harus diisi");
+            }
+        }
+
 
         private void UcmanageMember_Load(object sender, EventArgs e)
         {
@@ -93,15 +113,21 @@ namespace perpus
 
         private void BtnTambah_Click(object sender, EventArgs e)
         {
-            if(txtnama.Text != ""&&txtemail.Text !=""&&txthandphone.Text!="") 
-            member memm = new member();
-            memm.nama = txtnama.Text;
-            memm.email = txtemail.Text;
-            memm.handphone = txthandphone.Text;
-            memm.joindate = Convert.ToDateTime(getDate());
-            db.members.InsertOnSubmit(memm);
-            db.SubmitChanges();
-            loadManMember();
+            if(txtnama.Text != ""&&txtemail.Text !=""&&txthandphone.Text!="")
+            {
+                member memm = new member();
+                memm.nama = txtnama.Text;
+                memm.email = txtemail.Text;
+                memm.handphone = txthandphone.Text;
+                memm.joindate = Convert.ToDateTime(getDate());
+                db.members.InsertOnSubmit(memm);
+                db.SubmitChanges();
+                loadManMember();
+            }
+            else
+            {
+
+            }
         }
     }
 }
