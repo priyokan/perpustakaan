@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelActive = new System.Windows.Forms.Panel();
-            this.panelManageType = new System.Windows.Forms.Panel();
+            this.panelCetakKartu = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.panelManageBuku = new System.Windows.Forms.Panel();
+            this.panelBtnManageMember = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -47,7 +47,7 @@
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnTambah = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.txtpassword = new System.Windows.Forms.TextBox();
+            this.txthandphone = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtemail = new System.Windows.Forms.TextBox();
@@ -56,19 +56,27 @@
             this.txtnama = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.dataGridEmployee = new System.Windows.Forms.DataGridView();
-            this.perpusDataSet1 = new perpus.perpusDataSet1();
-            this.memberBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.memberTableAdapter = new perpus.perpusDataSet1TableAdapters.memberTableAdapter();
             this.nisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.namaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.handphoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.joindateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panelManageType.SuspendLayout();
-            this.panelManageBuku.SuspendLayout();
+            this.memberBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.perpusDataSet1 = new perpus.perpusDataSet1();
+            this.memberTableAdapter = new perpus.perpusDataSet1TableAdapters.memberTableAdapter();
+            this.fillByToolStrip = new System.Windows.Forms.ToolStrip();
+            this.fillByToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.fillBy1ToolStrip = new System.Windows.Forms.ToolStrip();
+            this.namaToolStripLabel = new System.Windows.Forms.ToolStripLabel();
+            this.namaToolStripTextBox = new System.Windows.Forms.ToolStripTextBox();
+            this.fillBy1ToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.panelCetakKartu.SuspendLayout();
+            this.panelBtnManageMember.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridEmployee)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.perpusDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.memberBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.perpusDataSet1)).BeginInit();
+            this.fillByToolStrip.SuspendLayout();
+            this.fillBy1ToolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelActive
@@ -79,16 +87,17 @@
             this.panelActive.Size = new System.Drawing.Size(10, 70);
             this.panelActive.TabIndex = 31;
             // 
-            // panelManageType
+            // panelCetakKartu
             // 
-            this.panelManageType.BackColor = System.Drawing.Color.SeaGreen;
-            this.panelManageType.Controls.Add(this.label3);
-            this.panelManageType.Controls.Add(this.label4);
-            this.panelManageType.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelManageType.Location = new System.Drawing.Point(284, 22);
-            this.panelManageType.Name = "panelManageType";
-            this.panelManageType.Size = new System.Drawing.Size(237, 70);
-            this.panelManageType.TabIndex = 30;
+            this.panelCetakKartu.BackColor = System.Drawing.Color.SeaGreen;
+            this.panelCetakKartu.Controls.Add(this.label3);
+            this.panelCetakKartu.Controls.Add(this.label4);
+            this.panelCetakKartu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelCetakKartu.Location = new System.Drawing.Point(284, 22);
+            this.panelCetakKartu.Name = "panelCetakKartu";
+            this.panelCetakKartu.Size = new System.Drawing.Size(237, 70);
+            this.panelCetakKartu.TabIndex = 30;
+            this.panelCetakKartu.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Label4_MouseClick);
             // 
             // label3
             // 
@@ -100,6 +109,7 @@
             this.label3.Size = new System.Drawing.Size(180, 16);
             this.label3.TabIndex = 1;
             this.label3.Text = "Form Management type buku";
+            this.label3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Label4_MouseClick);
             // 
             // label4
             // 
@@ -111,18 +121,19 @@
             this.label4.Size = new System.Drawing.Size(208, 26);
             this.label4.TabIndex = 0;
             this.label4.Text = "Cetak kartu anggota";
+            this.label4.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Label4_MouseClick);
             // 
-            // panelManageBuku
+            // panelBtnManageMember
             // 
-            this.panelManageBuku.BackColor = System.Drawing.Color.Teal;
-            this.panelManageBuku.Controls.Add(this.panelActive);
-            this.panelManageBuku.Controls.Add(this.label2);
-            this.panelManageBuku.Controls.Add(this.label1);
-            this.panelManageBuku.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelManageBuku.Location = new System.Drawing.Point(32, 22);
-            this.panelManageBuku.Name = "panelManageBuku";
-            this.panelManageBuku.Size = new System.Drawing.Size(232, 70);
-            this.panelManageBuku.TabIndex = 29;
+            this.panelBtnManageMember.BackColor = System.Drawing.Color.Teal;
+            this.panelBtnManageMember.Controls.Add(this.panelActive);
+            this.panelBtnManageMember.Controls.Add(this.label2);
+            this.panelBtnManageMember.Controls.Add(this.label1);
+            this.panelBtnManageMember.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelBtnManageMember.Location = new System.Drawing.Point(32, 22);
+            this.panelBtnManageMember.Name = "panelBtnManageMember";
+            this.panelBtnManageMember.Size = new System.Drawing.Size(232, 70);
+            this.panelBtnManageMember.TabIndex = 29;
             // 
             // label2
             // 
@@ -174,6 +185,7 @@
             this.txtCari.Name = "txtCari";
             this.txtCari.Size = new System.Drawing.Size(258, 17);
             this.txtCari.TabIndex = 47;
+            this.txtCari.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TxtCari_KeyUp);
             // 
             // btnHapus
             // 
@@ -225,16 +237,17 @@
             this.panel4.Size = new System.Drawing.Size(200, 2);
             this.panel4.TabIndex = 40;
             // 
-            // txtpassword
+            // txthandphone
             // 
-            this.txtpassword.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtpassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtpassword.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtpassword.Location = new System.Drawing.Point(703, 249);
-            this.txtpassword.Name = "txtpassword";
-            this.txtpassword.Size = new System.Drawing.Size(200, 16);
-            this.txtpassword.TabIndex = 39;
-            this.txtpassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txtpassword_KeyPress);
+            this.txthandphone.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txthandphone.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txthandphone.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txthandphone.Location = new System.Drawing.Point(703, 249);
+            this.txthandphone.MaxLength = 14;
+            this.txthandphone.Name = "txthandphone";
+            this.txthandphone.Size = new System.Drawing.Size(200, 16);
+            this.txthandphone.TabIndex = 39;
+            this.txthandphone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txtpassword_KeyPress);
             // 
             // label5
             // 
@@ -313,21 +326,21 @@
             this.dataGridEmployee.AllowUserToAddRows = false;
             this.dataGridEmployee.AllowUserToDeleteRows = false;
             this.dataGridEmployee.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridEmployee.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridEmployee.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridEmployee.AutoGenerateColumns = false;
             this.dataGridEmployee.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridEmployee.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridEmployee.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.AliceBlue;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridEmployee.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.AliceBlue;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridEmployee.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridEmployee.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nisDataGridViewTextBoxColumn,
@@ -336,44 +349,30 @@
             this.handphoneDataGridViewTextBoxColumn,
             this.joindateDataGridViewTextBoxColumn});
             this.dataGridEmployee.DataSource = this.memberBindingSource;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridEmployee.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridEmployee.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridEmployee.GridColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridEmployee.Location = new System.Drawing.Point(37, 140);
             this.dataGridEmployee.Name = "dataGridEmployee";
             this.dataGridEmployee.ReadOnly = true;
             this.dataGridEmployee.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridEmployee.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridEmployee.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridEmployee.RowHeadersVisible = false;
             this.dataGridEmployee.Size = new System.Drawing.Size(558, 344);
             this.dataGridEmployee.TabIndex = 31;
-            // 
-            // perpusDataSet1
-            // 
-            this.perpusDataSet1.DataSetName = "perpusDataSet1";
-            this.perpusDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // memberBindingSource
-            // 
-            this.memberBindingSource.DataMember = "member";
-            this.memberBindingSource.DataSource = this.perpusDataSet1;
-            // 
-            // memberTableAdapter
-            // 
-            this.memberTableAdapter.ClearBeforeFill = true;
             // 
             // nisDataGridViewTextBoxColumn
             // 
@@ -417,11 +416,79 @@
             this.joindateDataGridViewTextBoxColumn.ReadOnly = true;
             this.joindateDataGridViewTextBoxColumn.Width = 84;
             // 
+            // memberBindingSource
+            // 
+            this.memberBindingSource.DataMember = "member";
+            this.memberBindingSource.DataSource = this.perpusDataSet1;
+            // 
+            // perpusDataSet1
+            // 
+            this.perpusDataSet1.DataSetName = "perpusDataSet1";
+            this.perpusDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // memberTableAdapter
+            // 
+            this.memberTableAdapter.ClearBeforeFill = true;
+            // 
+            // fillByToolStrip
+            // 
+            this.fillByToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fillByToolStripButton});
+            this.fillByToolStrip.Location = new System.Drawing.Point(0, 0);
+            this.fillByToolStrip.Name = "fillByToolStrip";
+            this.fillByToolStrip.Size = new System.Drawing.Size(956, 25);
+            this.fillByToolStrip.TabIndex = 50;
+            this.fillByToolStrip.Text = "fillByToolStrip";
+            this.fillByToolStrip.Visible = false;
+            // 
+            // fillByToolStripButton
+            // 
+            this.fillByToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.fillByToolStripButton.Name = "fillByToolStripButton";
+            this.fillByToolStripButton.Size = new System.Drawing.Size(39, 22);
+            this.fillByToolStripButton.Text = "FillBy";
+            this.fillByToolStripButton.Click += new System.EventHandler(this.FillByToolStripButton_Click);
+            // 
+            // fillBy1ToolStrip
+            // 
+            this.fillBy1ToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.namaToolStripLabel,
+            this.namaToolStripTextBox,
+            this.fillBy1ToolStripButton});
+            this.fillBy1ToolStrip.Location = new System.Drawing.Point(0, 0);
+            this.fillBy1ToolStrip.Name = "fillBy1ToolStrip";
+            this.fillBy1ToolStrip.Size = new System.Drawing.Size(956, 25);
+            this.fillBy1ToolStrip.TabIndex = 51;
+            this.fillBy1ToolStrip.Text = "fillBy1ToolStrip";
+            this.fillBy1ToolStrip.Visible = false;
+            // 
+            // namaToolStripLabel
+            // 
+            this.namaToolStripLabel.Name = "namaToolStripLabel";
+            this.namaToolStripLabel.Size = new System.Drawing.Size(40, 22);
+            this.namaToolStripLabel.Text = "nama:";
+            // 
+            // namaToolStripTextBox
+            // 
+            this.namaToolStripTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.namaToolStripTextBox.Name = "namaToolStripTextBox";
+            this.namaToolStripTextBox.Size = new System.Drawing.Size(100, 25);
+            // 
+            // fillBy1ToolStripButton
+            // 
+            this.fillBy1ToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.fillBy1ToolStripButton.Name = "fillBy1ToolStripButton";
+            this.fillBy1ToolStripButton.Size = new System.Drawing.Size(45, 22);
+            this.fillBy1ToolStripButton.Text = "FillBy1";
+            this.fillBy1ToolStripButton.Click += new System.EventHandler(this.FillBy1ToolStripButton_Click);
+            // 
             // ucmanageMember
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Controls.Add(this.fillBy1ToolStrip);
+            this.Controls.Add(this.fillByToolStrip);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.txtCari);
@@ -429,7 +496,7 @@
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnTambah);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.txtpassword);
+            this.Controls.Add(this.txthandphone);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.txtemail);
@@ -438,18 +505,22 @@
             this.Controls.Add(this.txtnama);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.dataGridEmployee);
-            this.Controls.Add(this.panelManageType);
-            this.Controls.Add(this.panelManageBuku);
+            this.Controls.Add(this.panelCetakKartu);
+            this.Controls.Add(this.panelBtnManageMember);
             this.Name = "ucmanageMember";
             this.Size = new System.Drawing.Size(956, 525);
             this.Load += new System.EventHandler(this.UcmanageMember_Load);
-            this.panelManageType.ResumeLayout(false);
-            this.panelManageType.PerformLayout();
-            this.panelManageBuku.ResumeLayout(false);
-            this.panelManageBuku.PerformLayout();
+            this.panelCetakKartu.ResumeLayout(false);
+            this.panelCetakKartu.PerformLayout();
+            this.panelBtnManageMember.ResumeLayout(false);
+            this.panelBtnManageMember.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridEmployee)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.perpusDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.memberBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.perpusDataSet1)).EndInit();
+            this.fillByToolStrip.ResumeLayout(false);
+            this.fillByToolStrip.PerformLayout();
+            this.fillBy1ToolStrip.ResumeLayout(false);
+            this.fillBy1ToolStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -458,10 +529,10 @@
         #endregion
 
         private System.Windows.Forms.Panel panelActive;
-        private System.Windows.Forms.Panel panelManageType;
+        private System.Windows.Forms.Panel panelCetakKartu;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel panelManageBuku;
+        private System.Windows.Forms.Panel panelBtnManageMember;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label7;
@@ -471,7 +542,7 @@
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnTambah;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox txtpassword;
+        private System.Windows.Forms.TextBox txthandphone;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox txtemail;
@@ -488,5 +559,11 @@
         private System.Windows.Forms.BindingSource memberBindingSource;
         private perpusDataSet1 perpusDataSet1;
         private perpusDataSet1TableAdapters.memberTableAdapter memberTableAdapter;
+        private System.Windows.Forms.ToolStrip fillByToolStrip;
+        private System.Windows.Forms.ToolStripButton fillByToolStripButton;
+        private System.Windows.Forms.ToolStrip fillBy1ToolStrip;
+        private System.Windows.Forms.ToolStripLabel namaToolStripLabel;
+        private System.Windows.Forms.ToolStripTextBox namaToolStripTextBox;
+        private System.Windows.Forms.ToolStripButton fillBy1ToolStripButton;
     }
 }

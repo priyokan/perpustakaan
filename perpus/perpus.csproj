@@ -122,6 +122,12 @@
     <Compile Include="typeBook.Designer.cs">
       <DependentUpon>typeBook.cs</DependentUpon>
     </Compile>
+    <Compile Include="ucCetakKartu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucCetakKartu.Designer.cs">
+      <DependentUpon>ucCetakKartu.cs</DependentUpon>
+    </Compile>
     <Compile Include="ucmanageMember.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -166,6 +172,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="typeBook.resx">
       <DependentUpon>typeBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucCetakKartu.resx">
+      <DependentUpon>ucCetakKartu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucmanageMember.resx">
       <DependentUpon>ucmanageMember.cs</DependentUpon>
