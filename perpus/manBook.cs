@@ -263,5 +263,14 @@ namespace perpus
             }
           
         }
+
+        private void BtndeleteOK_Click(object sender, EventArgs e)
+        {
+            book Book = new book();
+            Book = db.books.Single(x => x.book_id == ID);
+            db.books.DeleteOnSubmit(Book);
+            db.SubmitChanges();
+            loadManbook();
+        }
     }
 }
