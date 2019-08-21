@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace perpus
 {
@@ -136,6 +137,8 @@ namespace perpus
             txtnama.Text = row.Cells[1].Value.ToString();
             txtemail.Text = row.Cells[2].Value.ToString();
             txthandphone.Text = row.Cells[3].Value.ToString();
+            txtPic.Text = row.Cells[5].Value.ToString();
+            picture.ImageLocation= row.Cells[5].Value.ToString();
 
             btnEdit.Enabled = true;
             btnHapus.Enabled = true;
@@ -195,6 +198,19 @@ namespace perpus
             else
             {
                 inputValidation();
+            }
+        }
+
+        private void Txtemail_Leave(object sender, EventArgs e)
+        {
+            string pattern = "^[a-z0-9]+@+([a-z]+[.])+[a-z]{2,5}$";
+            if (Regex.IsMatch(txtemail.Text, pattern))
+            {
+                errorProvider2.Clear();
+            }
+            else
+            {
+                errorProvider2.SetError(txtemail, "email invalid");
             }
         }
     }
