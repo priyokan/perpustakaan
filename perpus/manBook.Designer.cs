@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle57 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle58 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle59 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle60 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label7 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.txtCari = new System.Windows.Forms.TextBox();
@@ -75,6 +75,7 @@
             this.bookTableAdapter = new perpus.perpusDataSet1TableAdapters.bookTableAdapter();
             this.typeTableAdapter = new perpus.perpusDataSet1TableAdapters.typeTableAdapter();
             this.panelEdit = new System.Windows.Forms.Panel();
+            this.comboEdittype = new System.Windows.Forms.ComboBox();
             this.btnsrcedit = new System.Windows.Forms.Button();
             this.btnsimpanedit = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -100,7 +101,6 @@
             this.btncloseDelete = new System.Windows.Forms.Button();
             this.fillByToolStrip1 = new System.Windows.Forms.ToolStrip();
             this.fillByToolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.comboEdittype = new System.Windows.Forms.ComboBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
@@ -190,22 +190,22 @@
             this.dataGridtypebook.AllowUserToAddRows = false;
             this.dataGridtypebook.AllowUserToDeleteRows = false;
             this.dataGridtypebook.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle57.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle57.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridtypebook.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle57;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridtypebook.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridtypebook.AutoGenerateColumns = false;
             this.dataGridtypebook.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridtypebook.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridtypebook.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.dataGridtypebook.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle58.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle58.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle58.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle58.ForeColor = System.Drawing.Color.AliceBlue;
-            dataGridViewCellStyle58.SelectionBackColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle58.SelectionForeColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle58.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridtypebook.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle58;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.AliceBlue;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridtypebook.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridtypebook.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridtypebook.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.bookidDataGridViewTextBoxColumn,
@@ -218,27 +218,27 @@
             this.photobookDataGridViewTextBoxColumn});
             this.dataGridtypebook.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.dataGridtypebook.DataSource = this.bookBindingSource;
-            dataGridViewCellStyle59.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle59.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle59.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle59.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle59.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle59.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle59.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridtypebook.DefaultCellStyle = dataGridViewCellStyle59;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridtypebook.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridtypebook.GridColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridtypebook.Location = new System.Drawing.Point(51, 47);
             this.dataGridtypebook.Name = "dataGridtypebook";
             this.dataGridtypebook.ReadOnly = true;
             this.dataGridtypebook.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle60.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle60.BackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle60.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle60.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle60.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle60.SelectionForeColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle60.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridtypebook.RowHeadersDefaultCellStyle = dataGridViewCellStyle60;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridtypebook.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridtypebook.RowHeadersVisible = false;
             this.dataGridtypebook.Size = new System.Drawing.Size(844, 356);
             this.dataGridtypebook.TabIndex = 42;
@@ -622,6 +622,19 @@
             this.panelEdit.TabIndex = 57;
             this.panelEdit.Visible = false;
             // 
+            // comboEdittype
+            // 
+            this.comboEdittype.DataSource = this.typeBindingSource;
+            this.comboEdittype.DisplayMember = "type_name";
+            this.comboEdittype.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboEdittype.FormattingEnabled = true;
+            this.comboEdittype.Location = new System.Drawing.Point(93, 69);
+            this.comboEdittype.Name = "comboEdittype";
+            this.comboEdittype.Size = new System.Drawing.Size(200, 21);
+            this.comboEdittype.TabIndex = 61;
+            this.comboEdittype.ValueMember = "type_id";
+            this.comboEdittype.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ComboType_KeyPress);
+            // 
             // btnsrcedit
             // 
             this.btnsrcedit.BackColor = System.Drawing.Color.DarkSlateGray;
@@ -635,6 +648,7 @@
             this.btnsrcedit.TabIndex = 59;
             this.btnsrcedit.Text = "...";
             this.btnsrcedit.UseVisualStyleBackColor = false;
+            this.btnsrcedit.Click += new System.EventHandler(this.Btnsrcedit_Click);
             // 
             // btnsimpanedit
             // 
@@ -899,19 +913,6 @@
             this.fillByToolStripButton1.Size = new System.Drawing.Size(39, 22);
             this.fillByToolStripButton1.Text = "FillBy";
             this.fillByToolStripButton1.Click += new System.EventHandler(this.FillByToolStripButton1_Click);
-            // 
-            // comboEdittype
-            // 
-            this.comboEdittype.DataSource = this.typeBindingSource;
-            this.comboEdittype.DisplayMember = "type_name";
-            this.comboEdittype.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboEdittype.FormattingEnabled = true;
-            this.comboEdittype.Location = new System.Drawing.Point(93, 69);
-            this.comboEdittype.Name = "comboEdittype";
-            this.comboEdittype.Size = new System.Drawing.Size(200, 21);
-            this.comboEdittype.TabIndex = 61;
-            this.comboEdittype.ValueMember = "type_id";
-            this.comboEdittype.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ComboType_KeyPress);
             // 
             // errorProvider1
             // 

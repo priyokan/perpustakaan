@@ -38,15 +38,15 @@ namespace perpus
             }
             if (comboType.Text == "")
             {
-                errorProvider2.SetError(comboType, "judul harus di isi");
+                errorProvider2.SetError(comboType, "type harus di isi");
             }
             if (txtTotalTambah.Text == "")
             {
-                errorProvider3.SetError(txtTotalTambah, "judul harus di isi");
+                errorProvider3.SetError(txtTotalTambah, "total harus di isi");
             }
             if (txtPictambah.Text == "")
             {
-                errorProvider4.SetError(btnSrcTambah, "judul harus di isi");
+                errorProvider4.SetError(btnSrcTambah, "picture harus di isi");
             }
 
             if (txteditjudul.Text == "")
@@ -55,15 +55,15 @@ namespace perpus
             }
             if (comboEdittype.Text == "")
             {
-                errorProvider2.SetError(comboEdittype, "judul harus di isi");
+                errorProvider2.SetError(comboEdittype, "type harus di isi");
             }
             if (txtedittotal.Text == "")
             {
-                errorProvider3.SetError(txtedittotal, "judul harus di isi");
+                errorProvider3.SetError(txtedittotal, "total harus di isi");
             }
             if (txtpicedit.Text == "")
             {
-                errorProvider4.SetError(btnsrcedit, "judul harus di isi");
+                errorProvider4.SetError(btnsrcedit, "picture harus di isi");
             }
         }
 
@@ -78,7 +78,7 @@ namespace perpus
             txteditjudul.Text = "";
             txtedittotal.Text = "";
             txtjudulTambah.Text = "";
-            txtpicedit.Text = ""; ;
+            txtpicedit.Text = "";
             txtPictambah.Text = "";
             txtTotalTambah.Text = "";
             comboEdittype.Text = "";
@@ -200,6 +200,17 @@ namespace perpus
             {
                 txtPictambah.Text = open.FileName;
                 picTambah.ImageLocation = open.FileName;
+            }
+        }
+
+        private void Btnsrcedit_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog open = new OpenFileDialog();
+            open.Filter = "Image files (*.jpg,*.jpeg,*.png)|*.jpg;*.jpeg;*.png";
+            if(open.ShowDialog() == DialogResult.OK)
+            {
+                picedit.ImageLocation = open.FileName;
+                txtpicedit.Text = open.FileName;
             }
         }
     }
