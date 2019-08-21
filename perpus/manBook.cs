@@ -253,7 +253,7 @@ namespace perpus
             Book.photo_book = txtpicedit.Text;
             db.books.InsertOnSubmit(Book);
             db.SubmitChanges();
-
+            loadManbook();
         }
     }
 }
