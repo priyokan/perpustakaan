@@ -118,6 +118,7 @@ namespace perpus
                 memm.email = txtemail.Text;
                 memm.handphone = txthandphone.Text;
                 memm.joindate = Convert.ToDateTime(getDate());
+                memm.pohoto = txtPic.Text;
                 db.members.InsertOnSubmit(memm);
                 db.SubmitChanges();
                 loadManMember();
@@ -159,6 +160,42 @@ namespace perpus
         private void FillBy1ToolStripButton_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void BtnEdit_Click(object sender, EventArgs e)
+        {
+            if (txtnama.Text != "" && txtemail.Text != "" && txthandphone.Text != "")
+            {
+                member memm = new member();
+                memm = db.members.Single(x => x.nis == ID);
+                memm.nama = txtnama.Text;
+                memm.email = txtemail.Text;
+                memm.handphone = txthandphone.Text;
+                memm.joindate = Convert.ToDateTime(getDate());
+                memm.pohoto = txtPic.Text;
+                db.SubmitChanges();
+                loadManMember();
+            }
+            else
+            {
+                inputValidation();
+            }
+        }
+
+        private void BtnHapus_Click(object sender, EventArgs e)
+        {
+            if (txtnama.Text != "" && txtemail.Text != "" && txthandphone.Text != "")
+            {
+                member memm = new member();
+                memm = db.members.Single(x => x.nis == ID);
+                db.members.DeleteOnSubmit(memm);
+                db.SubmitChanges();
+                loadManMember();
+            }
+            else
+            {
+                inputValidation();
+            }
         }
     }
 }
