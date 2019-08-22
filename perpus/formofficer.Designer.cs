@@ -193,6 +193,7 @@
             this.btnLogout.Text = "logout";
             this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.BtnLogout_Click);
             // 
             // panel4
             // 
@@ -229,6 +230,7 @@
             this.btnclose.TabIndex = 14;
             this.btnclose.Text = "X";
             this.btnclose.UseVisualStyleBackColor = false;
+            this.btnclose.Click += new System.EventHandler(this.Btnclose_Click);
             // 
             // formofficer
             // 
@@ -240,7 +242,9 @@
             this.Controls.Add(this.panel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "formofficer";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "formofficer";
+            this.Load += new System.EventHandler(this.Formofficer_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel4.ResumeLayout(false);

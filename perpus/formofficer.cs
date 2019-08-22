@@ -16,5 +16,22 @@ namespace perpus
         {
             InitializeComponent();
         }
+
+        private void Btnclose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void BtnLogout_Click(object sender, EventArgs e)
+        {
+            Login loginForm = new Login();
+            loginForm.Show();
+            this.Close();
+        }
+
+        private void Formofficer_Load(object sender, EventArgs e)
+        {
+            lblnama.Text = Login.nama;
+        }
     }
 }
