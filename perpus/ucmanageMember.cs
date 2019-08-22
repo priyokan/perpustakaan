@@ -46,6 +46,8 @@ namespace perpus
             txtnama.Text = "";
             txtemail.Text = "";
             txthandphone.Text = "";
+            txtPic.Text = "";
+            picture.ImageLocation = null;
 
             errorProvider1.Clear();
             errorProvider2.Clear();
@@ -82,6 +84,7 @@ namespace perpus
 
         private void UcmanageMember_Load(object sender, EventArgs e)
         {
+            panelActive.Location = panelBtnManageMember.Location;
             loadManMember();
         }
 
@@ -112,7 +115,7 @@ namespace perpus
 
         private void BtnTambah_Click(object sender, EventArgs e)
         {
-            if(txtnama.Text != ""&&txtemail.Text !=""&&txthandphone.Text!="")
+            if(txtnama.Text != ""&&txtemail.Text !=""&&txthandphone.Text!="" && txtPic.Text != "")
             {
                 member memm = new member();
                 memm.nama = txtnama.Text;
@@ -153,6 +156,7 @@ namespace perpus
                 txtPic.Text = open.FileName;
                 picture.ImageLocation = open.FileName;
             }
+
         }
 
         private void FillByToolStripButton_Click_1(object sender, EventArgs e)
@@ -167,7 +171,7 @@ namespace perpus
 
         private void BtnEdit_Click(object sender, EventArgs e)
         {
-            if (txtnama.Text != "" && txtemail.Text != "" && txthandphone.Text != "")
+            if (txtnama.Text != "" && txtemail.Text != "" && txthandphone.Text != "" && txtPic.Text != "")
             {
                 member memm = new member();
                 memm = db.members.Single(x => x.nis == ID);
@@ -187,7 +191,7 @@ namespace perpus
 
         private void BtnHapus_Click(object sender, EventArgs e)
         {
-            if (txtnama.Text != "" && txtemail.Text != "" && txthandphone.Text != "")
+            if (txtnama.Text != "" && txtemail.Text != "" && txthandphone.Text != "" && txtPic.Text !="")
             {
                 member memm = new member();
                 memm = db.members.Single(x => x.nis == ID);
@@ -212,6 +216,18 @@ namespace perpus
             {
                 errorProvider2.SetError(txtemail, "email invalid");
             }
+        }
+
+        private void PanelCetakKartu_Click(object sender, EventArgs e)
+        {
+            panelActive.Location = panelCetakKartu.Location;
+            ucCetakKartu1.Visible = true;
+        }
+
+        private void PanelBtnManageMember_Click(object sender, EventArgs e)
+        {
+            panelActive.Location = panelBtnManageMember.Location;
+            ucCetakKartu1.Visible = false;
         }
     }
 }

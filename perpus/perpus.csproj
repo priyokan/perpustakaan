@@ -172,6 +172,7 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Report2.rdlc" />
     <EmbeddedResource Include="Resources\manageKaryawan.resx">
       <DependentUpon>manageKaryawan.cs</DependentUpon>
     </EmbeddedResource>

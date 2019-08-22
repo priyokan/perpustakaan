@@ -273,7 +273,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(1256, 591);
+            this.ClientSize = new System.Drawing.Size(1209, 591);
             this.Controls.Add(this.ucmanageMember1);
             this.Controls.Add(this.manageBuku1);
             this.Controls.Add(this.manageKaryawan1);

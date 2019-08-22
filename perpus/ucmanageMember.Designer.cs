@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelActive = new System.Windows.Forms.Panel();
             this.panelCetakKartu = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -56,6 +56,14 @@
             this.txtnama = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.dataGridMember = new System.Windows.Forms.DataGridView();
+            this.nisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.namaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.handphoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.joindateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pohotoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.memberBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.perpusDataSet2 = new perpus.perpusDataSet2();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
@@ -71,19 +79,14 @@
             this.namaToolStripLabel = new System.Windows.Forms.ToolStripLabel();
             this.namaToolStripTextBox = new System.Windows.Forms.ToolStripTextBox();
             this.fillBy1ToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.memberBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.perpusDataSet2 = new perpus.perpusDataSet2();
             this.perpusDataSet2BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.memberTableAdapter = new perpus.perpusDataSet2TableAdapters.memberTableAdapter();
-            this.nisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.namaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.handphoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.joindateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pohotoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ucCetakKartu1 = new perpus.ucCetakKartu();
             this.panelCetakKartu.SuspendLayout();
             this.panelBtnManageMember.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridMember)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memberBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.perpusDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).BeginInit();
@@ -91,15 +94,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider4)).BeginInit();
             this.fillByToolStrip.SuspendLayout();
             this.fillBy1ToolStrip.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.memberBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.perpusDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.perpusDataSet2BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panelActive
             // 
             this.panelActive.BackColor = System.Drawing.Color.Goldenrod;
-            this.panelActive.Location = new System.Drawing.Point(0, 0);
+            this.panelActive.Location = new System.Drawing.Point(16, 22);
             this.panelActive.Name = "panelActive";
             this.panelActive.Size = new System.Drawing.Size(10, 70);
             this.panelActive.TabIndex = 31;
@@ -114,6 +115,7 @@
             this.panelCetakKartu.Name = "panelCetakKartu";
             this.panelCetakKartu.Size = new System.Drawing.Size(237, 70);
             this.panelCetakKartu.TabIndex = 30;
+            this.panelCetakKartu.Click += new System.EventHandler(this.PanelCetakKartu_Click);
             this.panelCetakKartu.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Label4_MouseClick);
             // 
             // label3
@@ -126,6 +128,7 @@
             this.label3.Size = new System.Drawing.Size(180, 16);
             this.label3.TabIndex = 1;
             this.label3.Text = "Form Management type buku";
+            this.label3.Click += new System.EventHandler(this.PanelCetakKartu_Click);
             this.label3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Label4_MouseClick);
             // 
             // label4
@@ -138,12 +141,12 @@
             this.label4.Size = new System.Drawing.Size(208, 26);
             this.label4.TabIndex = 0;
             this.label4.Text = "Cetak kartu anggota";
+            this.label4.Click += new System.EventHandler(this.PanelCetakKartu_Click);
             this.label4.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Label4_MouseClick);
             // 
             // panelBtnManageMember
             // 
             this.panelBtnManageMember.BackColor = System.Drawing.Color.Teal;
-            this.panelBtnManageMember.Controls.Add(this.panelActive);
             this.panelBtnManageMember.Controls.Add(this.label2);
             this.panelBtnManageMember.Controls.Add(this.label1);
             this.panelBtnManageMember.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -151,6 +154,7 @@
             this.panelBtnManageMember.Name = "panelBtnManageMember";
             this.panelBtnManageMember.Size = new System.Drawing.Size(232, 70);
             this.panelBtnManageMember.TabIndex = 29;
+            this.panelBtnManageMember.Click += new System.EventHandler(this.PanelBtnManageMember_Click);
             // 
             // label2
             // 
@@ -162,6 +166,7 @@
             this.label2.Size = new System.Drawing.Size(172, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "Form Management member";
+            this.label2.Click += new System.EventHandler(this.PanelBtnManageMember_Click);
             // 
             // label1
             // 
@@ -173,6 +178,7 @@
             this.label1.Size = new System.Drawing.Size(178, 26);
             this.label1.TabIndex = 0;
             this.label1.Text = "Manage Member";
+            this.label1.Click += new System.EventHandler(this.PanelBtnManageMember_Click);
             // 
             // label7
             // 
@@ -211,7 +217,7 @@
             this.btnHapus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHapus.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHapus.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnHapus.Location = new System.Drawing.Point(820, 449);
+            this.btnHapus.Location = new System.Drawing.Point(830, 406);
             this.btnHapus.Name = "btnHapus";
             this.btnHapus.Size = new System.Drawing.Size(85, 35);
             this.btnHapus.TabIndex = 46;
@@ -226,7 +232,7 @@
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnEdit.Location = new System.Drawing.Point(722, 449);
+            this.btnEdit.Location = new System.Drawing.Point(732, 406);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(85, 35);
             this.btnEdit.TabIndex = 45;
@@ -241,7 +247,7 @@
             this.btnTambah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTambah.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTambah.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnTambah.Location = new System.Drawing.Point(622, 449);
+            this.btnTambah.Location = new System.Drawing.Point(632, 406);
             this.btnTambah.Name = "btnTambah";
             this.btnTambah.Size = new System.Drawing.Size(85, 35);
             this.btnTambah.TabIndex = 44;
@@ -252,7 +258,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.DimGray;
-            this.panel4.Location = new System.Drawing.Point(703, 263);
+            this.panel4.Location = new System.Drawing.Point(713, 220);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(200, 2);
             this.panel4.TabIndex = 40;
@@ -262,7 +268,7 @@
             this.txthandphone.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txthandphone.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txthandphone.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txthandphone.Location = new System.Drawing.Point(703, 249);
+            this.txthandphone.Location = new System.Drawing.Point(713, 206);
             this.txthandphone.MaxLength = 14;
             this.txthandphone.Name = "txthandphone";
             this.txthandphone.Size = new System.Drawing.Size(200, 16);
@@ -275,7 +281,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label5.Location = new System.Drawing.Point(619, 249);
+            this.label5.Location = new System.Drawing.Point(629, 206);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(81, 16);
             this.label5.TabIndex = 38;
@@ -284,7 +290,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.DimGray;
-            this.panel3.Location = new System.Drawing.Point(703, 231);
+            this.panel3.Location = new System.Drawing.Point(713, 188);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(200, 2);
             this.panel3.TabIndex = 37;
@@ -294,7 +300,7 @@
             this.txtemail.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtemail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtemail.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtemail.Location = new System.Drawing.Point(703, 217);
+            this.txtemail.Location = new System.Drawing.Point(713, 174);
             this.txtemail.Name = "txtemail";
             this.txtemail.Size = new System.Drawing.Size(200, 16);
             this.txtemail.TabIndex = 36;
@@ -306,7 +312,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label8.Location = new System.Drawing.Point(619, 217);
+            this.label8.Location = new System.Drawing.Point(629, 174);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(41, 16);
             this.label8.TabIndex = 35;
@@ -315,7 +321,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DimGray;
-            this.panel2.Location = new System.Drawing.Point(703, 197);
+            this.panel2.Location = new System.Drawing.Point(713, 154);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(200, 2);
             this.panel2.TabIndex = 34;
@@ -325,7 +331,7 @@
             this.txtnama.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtnama.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtnama.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtnama.Location = new System.Drawing.Point(703, 183);
+            this.txtnama.Location = new System.Drawing.Point(713, 140);
             this.txtnama.Name = "txtnama";
             this.txtnama.Size = new System.Drawing.Size(200, 16);
             this.txtnama.TabIndex = 33;
@@ -336,7 +342,7 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label9.Location = new System.Drawing.Point(619, 183);
+            this.label9.Location = new System.Drawing.Point(629, 140);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(44, 16);
             this.label9.TabIndex = 32;
@@ -347,21 +353,21 @@
             this.dataGridMember.AllowUserToAddRows = false;
             this.dataGridMember.AllowUserToDeleteRows = false;
             this.dataGridMember.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridMember.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridMember.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridMember.AutoGenerateColumns = false;
             this.dataGridMember.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridMember.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridMember.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.AliceBlue;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridMember.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.AliceBlue;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridMember.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridMember.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridMember.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nisDataGridViewTextBoxColumn,
@@ -371,31 +377,92 @@
             this.joindateDataGridViewTextBoxColumn,
             this.pohotoDataGridViewTextBoxColumn});
             this.dataGridMember.DataSource = this.memberBindingSource;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridMember.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridMember.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridMember.GridColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridMember.Location = new System.Drawing.Point(37, 140);
             this.dataGridMember.Name = "dataGridMember";
             this.dataGridMember.ReadOnly = true;
             this.dataGridMember.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridMember.RowHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridMember.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridMember.RowHeadersVisible = false;
             this.dataGridMember.Size = new System.Drawing.Size(558, 344);
             this.dataGridMember.TabIndex = 31;
             this.dataGridMember.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridMember_CellClick);
+            // 
+            // nisDataGridViewTextBoxColumn
+            // 
+            this.nisDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.nisDataGridViewTextBoxColumn.DataPropertyName = "nis";
+            this.nisDataGridViewTextBoxColumn.HeaderText = "nis";
+            this.nisDataGridViewTextBoxColumn.Name = "nisDataGridViewTextBoxColumn";
+            this.nisDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nisDataGridViewTextBoxColumn.Width = 52;
+            // 
+            // namaDataGridViewTextBoxColumn
+            // 
+            this.namaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.namaDataGridViewTextBoxColumn.DataPropertyName = "nama";
+            this.namaDataGridViewTextBoxColumn.HeaderText = "nama";
+            this.namaDataGridViewTextBoxColumn.Name = "namaDataGridViewTextBoxColumn";
+            this.namaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "email";
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // handphoneDataGridViewTextBoxColumn
+            // 
+            this.handphoneDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.handphoneDataGridViewTextBoxColumn.DataPropertyName = "handphone";
+            this.handphoneDataGridViewTextBoxColumn.HeaderText = "handphone";
+            this.handphoneDataGridViewTextBoxColumn.Name = "handphoneDataGridViewTextBoxColumn";
+            this.handphoneDataGridViewTextBoxColumn.ReadOnly = true;
+            this.handphoneDataGridViewTextBoxColumn.Width = 106;
+            // 
+            // joindateDataGridViewTextBoxColumn
+            // 
+            this.joindateDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.joindateDataGridViewTextBoxColumn.DataPropertyName = "joindate";
+            this.joindateDataGridViewTextBoxColumn.HeaderText = "joindate";
+            this.joindateDataGridViewTextBoxColumn.Name = "joindateDataGridViewTextBoxColumn";
+            this.joindateDataGridViewTextBoxColumn.ReadOnly = true;
+            this.joindateDataGridViewTextBoxColumn.Width = 84;
+            // 
+            // pohotoDataGridViewTextBoxColumn
+            // 
+            this.pohotoDataGridViewTextBoxColumn.DataPropertyName = "pohoto";
+            this.pohotoDataGridViewTextBoxColumn.HeaderText = "pohoto";
+            this.pohotoDataGridViewTextBoxColumn.Name = "pohotoDataGridViewTextBoxColumn";
+            this.pohotoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.pohotoDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // memberBindingSource
+            // 
+            this.memberBindingSource.DataMember = "member";
+            this.memberBindingSource.DataSource = this.perpusDataSet2;
+            // 
+            // perpusDataSet2
+            // 
+            this.perpusDataSet2.DataSetName = "perpusDataSet2";
+            this.perpusDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // errorProvider1
             // 
@@ -416,7 +483,7 @@
             this.btnSrc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSrc.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSrc.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnSrc.Location = new System.Drawing.Point(870, 412);
+            this.btnSrc.Location = new System.Drawing.Point(880, 369);
             this.btnSrc.Name = "btnSrc";
             this.btnSrc.Size = new System.Drawing.Size(34, 20);
             this.btnSrc.TabIndex = 64;
@@ -427,7 +494,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.panel5.Location = new System.Drawing.Point(703, 430);
+            this.panel5.Location = new System.Drawing.Point(713, 387);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(200, 2);
             this.panel5.TabIndex = 63;
@@ -438,7 +505,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label6.Location = new System.Drawing.Point(619, 416);
+            this.label6.Location = new System.Drawing.Point(629, 373);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(46, 16);
             this.label6.TabIndex = 61;
@@ -450,7 +517,7 @@
             this.txtPic.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPic.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPic.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.txtPic.Location = new System.Drawing.Point(703, 414);
+            this.txtPic.Location = new System.Drawing.Point(713, 371);
             this.txtPic.Name = "txtPic";
             this.txtPic.Size = new System.Drawing.Size(161, 16);
             this.txtPic.TabIndex = 62;
@@ -458,7 +525,7 @@
             // picture
             // 
             this.picture.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picture.Location = new System.Drawing.Point(703, 280);
+            this.picture.Location = new System.Drawing.Point(713, 237);
             this.picture.Name = "picture";
             this.picture.Size = new System.Drawing.Size(200, 126);
             this.picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -521,16 +588,6 @@
             this.fillBy1ToolStripButton.Text = "FillBy1";
             this.fillBy1ToolStripButton.Click += new System.EventHandler(this.FillBy1ToolStripButton_Click_1);
             // 
-            // memberBindingSource
-            // 
-            this.memberBindingSource.DataMember = "member";
-            this.memberBindingSource.DataSource = this.perpusDataSet2;
-            // 
-            // perpusDataSet2
-            // 
-            this.perpusDataSet2.DataSetName = "perpusDataSet2";
-            this.perpusDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // perpusDataSet2BindingSource
             // 
             this.perpusDataSet2BindingSource.DataSource = this.perpusDataSet2;
@@ -540,62 +597,21 @@
             // 
             this.memberTableAdapter.ClearBeforeFill = true;
             // 
-            // nisDataGridViewTextBoxColumn
+            // ucCetakKartu1
             // 
-            this.nisDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.nisDataGridViewTextBoxColumn.DataPropertyName = "nis";
-            this.nisDataGridViewTextBoxColumn.HeaderText = "nis";
-            this.nisDataGridViewTextBoxColumn.Name = "nisDataGridViewTextBoxColumn";
-            this.nisDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nisDataGridViewTextBoxColumn.Width = 52;
-            // 
-            // namaDataGridViewTextBoxColumn
-            // 
-            this.namaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.namaDataGridViewTextBoxColumn.DataPropertyName = "nama";
-            this.namaDataGridViewTextBoxColumn.HeaderText = "nama";
-            this.namaDataGridViewTextBoxColumn.Name = "namaDataGridViewTextBoxColumn";
-            this.namaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // emailDataGridViewTextBoxColumn
-            // 
-            this.emailDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "email";
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // handphoneDataGridViewTextBoxColumn
-            // 
-            this.handphoneDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.handphoneDataGridViewTextBoxColumn.DataPropertyName = "handphone";
-            this.handphoneDataGridViewTextBoxColumn.HeaderText = "handphone";
-            this.handphoneDataGridViewTextBoxColumn.Name = "handphoneDataGridViewTextBoxColumn";
-            this.handphoneDataGridViewTextBoxColumn.ReadOnly = true;
-            this.handphoneDataGridViewTextBoxColumn.Width = 106;
-            // 
-            // joindateDataGridViewTextBoxColumn
-            // 
-            this.joindateDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.joindateDataGridViewTextBoxColumn.DataPropertyName = "joindate";
-            this.joindateDataGridViewTextBoxColumn.HeaderText = "joindate";
-            this.joindateDataGridViewTextBoxColumn.Name = "joindateDataGridViewTextBoxColumn";
-            this.joindateDataGridViewTextBoxColumn.ReadOnly = true;
-            this.joindateDataGridViewTextBoxColumn.Width = 84;
-            // 
-            // pohotoDataGridViewTextBoxColumn
-            // 
-            this.pohotoDataGridViewTextBoxColumn.DataPropertyName = "pohoto";
-            this.pohotoDataGridViewTextBoxColumn.HeaderText = "pohoto";
-            this.pohotoDataGridViewTextBoxColumn.Name = "pohotoDataGridViewTextBoxColumn";
-            this.pohotoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.pohotoDataGridViewTextBoxColumn.Visible = false;
+            this.ucCetakKartu1.Location = new System.Drawing.Point(0, 117);
+            this.ucCetakKartu1.Name = "ucCetakKartu1";
+            this.ucCetakKartu1.Size = new System.Drawing.Size(975, 408);
+            this.ucCetakKartu1.TabIndex = 67;
+            this.ucCetakKartu1.Visible = false;
             // 
             // ucmanageMember
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Controls.Add(this.panelActive);
+            this.Controls.Add(this.ucCetakKartu1);
             this.Controls.Add(this.fillBy1ToolStrip);
             this.Controls.Add(this.fillByToolStrip);
             this.Controls.Add(this.btnSrc);
@@ -629,6 +645,8 @@
             this.panelBtnManageMember.ResumeLayout(false);
             this.panelBtnManageMember.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridMember)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memberBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.perpusDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).EndInit();
@@ -638,8 +656,6 @@
             this.fillByToolStrip.PerformLayout();
             this.fillBy1ToolStrip.ResumeLayout(false);
             this.fillBy1ToolStrip.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.memberBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.perpusDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.perpusDataSet2BindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -696,5 +712,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn handphoneDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn joindateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pohotoDataGridViewTextBoxColumn;
+        private ucCetakKartu ucCetakKartu1;
     }
 }
