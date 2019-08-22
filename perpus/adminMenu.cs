@@ -55,6 +55,7 @@ namespace perpus
         {
             btnactive.BringToFront();
             btnactive.Location = btnMasterDenda.Location;
+            masterDenda1.BringToFront();
         }
 
         private void BtnReport_Click(object sender, EventArgs e)

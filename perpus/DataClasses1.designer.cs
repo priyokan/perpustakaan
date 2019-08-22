@@ -42,6 +42,9 @@ namespace perpus
     partial void Insertmember(member instance);
     partial void Updatemember(member instance);
     partial void Deletemember(member instance);
+    partial void Insertfine(fine instance);
+    partial void Updatefine(fine instance);
+    partial void Deletefine(fine instance);
     #endregion
 		
 		public DataClasses1DataContext() : 
@@ -103,6 +106,14 @@ namespace perpus
 			get
 			{
 				return this.GetTable<member>();
+			}
+		}
+		
+		public System.Data.Linq.Table<fine> fines
+		{
+			get
+			{
+				return this.GetTable<fine>();
 			}
 		}
 	}
@@ -714,6 +725,92 @@ namespace perpus
 					this._pohoto = value;
 					this.SendPropertyChanged("pohoto");
 					this.OnpohotoChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.fine")]
+	public partial class fine : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _fine_id;
+		
+		private int _fine1;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void Onfine_idChanging(int value);
+    partial void Onfine_idChanged();
+    partial void Onfine1Changing(int value);
+    partial void Onfine1Changed();
+    #endregion
+		
+		public fine()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fine_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int fine_id
+		{
+			get
+			{
+				return this._fine_id;
+			}
+			set
+			{
+				if ((this._fine_id != value))
+				{
+					this.Onfine_idChanging(value);
+					this.SendPropertyChanging();
+					this._fine_id = value;
+					this.SendPropertyChanged("fine_id");
+					this.Onfine_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="fine", Storage="_fine1", DbType="Int NOT NULL")]
+		public int fine1
+		{
+			get
+			{
+				return this._fine1;
+			}
+			set
+			{
+				if ((this._fine1 != value))
+				{
+					this.Onfine1Changing(value);
+					this.SendPropertyChanging();
+					this._fine1 = value;
+					this.SendPropertyChanged("fine1");
+					this.Onfine1Changed();
 				}
 			}
 		}

@@ -41,9 +41,10 @@
             this.btnManageBuku = new System.Windows.Forms.Button();
             this.btnManagekaryawan = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
+            this.masterDenda1 = new perpus.masterDenda();
+            this.ucmanageMember1 = new perpus.ucmanageMember();
             this.manageBuku1 = new perpus.manageBuku();
             this.manageKaryawan1 = new perpus.Resources.manageKaryawan();
-            this.ucmanageMember1 = new perpus.ucmanageMember();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -77,7 +78,7 @@
             this.btnclose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.btnclose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnclose.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnclose.Location = new System.Drawing.Point(1209, 0);
+            this.btnclose.Location = new System.Drawing.Point(1163, 1);
             this.btnclose.Name = "btnclose";
             this.btnclose.Size = new System.Drawing.Size(47, 24);
             this.btnclose.TabIndex = 14;
@@ -240,6 +241,23 @@
             this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.BtnLogout_Click);
             // 
+            // masterDenda1
+            // 
+            this.masterDenda1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.masterDenda1.Location = new System.Drawing.Point(223, 39);
+            this.masterDenda1.Name = "masterDenda1";
+            this.masterDenda1.Size = new System.Drawing.Size(956, 525);
+            this.masterDenda1.TabIndex = 17;
+            // 
+            // ucmanageMember1
+            // 
+            this.ucmanageMember1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ucmanageMember1.Location = new System.Drawing.Point(225, 39);
+            this.ucmanageMember1.Name = "ucmanageMember1";
+            this.ucmanageMember1.Size = new System.Drawing.Size(956, 525);
+            this.ucmanageMember1.TabIndex = 16;
+            this.ucmanageMember1.Load += new System.EventHandler(this.UcmanageMember1_Load);
+            // 
             // manageBuku1
             // 
             this.manageBuku1.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -259,21 +277,13 @@
             this.manageKaryawan1.TabIndex = 14;
             this.manageKaryawan1.Load += new System.EventHandler(this.ManageKaryawan1_Load);
             // 
-            // ucmanageMember1
-            // 
-            this.ucmanageMember1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ucmanageMember1.Location = new System.Drawing.Point(225, 39);
-            this.ucmanageMember1.Name = "ucmanageMember1";
-            this.ucmanageMember1.Size = new System.Drawing.Size(956, 525);
-            this.ucmanageMember1.TabIndex = 16;
-            this.ucmanageMember1.Load += new System.EventHandler(this.UcmanageMember1_Load);
-            // 
             // adminMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1209, 591);
+            this.Controls.Add(this.masterDenda1);
             this.Controls.Add(this.ucmanageMember1);
             this.Controls.Add(this.manageBuku1);
             this.Controls.Add(this.manageKaryawan1);
@@ -311,5 +321,6 @@
         private Resources.manageKaryawan manageKaryawan1;
         private manageBuku manageBuku1;
         private ucmanageMember ucmanageMember1;
+        private masterDenda masterDenda1;
     }
 }
