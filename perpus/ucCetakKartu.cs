@@ -24,15 +24,16 @@ namespace perpus
         {
             this.Controls.Add(reportViewer1);
 
+            reportViewer1.Size = new Size(975, 419);
+            reportViewer1.ZoomMode = ZoomMode.PageWidth;
+
             var report = from a in db.members
                          where a.nis == 3
                          select a;
 
             member memm = new member();
             memm = db.members.Single(x => x.nis == 3);
-
-            ReportParameter[] imgPar = new ReportParameter[1];
-            imgPar[0] = new ReportParameter("test", new Uri(memm.pohoto.ToString()).AbsoluteUri);
+            
             reportViewer1.Reset();
             reportViewer1.ProcessingMode = ProcessingMode.Local;
             reportViewer1.LocalReport.DataSources.Clear();
@@ -40,9 +41,7 @@ namespace perpus
             reportViewer1.LocalReport.EnableExternalImages = true;
             reportViewer1.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", report));
             reportViewer1.LocalReport.ReportEmbeddedResource = "perpus.Report2.rdlc";
-            reportViewer1.LocalReport.SetParameters(imgPar);
-            reportViewer1.Size = new Size(975, 419);
-            reportViewer1.ZoomMode = ZoomMode.PageWidth;
+            reportViewer1.LocalReport.SetParameters(new ReportParameter("test", new Uri(memm.pohoto.ToString()).AbsoluteUri));
             reportViewer1.RefreshReport();
         }
     }
