@@ -70,6 +70,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataClasses1.dbml</DependentUpon>
     </Compile>
+    <Compile Include="formofficer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formofficer.Designer.cs">
+      <DependentUpon>formofficer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,6 +165,9 @@
     </Compile>
     <EmbeddedResource Include="adminMenu.resx">
       <DependentUpon>adminMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formofficer.resx">
+      <DependentUpon>formofficer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

@@ -85,6 +85,12 @@ namespace perpus
                     adminMEnu.Show();
                     this.Hide();
                 }
+                else if(login.role == "officer")
+                {
+                    formofficer officerForm = new formofficer();
+                    officerForm.Show();
+                    this.Hide();
+                }
             }
             else if (txtEmail.Text == "masukan email..." && txtpassword.Text == "masukan password...")
             {
