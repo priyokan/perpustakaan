@@ -53,7 +53,7 @@ namespace perpus
             errorProvider2.Clear();
             errorProvider3.Clear();
 
-
+            panelCetakKartu.Enabled = false;
             btnEdit.Enabled = false;
             btnHapus.Enabled = false;
         }
@@ -143,6 +143,8 @@ namespace perpus
             txtPic.Text = row.Cells[5].Value.ToString();
             picture.ImageLocation= row.Cells[5].Value.ToString();
 
+            ucCetakKartu.ID = ID;
+            panelCetakKartu.Enabled = true;
             btnEdit.Enabled = true;
             btnHapus.Enabled = true;
         }
@@ -228,6 +230,7 @@ namespace perpus
         {
             panelActive.Location = panelBtnManageMember.Location;
             ucCetakKartu1.Visible = false;
+            loadManMember();
         }
     }
 }

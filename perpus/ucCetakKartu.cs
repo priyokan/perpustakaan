@@ -18,6 +18,7 @@ namespace perpus
             InitializeComponent();
         }
 
+        public static int ID;
         DataClasses1DataContext db = new DataClasses1DataContext();
 
         private void UcCetakKartu_Load(object sender, EventArgs e)
@@ -28,11 +29,11 @@ namespace perpus
             reportViewer1.ZoomMode = ZoomMode.PageWidth;
 
             var report = from a in db.members
-                         where a.nis == 3
+                         where a.nis == ID
                          select a;
 
             member memm = new member();
-            memm = db.members.Single(x => x.nis == 3);
+            memm = db.members.Single(x => x.nis == ID);
             
             reportViewer1.Reset();
             reportViewer1.ProcessingMode = ProcessingMode.Local;
