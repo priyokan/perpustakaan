@@ -47,6 +47,7 @@
             this.Name = "ucCetakKartu";
             this.Size = new System.Drawing.Size(975, 419);
             this.Load += new System.EventHandler(this.UcCetakKartu_Load);
+            this.VisibleChanged += new System.EventHandler(this.UcCetakKartu_VisibleChanged);
             this.ResumeLayout(false);
 
         }

@@ -18,10 +18,10 @@ namespace perpus
             InitializeComponent();
         }
 
-        public static int ID;
+        public static int ID = 1;
         DataClasses1DataContext db = new DataClasses1DataContext();
 
-        private void UcCetakKartu_Load(object sender, EventArgs e)
+        private void load()
         {
             this.Controls.Add(reportViewer1);
 
@@ -34,7 +34,7 @@ namespace perpus
 
             member memm = new member();
             memm = db.members.Single(x => x.nis == ID);
-            
+
             reportViewer1.Reset();
             reportViewer1.ProcessingMode = ProcessingMode.Local;
             reportViewer1.LocalReport.DataSources.Clear();
@@ -44,6 +44,16 @@ namespace perpus
             reportViewer1.LocalReport.ReportEmbeddedResource = "perpus.Report2.rdlc";
             reportViewer1.LocalReport.SetParameters(new ReportParameter("test", new Uri(memm.pohoto.ToString()).AbsoluteUri));
             reportViewer1.RefreshReport();
+        }
+
+        private void UcCetakKartu_Load(object sender, EventArgs e)
+        {
+            load();
+        }
+
+        private void UcCetakKartu_VisibleChanged(object sender, EventArgs e)
+        {
+            load();
         }
     }
 }
