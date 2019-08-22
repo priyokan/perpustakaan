@@ -28,6 +28,8 @@ namespace perpus
 
 
             txtToMoney();
+            panelSave.Visible = false;
+            btnSave.Enabled = true;
         }
 
         string money;
@@ -62,9 +64,16 @@ namespace perpus
             txtdenda.Text = money;
         }
 
-        private void MasterDenda_TabIndexChanged(object sender, EventArgs e)
+
+        private void MasterDenda_VisibleChanged(object sender, EventArgs e)
         {
             loadMasterDenda();
+        }
+
+        private void BtnSave_Click(object sender, EventArgs e)
+        {
+            btnSave.Enabled = false;
+            panelSave.Visible = true;
         }
     }
 }

@@ -34,9 +34,13 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.txtdenda = new System.Windows.Forms.TextBox();
+            this.panelSave = new System.Windows.Forms.Panel();
+            this.btnyes = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             this.panelBtnManageMember.SuspendLayout();
+            this.panelSave.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelBtnManageMember
@@ -104,19 +108,20 @@
             this.label3.TabIndex = 38;
             this.label3.Text = "/bulan";
             // 
-            // btnEdit
+            // btnSave
             // 
-            this.btnEdit.BackColor = System.Drawing.Color.DimGray;
-            this.btnEdit.FlatAppearance.BorderSize = 0;
-            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEdit.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnEdit.Location = new System.Drawing.Point(506, 255);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(85, 29);
-            this.btnEdit.TabIndex = 39;
-            this.btnEdit.Text = "Simpan";
-            this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnSave.BackColor = System.Drawing.Color.DimGray;
+            this.btnSave.FlatAppearance.BorderSize = 0;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnSave.Location = new System.Drawing.Point(506, 255);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(85, 29);
+            this.btnSave.TabIndex = 39;
+            this.btnSave.Text = "Simpan";
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // txtdenda
             // 
@@ -133,13 +138,51 @@
             this.txtdenda.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txtdenda_KeyPress);
             this.txtdenda.Leave += new System.EventHandler(this.Txtdenda_Leave);
             // 
+            // panelSave
+            // 
+            this.panelSave.BackColor = System.Drawing.Color.DimGray;
+            this.panelSave.Controls.Add(this.label4);
+            this.panelSave.Controls.Add(this.btnyes);
+            this.panelSave.Location = new System.Drawing.Point(506, 282);
+            this.panelSave.Name = "panelSave";
+            this.panelSave.Size = new System.Drawing.Size(222, 29);
+            this.panelSave.TabIndex = 41;
+            this.panelSave.Visible = false;
+            // 
+            // btnyes
+            // 
+            this.btnyes.BackColor = System.Drawing.Color.DimGray;
+            this.btnyes.FlatAppearance.BorderSize = 0;
+            this.btnyes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnyes.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnyes.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnyes.Location = new System.Drawing.Point(177, 0);
+            this.btnyes.Name = "btnyes";
+            this.btnyes.Size = new System.Drawing.Size(43, 29);
+            this.btnyes.TabIndex = 40;
+            this.btnyes.Text = "ya";
+            this.btnyes.UseVisualStyleBackColor = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(14, 5);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(154, 18);
+            this.label4.TabIndex = 41;
+            this.label4.Text = "Simpan perubahan?";
+            // 
             // masterDenda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Controls.Add(this.panelSave);
             this.Controls.Add(this.txtdenda);
-            this.Controls.Add(this.btnEdit);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label9);
@@ -147,9 +190,11 @@
             this.Name = "masterDenda";
             this.Size = new System.Drawing.Size(956, 525);
             this.Load += new System.EventHandler(this.MasterDenda_Load);
-            this.TabIndexChanged += new System.EventHandler(this.MasterDenda_TabIndexChanged);
+            this.VisibleChanged += new System.EventHandler(this.MasterDenda_VisibleChanged);
             this.panelBtnManageMember.ResumeLayout(false);
             this.panelBtnManageMember.PerformLayout();
+            this.panelSave.ResumeLayout(false);
+            this.panelSave.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -163,7 +208,10 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.TextBox txtdenda;
+        private System.Windows.Forms.Panel panelSave;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnyes;
     }
 }
