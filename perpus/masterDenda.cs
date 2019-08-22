@@ -28,7 +28,7 @@ namespace perpus
 
 
             txtToMoney();
-            panelSave.Visible = false;
+            panel1.Visible = false;
             btnSave.Enabled = true;
         }
 
@@ -73,7 +73,26 @@ namespace perpus
         private void BtnSave_Click(object sender, EventArgs e)
         {
             btnSave.Enabled = false;
-            panelSave.Visible = true;
+            panel1.Visible = true;
+        }
+
+        private void Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Btnyes_Click(object sender, EventArgs e)
+        {
+            fine fin = new fine();
+            fin = db.fines.Single(x => x.fine_id == 1);
+            fin.fine1 = Convert.ToInt32(money);
+            db.SubmitChanges();
+            loadMasterDenda();
+        }
+
+        private void Btnclosesave_Click(object sender, EventArgs e)
+        {
+            loadMasterDenda();
         }
     }
 }

@@ -36,11 +36,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.txtdenda = new System.Windows.Forms.TextBox();
-            this.panelSave = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.btnyes = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btnclosesave = new System.Windows.Forms.Button();
             this.panelBtnManageMember.SuspendLayout();
-            this.panelSave.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelBtnManageMember
@@ -138,16 +142,18 @@
             this.txtdenda.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txtdenda_KeyPress);
             this.txtdenda.Leave += new System.EventHandler(this.Txtdenda_Leave);
             // 
-            // panelSave
+            // panel1
             // 
-            this.panelSave.BackColor = System.Drawing.Color.DimGray;
-            this.panelSave.Controls.Add(this.label4);
-            this.panelSave.Controls.Add(this.btnyes);
-            this.panelSave.Location = new System.Drawing.Point(506, 282);
-            this.panelSave.Name = "panelSave";
-            this.panelSave.Size = new System.Drawing.Size(222, 29);
-            this.panelSave.TabIndex = 41;
-            this.panelSave.Visible = false;
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.btnyes);
+            this.panel1.Location = new System.Drawing.Point(506, 282);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(222, 62);
+            this.panel1.TabIndex = 41;
+            this.panel1.Visible = false;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
             // 
             // btnyes
             // 
@@ -156,31 +162,69 @@
             this.btnyes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnyes.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnyes.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnyes.Location = new System.Drawing.Point(177, 0);
+            this.btnyes.Location = new System.Drawing.Point(179, 32);
             this.btnyes.Name = "btnyes";
             this.btnyes.Size = new System.Drawing.Size(43, 29);
             this.btnyes.TabIndex = 40;
             this.btnyes.Text = "ya";
             this.btnyes.UseVisualStyleBackColor = false;
+            this.btnyes.Click += new System.EventHandler(this.Btnyes_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(14, 5);
+            this.label4.ForeColor = System.Drawing.Color.DimGray;
+            this.label4.Location = new System.Drawing.Point(16, 37);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(154, 18);
             this.label4.TabIndex = 41;
             this.label4.Text = "Simpan perubahan?";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.DimGray;
+            this.panel3.Controls.Add(this.btnclosesave);
+            this.panel3.Controls.Add(this.label5);
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(222, 26);
+            this.panel3.TabIndex = 42;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(93, 4);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(46, 18);
+            this.label5.TabIndex = 42;
+            this.label5.Text = "Yakin";
+            // 
+            // btnclosesave
+            // 
+            this.btnclosesave.BackColor = System.Drawing.Color.DimGray;
+            this.btnclosesave.FlatAppearance.BorderSize = 0;
+            this.btnclosesave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnclosesave.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnclosesave.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnclosesave.Location = new System.Drawing.Point(179, -1);
+            this.btnclosesave.Name = "btnclosesave";
+            this.btnclosesave.Size = new System.Drawing.Size(43, 29);
+            this.btnclosesave.TabIndex = 43;
+            this.btnclosesave.Text = "x";
+            this.btnclosesave.UseVisualStyleBackColor = false;
+            this.btnclosesave.Click += new System.EventHandler(this.Btnclosesave_Click);
             // 
             // masterDenda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.Controls.Add(this.panelSave);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtdenda);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label3);
@@ -193,8 +237,10 @@
             this.VisibleChanged += new System.EventHandler(this.MasterDenda_VisibleChanged);
             this.panelBtnManageMember.ResumeLayout(false);
             this.panelBtnManageMember.PerformLayout();
-            this.panelSave.ResumeLayout(false);
-            this.panelSave.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -210,8 +256,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.TextBox txtdenda;
-        private System.Windows.Forms.Panel panelSave;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnyes;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnclosesave;
     }
 }
