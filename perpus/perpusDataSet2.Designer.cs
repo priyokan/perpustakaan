@@ -2676,7 +2676,7 @@ SELECT book_id, book_title, book_type, books_on_the_rack, books_borrowed, total_
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT book_id, book_title, book_type, books_on_the_rack, books_borrowed, total_b" +
@@ -2687,6 +2687,13 @@ SELECT book_id, book_title, book_type, books_on_the_rack, books_borrowed, total_
             this._commandCollection[1].CommandText = "SELECT book_id, book_title, book_type, books_on_the_rack, books_borrowed, total_b" +
                 "ooks, photo_book FROM dbo.book";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = "SELECT        book_id, book_title, book_type, books_on_the_rack, books_borrowed, " +
+                "total_books, photo_book\r\nFROM            book\r\nWHERE        (CAST(book_title AS " +
+                "varchar(31)) LIKE CAST(@title AS varchar(31)) + \'%\')";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@title", global::System.Data.SqlDbType.VarChar, 1024, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2719,6 +2726,25 @@ SELECT book_id, book_title, book_type, books_on_the_rack, books_borrowed, total_
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
         public virtual int FillBy(perpusDataSet2.bookDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy1(perpusDataSet2.bookDataTable dataTable, string title) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            if ((title == null)) {
+                throw new global::System.ArgumentNullException("title");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(title));
+            }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }

@@ -46,5 +46,23 @@ namespace perpus
                 e.Handled = true;
             }
         }
+
+        private void FillBy1ToolStripButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtCari_KeyUp(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                this.bookTableAdapter.FillBy1(this.perpusDataSet2.book, txtCari.Text);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
     }
 }

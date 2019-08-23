@@ -81,3 +81,4 @@ C:\Users\Priyo Nugroho\source\repos\perpus\perpus\obj\Debug\perpus.ucmanageMembe
 C:\Users\Priyo Nugroho\source\repos\perpus\perpus\obj\Debug\perpus.ucCetakKartu.resources
 C:\Users\Priyo Nugroho\source\repos\perpus\perpus\obj\Debug\perpus.masterDenda.resources
 C:\Users\Priyo Nugroho\source\repos\perpus\perpus\obj\Debug\perpus.formofficer.resources
+C:\Users\Priyo Nugroho\source\repos\perpus\perpus\obj\Debug\perpus.ucLoaning.resources

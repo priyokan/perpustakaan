@@ -41,6 +41,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.btnclose = new System.Windows.Forms.Button();
+            this.ucLoaning1 = new perpus.ucLoaning();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
@@ -232,12 +233,21 @@
             this.btnclose.UseVisualStyleBackColor = false;
             this.btnclose.Click += new System.EventHandler(this.Btnclose_Click);
             // 
+            // ucLoaning1
+            // 
+            this.ucLoaning1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ucLoaning1.Location = new System.Drawing.Point(224, 39);
+            this.ucLoaning1.Name = "ucLoaning1";
+            this.ucLoaning1.Size = new System.Drawing.Size(973, 525);
+            this.ucLoaning1.TabIndex = 16;
+            // 
             // formofficer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1209, 591);
+            this.Controls.Add(this.ucLoaning1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -268,5 +278,6 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnclose;
+        private ucLoaning ucLoaning1;
     }
 }
