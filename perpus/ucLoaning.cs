@@ -16,5 +16,35 @@ namespace perpus
         {
             InitializeComponent();
         }
+
+        private void loadLoaning()
+        {
+            try
+            {
+                this.bookTableAdapter.FillBy(this.perpusDataSet2.book);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+        }
+        private void FillByToolStripButton_Click(object sender, EventArgs e)
+        {
+          
+
+        }
+
+        private void UcLoaning_Load(object sender, EventArgs e)
+        {
+            loadLoaning();
+        }
+
+        private void TxtTotalTambah_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
