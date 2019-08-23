@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnMasterDenda = new System.Windows.Forms.Button();
+            this.btnbayardenda = new System.Windows.Forms.Button();
             this.btnactive = new System.Windows.Forms.Panel();
             this.lblnama = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnReport = new System.Windows.Forms.Button();
-            this.btnManageMember = new System.Windows.Forms.Button();
-            this.btnManageBuku = new System.Windows.Forms.Button();
-            this.btnManagekaryawan = new System.Windows.Forms.Button();
+            this.btngantipass = new System.Windows.Forms.Button();
+            this.btnmember = new System.Windows.Forms.Button();
+            this.btnpengembalian = new System.Windows.Forms.Button();
+            this.btnPeminjaman = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -48,36 +48,36 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel1.Controls.Add(this.btnMasterDenda);
+            this.panel1.Controls.Add(this.btnbayardenda);
             this.panel1.Controls.Add(this.btnactive);
             this.panel1.Controls.Add(this.lblnama);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.btnReport);
-            this.panel1.Controls.Add(this.btnManageMember);
-            this.panel1.Controls.Add(this.btnManageBuku);
-            this.panel1.Controls.Add(this.btnManagekaryawan);
+            this.panel1.Controls.Add(this.btngantipass);
+            this.panel1.Controls.Add(this.btnmember);
+            this.panel1.Controls.Add(this.btnpengembalian);
+            this.panel1.Controls.Add(this.btnPeminjaman);
             this.panel1.Controls.Add(this.btnLogout);
             this.panel1.Location = new System.Drawing.Point(0, 33);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(223, 562);
             this.panel1.TabIndex = 15;
             // 
-            // btnMasterDenda
+            // btnbayardenda
             // 
-            this.btnMasterDenda.BackColor = System.Drawing.Color.Transparent;
-            this.btnMasterDenda.FlatAppearance.BorderSize = 0;
-            this.btnMasterDenda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.btnMasterDenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMasterDenda.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMasterDenda.ForeColor = System.Drawing.Color.White;
-            this.btnMasterDenda.Location = new System.Drawing.Point(13, 290);
-            this.btnMasterDenda.Name = "btnMasterDenda";
-            this.btnMasterDenda.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnMasterDenda.Size = new System.Drawing.Size(200, 43);
-            this.btnMasterDenda.TabIndex = 22;
-            this.btnMasterDenda.Text = "Master Denda";
-            this.btnMasterDenda.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMasterDenda.UseVisualStyleBackColor = false;
+            this.btnbayardenda.BackColor = System.Drawing.Color.Transparent;
+            this.btnbayardenda.FlatAppearance.BorderSize = 0;
+            this.btnbayardenda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.btnbayardenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnbayardenda.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnbayardenda.ForeColor = System.Drawing.Color.White;
+            this.btnbayardenda.Location = new System.Drawing.Point(13, 290);
+            this.btnbayardenda.Name = "btnbayardenda";
+            this.btnbayardenda.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnbayardenda.Size = new System.Drawing.Size(200, 43);
+            this.btnbayardenda.TabIndex = 22;
+            this.btnbayardenda.Text = "Bayar denda";
+            this.btnbayardenda.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnbayardenda.UseVisualStyleBackColor = false;
             // 
             // btnactive
             // 
@@ -109,73 +109,73 @@
             this.label1.TabIndex = 19;
             this.label1.Text = "Selamat datang :";
             // 
-            // btnReport
+            // btngantipass
             // 
-            this.btnReport.BackColor = System.Drawing.Color.Transparent;
-            this.btnReport.FlatAppearance.BorderSize = 0;
-            this.btnReport.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.btnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReport.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReport.ForeColor = System.Drawing.Color.White;
-            this.btnReport.Location = new System.Drawing.Point(14, 339);
-            this.btnReport.Name = "btnReport";
-            this.btnReport.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnReport.Size = new System.Drawing.Size(200, 43);
-            this.btnReport.TabIndex = 18;
-            this.btnReport.Text = "Laporan";
-            this.btnReport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReport.UseVisualStyleBackColor = false;
+            this.btngantipass.BackColor = System.Drawing.Color.Transparent;
+            this.btngantipass.FlatAppearance.BorderSize = 0;
+            this.btngantipass.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.btngantipass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btngantipass.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btngantipass.ForeColor = System.Drawing.Color.White;
+            this.btngantipass.Location = new System.Drawing.Point(14, 339);
+            this.btngantipass.Name = "btngantipass";
+            this.btngantipass.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btngantipass.Size = new System.Drawing.Size(200, 43);
+            this.btngantipass.TabIndex = 18;
+            this.btngantipass.Text = "Ganti password";
+            this.btngantipass.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btngantipass.UseVisualStyleBackColor = false;
             // 
-            // btnManageMember
+            // btnmember
             // 
-            this.btnManageMember.BackColor = System.Drawing.Color.Transparent;
-            this.btnManageMember.FlatAppearance.BorderSize = 0;
-            this.btnManageMember.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.btnManageMember.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnManageMember.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnManageMember.ForeColor = System.Drawing.Color.White;
-            this.btnManageMember.Location = new System.Drawing.Point(14, 241);
-            this.btnManageMember.Name = "btnManageMember";
-            this.btnManageMember.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnManageMember.Size = new System.Drawing.Size(200, 43);
-            this.btnManageMember.TabIndex = 17;
-            this.btnManageMember.Text = "Manage member";
-            this.btnManageMember.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnManageMember.UseVisualStyleBackColor = false;
+            this.btnmember.BackColor = System.Drawing.Color.Transparent;
+            this.btnmember.FlatAppearance.BorderSize = 0;
+            this.btnmember.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.btnmember.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnmember.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnmember.ForeColor = System.Drawing.Color.White;
+            this.btnmember.Location = new System.Drawing.Point(14, 241);
+            this.btnmember.Name = "btnmember";
+            this.btnmember.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnmember.Size = new System.Drawing.Size(200, 43);
+            this.btnmember.TabIndex = 17;
+            this.btnmember.Text = "Anggota";
+            this.btnmember.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnmember.UseVisualStyleBackColor = false;
             // 
-            // btnManageBuku
+            // btnpengembalian
             // 
-            this.btnManageBuku.BackColor = System.Drawing.Color.Transparent;
-            this.btnManageBuku.FlatAppearance.BorderSize = 0;
-            this.btnManageBuku.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.btnManageBuku.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnManageBuku.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnManageBuku.ForeColor = System.Drawing.Color.White;
-            this.btnManageBuku.Location = new System.Drawing.Point(14, 192);
-            this.btnManageBuku.Name = "btnManageBuku";
-            this.btnManageBuku.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnManageBuku.Size = new System.Drawing.Size(200, 43);
-            this.btnManageBuku.TabIndex = 16;
-            this.btnManageBuku.Text = "Manage buku";
-            this.btnManageBuku.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnManageBuku.UseVisualStyleBackColor = false;
+            this.btnpengembalian.BackColor = System.Drawing.Color.Transparent;
+            this.btnpengembalian.FlatAppearance.BorderSize = 0;
+            this.btnpengembalian.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.btnpengembalian.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnpengembalian.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnpengembalian.ForeColor = System.Drawing.Color.White;
+            this.btnpengembalian.Location = new System.Drawing.Point(14, 192);
+            this.btnpengembalian.Name = "btnpengembalian";
+            this.btnpengembalian.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnpengembalian.Size = new System.Drawing.Size(200, 43);
+            this.btnpengembalian.TabIndex = 16;
+            this.btnpengembalian.Text = "pengembalian";
+            this.btnpengembalian.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnpengembalian.UseVisualStyleBackColor = false;
             // 
-            // btnManagekaryawan
+            // btnPeminjaman
             // 
-            this.btnManagekaryawan.BackColor = System.Drawing.Color.Transparent;
-            this.btnManagekaryawan.FlatAppearance.BorderSize = 0;
-            this.btnManagekaryawan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.btnManagekaryawan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnManagekaryawan.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnManagekaryawan.ForeColor = System.Drawing.Color.White;
-            this.btnManagekaryawan.Location = new System.Drawing.Point(14, 143);
-            this.btnManagekaryawan.Name = "btnManagekaryawan";
-            this.btnManagekaryawan.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnManagekaryawan.Size = new System.Drawing.Size(200, 43);
-            this.btnManagekaryawan.TabIndex = 15;
-            this.btnManagekaryawan.Text = "Manage karyawan";
-            this.btnManagekaryawan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnManagekaryawan.UseVisualStyleBackColor = false;
+            this.btnPeminjaman.BackColor = System.Drawing.Color.Transparent;
+            this.btnPeminjaman.FlatAppearance.BorderSize = 0;
+            this.btnPeminjaman.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.btnPeminjaman.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPeminjaman.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPeminjaman.ForeColor = System.Drawing.Color.White;
+            this.btnPeminjaman.Location = new System.Drawing.Point(14, 143);
+            this.btnPeminjaman.Name = "btnPeminjaman";
+            this.btnPeminjaman.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnPeminjaman.Size = new System.Drawing.Size(200, 43);
+            this.btnPeminjaman.TabIndex = 15;
+            this.btnPeminjaman.Text = "Peminjaman";
+            this.btnPeminjaman.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPeminjaman.UseVisualStyleBackColor = false;
             // 
             // btnLogout
             // 
@@ -256,14 +256,14 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnMasterDenda;
+        private System.Windows.Forms.Button btnbayardenda;
         private System.Windows.Forms.Panel btnactive;
         private System.Windows.Forms.Label lblnama;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnReport;
-        private System.Windows.Forms.Button btnManageMember;
-        private System.Windows.Forms.Button btnManageBuku;
-        private System.Windows.Forms.Button btnManagekaryawan;
+        private System.Windows.Forms.Button btngantipass;
+        private System.Windows.Forms.Button btnmember;
+        private System.Windows.Forms.Button btnpengembalian;
+        private System.Windows.Forms.Button btnPeminjaman;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label3;
