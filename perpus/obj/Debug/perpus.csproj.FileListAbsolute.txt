@@ -74,3 +74,11 @@ C:\Users\Priyo Nugroho\source\repos\perpus\perpus\bin\Debug\ru\Microsoft.ReportV
 C:\Users\Priyo Nugroho\source\repos\perpus\perpus\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
 C:\Users\Priyo Nugroho\source\repos\perpus\perpus\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
 C:\Users\Priyo Nugroho\source\repos\perpus\perpus\obj\Debug\perpus.csproj.CopyComplete
+C:\Users\Priyo Nugroho\source\repos\perpus\perpus\obj\Debug\perpus.manageBuku.resources
+C:\Users\Priyo Nugroho\source\repos\perpus\perpus\obj\Debug\perpus.typeBook.resources
+C:\Users\Priyo Nugroho\source\repos\perpus\perpus\obj\Debug\perpus.manBook.resources
+C:\Users\Priyo Nugroho\source\repos\perpus\perpus\obj\Debug\perpus.ucmanageMember.resources
+C:\Users\Priyo Nugroho\source\repos\perpus\perpus\obj\Debug\perpus.ucCetakKartu.resources
+C:\Users\Priyo Nugroho\source\repos\perpus\perpus\obj\Debug\perpus.masterDenda.resources
+C:\Users\Priyo Nugroho\source\repos\perpus\perpus\obj\Debug\perpus.formofficer.resources
+C:\Users\Priyo Nugroho\source\repos\perpus\perpus\obj\Debug\perpus.ucLoaning.resources

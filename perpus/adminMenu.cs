@@ -20,6 +20,7 @@ namespace perpus
         private void AdminMenu_Load(object sender, EventArgs e)
         {
             lblnama.Text = Login.nama;
+            manageKaryawan1.BringToFront();
         }
 
         private void Btnclose_Click(object sender, EventArgs e)
@@ -28,6 +29,53 @@ namespace perpus
         }
 
         private void ManageKaryawan1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnManageBuku_Click(object sender, EventArgs e)
+        {
+            btnactive.Location = btnManageBuku.Location;            
+            manageBuku1.BringToFront();
+        }
+
+        private void BtnManagekaryawan_Click(object sender, EventArgs e)
+        {
+            btnactive.Location = btnManagekaryawan.Location;
+            manageKaryawan1.BringToFront();
+        }
+
+        private void BtnManageMember_Click(object sender, EventArgs e)
+        {
+            btnactive.Location = btnManageMember.Location;
+            ucmanageMember1.BringToFront();
+        }
+
+        private void BtnMasterDenda_Click(object sender, EventArgs e)
+        {
+            btnactive.BringToFront();
+            btnactive.Location = btnMasterDenda.Location;
+            masterDenda1.BringToFront();
+        }
+
+        private void BtnReport_Click(object sender, EventArgs e)
+        {
+            btnactive.Location = btnReport.Location;
+        }
+
+        private void BtnLogout_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            login.Show();
+            this.Close();
+        }
+
+        private void ManageBuku1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UcmanageMember1_Load(object sender, EventArgs e)
         {
 
         }

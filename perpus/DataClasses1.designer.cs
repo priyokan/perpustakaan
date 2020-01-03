@@ -33,12 +33,18 @@ namespace perpus
     partial void Insertemployee(employee instance);
     partial void Updateemployee(employee instance);
     partial void Deleteemployee(employee instance);
-    partial void Insertmember(member instance);
-    partial void Updatemember(member instance);
-    partial void Deletemember(member instance);
+    partial void Inserttype(type instance);
+    partial void Updatetype(type instance);
+    partial void Deletetype(type instance);
     partial void Insertbook(book instance);
     partial void Updatebook(book instance);
     partial void Deletebook(book instance);
+    partial void Insertmember(member instance);
+    partial void Updatemember(member instance);
+    partial void Deletemember(member instance);
+    partial void Insertfine(fine instance);
+    partial void Updatefine(fine instance);
+    partial void Deletefine(fine instance);
     #endregion
 		
 		public DataClasses1DataContext() : 
@@ -79,11 +85,11 @@ namespace perpus
 			}
 		}
 		
-		public System.Data.Linq.Table<member> members
+		public System.Data.Linq.Table<type> types
 		{
 			get
 			{
-				return this.GetTable<member>();
+				return this.GetTable<type>();
 			}
 		}
 		
@@ -92,6 +98,22 @@ namespace perpus
 			get
 			{
 				return this.GetTable<book>();
+			}
+		}
+		
+		public System.Data.Linq.Table<member> members
+		{
+			get
+			{
+				return this.GetTable<member>();
+			}
+		}
+		
+		public System.Data.Linq.Table<fine> fines
+		{
+			get
+			{
+				return this.GetTable<fine>();
 			}
 		}
 	}
@@ -254,6 +276,298 @@ namespace perpus
 		}
 	}
 	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.type")]
+	public partial class type : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _type_id;
+		
+		private string _type_name;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void Ontype_idChanging(int value);
+    partial void Ontype_idChanged();
+    partial void Ontype_nameChanging(string value);
+    partial void Ontype_nameChanged();
+    #endregion
+		
+		public type()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_type_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int type_id
+		{
+			get
+			{
+				return this._type_id;
+			}
+			set
+			{
+				if ((this._type_id != value))
+				{
+					this.Ontype_idChanging(value);
+					this.SendPropertyChanging();
+					this._type_id = value;
+					this.SendPropertyChanged("type_id");
+					this.Ontype_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_type_name", DbType="VarChar(50)")]
+		public string type_name
+		{
+			get
+			{
+				return this._type_name;
+			}
+			set
+			{
+				if ((this._type_name != value))
+				{
+					this.Ontype_nameChanging(value);
+					this.SendPropertyChanging();
+					this._type_name = value;
+					this.SendPropertyChanged("type_name");
+					this.Ontype_nameChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.book")]
+	public partial class book : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _book_id;
+		
+		private string _book_title;
+		
+		private int _book_type;
+		
+		private int _books_on_the_rack;
+		
+		private int _books_borrowed;
+		
+		private int _total_books;
+		
+		private string _photo_book;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void Onbook_idChanging(int value);
+    partial void Onbook_idChanged();
+    partial void Onbook_titleChanging(string value);
+    partial void Onbook_titleChanged();
+    partial void Onbook_typeChanging(int value);
+    partial void Onbook_typeChanged();
+    partial void Onbooks_on_the_rackChanging(int value);
+    partial void Onbooks_on_the_rackChanged();
+    partial void Onbooks_borrowedChanging(int value);
+    partial void Onbooks_borrowedChanged();
+    partial void Ontotal_booksChanging(int value);
+    partial void Ontotal_booksChanged();
+    partial void Onphoto_bookChanging(string value);
+    partial void Onphoto_bookChanged();
+    #endregion
+		
+		public book()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_book_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int book_id
+		{
+			get
+			{
+				return this._book_id;
+			}
+			set
+			{
+				if ((this._book_id != value))
+				{
+					this.Onbook_idChanging(value);
+					this.SendPropertyChanging();
+					this._book_id = value;
+					this.SendPropertyChanged("book_id");
+					this.Onbook_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_book_title", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string book_title
+		{
+			get
+			{
+				return this._book_title;
+			}
+			set
+			{
+				if ((this._book_title != value))
+				{
+					this.Onbook_titleChanging(value);
+					this.SendPropertyChanging();
+					this._book_title = value;
+					this.SendPropertyChanged("book_title");
+					this.Onbook_titleChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_book_type", DbType="Int NOT NULL")]
+		public int book_type
+		{
+			get
+			{
+				return this._book_type;
+			}
+			set
+			{
+				if ((this._book_type != value))
+				{
+					this.Onbook_typeChanging(value);
+					this.SendPropertyChanging();
+					this._book_type = value;
+					this.SendPropertyChanged("book_type");
+					this.Onbook_typeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_books_on_the_rack", DbType="Int NOT NULL")]
+		public int books_on_the_rack
+		{
+			get
+			{
+				return this._books_on_the_rack;
+			}
+			set
+			{
+				if ((this._books_on_the_rack != value))
+				{
+					this.Onbooks_on_the_rackChanging(value);
+					this.SendPropertyChanging();
+					this._books_on_the_rack = value;
+					this.SendPropertyChanged("books_on_the_rack");
+					this.Onbooks_on_the_rackChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_books_borrowed", DbType="Int NOT NULL")]
+		public int books_borrowed
+		{
+			get
+			{
+				return this._books_borrowed;
+			}
+			set
+			{
+				if ((this._books_borrowed != value))
+				{
+					this.Onbooks_borrowedChanging(value);
+					this.SendPropertyChanging();
+					this._books_borrowed = value;
+					this.SendPropertyChanged("books_borrowed");
+					this.Onbooks_borrowedChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_total_books", DbType="Int NOT NULL")]
+		public int total_books
+		{
+			get
+			{
+				return this._total_books;
+			}
+			set
+			{
+				if ((this._total_books != value))
+				{
+					this.Ontotal_booksChanging(value);
+					this.SendPropertyChanging();
+					this._total_books = value;
+					this.SendPropertyChanged("total_books");
+					this.Ontotal_booksChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_photo_book", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
+		public string photo_book
+		{
+			get
+			{
+				return this._photo_book;
+			}
+			set
+			{
+				if ((this._photo_book != value))
+				{
+					this.Onphoto_bookChanging(value);
+					this.SendPropertyChanging();
+					this._photo_book = value;
+					this.SendPropertyChanged("photo_book");
+					this.Onphoto_bookChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.member")]
 	public partial class member : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -270,6 +584,8 @@ namespace perpus
 		
 		private System.DateTime _joindate;
 		
+		private string _pohoto;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -284,6 +600,8 @@ namespace perpus
     partial void OnhandphoneChanged();
     partial void OnjoindateChanging(System.DateTime value);
     partial void OnjoindateChanged();
+    partial void OnpohotoChanging(string value);
+    partial void OnpohotoChanged();
     #endregion
 		
 		public member()
@@ -391,6 +709,26 @@ namespace perpus
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_pohoto", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
+		public string pohoto
+		{
+			get
+			{
+				return this._pohoto;
+			}
+			set
+			{
+				if ((this._pohoto != value))
+				{
+					this.OnpohotoChanging(value);
+					this.SendPropertyChanging();
+					this._pohoto = value;
+					this.SendPropertyChanged("pohoto");
+					this.OnpohotoChanged();
+				}
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -412,163 +750,67 @@ namespace perpus
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.book")]
-	public partial class book : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.fine")]
+	public partial class fine : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private int _book_id;
+		private int _fine_id;
 		
-		private string _book_title;
-		
-		private string _book_type;
-		
-		private int _books_on_the_rack;
-		
-		private System.Nullable<int> _books_borrowed;
-		
-		private int _total_books;
+		private int _fine1;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void Onbook_idChanging(int value);
-    partial void Onbook_idChanged();
-    partial void Onbook_titleChanging(string value);
-    partial void Onbook_titleChanged();
-    partial void Onbook_typeChanging(string value);
-    partial void Onbook_typeChanged();
-    partial void Onbooks_on_the_rackChanging(int value);
-    partial void Onbooks_on_the_rackChanged();
-    partial void Onbooks_borrowedChanging(System.Nullable<int> value);
-    partial void Onbooks_borrowedChanged();
-    partial void Ontotal_booksChanging(int value);
-    partial void Ontotal_booksChanged();
+    partial void Onfine_idChanging(int value);
+    partial void Onfine_idChanged();
+    partial void Onfine1Changing(int value);
+    partial void Onfine1Changed();
     #endregion
 		
-		public book()
+		public fine()
 		{
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_book_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int book_id
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fine_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int fine_id
 		{
 			get
 			{
-				return this._book_id;
+				return this._fine_id;
 			}
 			set
 			{
-				if ((this._book_id != value))
+				if ((this._fine_id != value))
 				{
-					this.Onbook_idChanging(value);
+					this.Onfine_idChanging(value);
 					this.SendPropertyChanging();
-					this._book_id = value;
-					this.SendPropertyChanged("book_id");
-					this.Onbook_idChanged();
+					this._fine_id = value;
+					this.SendPropertyChanged("fine_id");
+					this.Onfine_idChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_book_title", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-		public string book_title
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="fine", Storage="_fine1", DbType="Int NOT NULL")]
+		public int fine1
 		{
 			get
 			{
-				return this._book_title;
+				return this._fine1;
 			}
 			set
 			{
-				if ((this._book_title != value))
+				if ((this._fine1 != value))
 				{
-					this.Onbook_titleChanging(value);
+					this.Onfine1Changing(value);
 					this.SendPropertyChanging();
-					this._book_title = value;
-					this.SendPropertyChanged("book_title");
-					this.Onbook_titleChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_book_type", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-		public string book_type
-		{
-			get
-			{
-				return this._book_type;
-			}
-			set
-			{
-				if ((this._book_type != value))
-				{
-					this.Onbook_typeChanging(value);
-					this.SendPropertyChanging();
-					this._book_type = value;
-					this.SendPropertyChanged("book_type");
-					this.Onbook_typeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_books_on_the_rack", DbType="Int NOT NULL")]
-		public int books_on_the_rack
-		{
-			get
-			{
-				return this._books_on_the_rack;
-			}
-			set
-			{
-				if ((this._books_on_the_rack != value))
-				{
-					this.Onbooks_on_the_rackChanging(value);
-					this.SendPropertyChanging();
-					this._books_on_the_rack = value;
-					this.SendPropertyChanged("books_on_the_rack");
-					this.Onbooks_on_the_rackChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_books_borrowed", DbType="Int")]
-		public System.Nullable<int> books_borrowed
-		{
-			get
-			{
-				return this._books_borrowed;
-			}
-			set
-			{
-				if ((this._books_borrowed != value))
-				{
-					this.Onbooks_borrowedChanging(value);
-					this.SendPropertyChanging();
-					this._books_borrowed = value;
-					this.SendPropertyChanged("books_borrowed");
-					this.Onbooks_borrowedChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_total_books", DbType="Int NOT NULL")]
-		public int total_books
-		{
-			get
-			{
-				return this._total_books;
-			}
-			set
-			{
-				if ((this._total_books != value))
-				{
-					this.Ontotal_booksChanging(value);
-					this.SendPropertyChanging();
-					this._total_books = value;
-					this.SendPropertyChanged("total_books");
-					this.Ontotal_booksChanged();
+					this._fine1 = value;
+					this.SendPropertyChanged("fine1");
+					this.Onfine1Changed();
 				}
 			}
 		}

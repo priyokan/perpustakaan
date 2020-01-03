@@ -9,6 +9,23 @@
       <Column Name="role" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
+  <Table Name="dbo.type" Member="types">
+    <Type Name="type">
+      <Column Name="type_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="type_name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.book" Member="books">
+    <Type Name="book">
+      <Column Name="book_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="book_title" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="book_type" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="books_on_the_rack" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="books_borrowed" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="total_books" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="photo_book" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
   <Table Name="dbo.member" Member="members">
     <Type Name="member">
       <Column Name="nis" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -16,16 +33,13 @@
       <Column Name="email" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="handphone" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="joindate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="pohoto" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
-  <Table Name="dbo.book" Member="books">
-    <Type Name="book">
-      <Column Name="book_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="book_title" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="book_type" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="books_on_the_rack" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="books_borrowed" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="total_books" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+  <Table Name="dbo.fine" Member="fines">
+    <Type Name="fine">
+      <Column Name="fine_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="fine" Member="fine1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
 </Database>

@@ -70,11 +70,35 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataClasses1.dbml</DependentUpon>
     </Compile>
+    <Compile Include="formofficer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formofficer.Designer.cs">
+      <DependentUpon>formofficer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="manageBuku.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="manageBuku.Designer.cs">
+      <DependentUpon>manageBuku.cs</DependentUpon>
+    </Compile>
+    <Compile Include="manBook.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="manBook.Designer.cs">
+      <DependentUpon>manBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="masterDenda.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="masterDenda.Designer.cs">
+      <DependentUpon>masterDenda.cs</DependentUpon>
     </Compile>
     <Compile Include="memberForm.cs">
       <SubType>Form</SubType>
@@ -90,6 +114,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>perpusDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="perpusDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>perpusDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="perpusDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>perpusDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources\manageKaryawan.cs">
@@ -99,6 +133,30 @@
       <DependentUpon>manageKaryawan.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="typeBook.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="typeBook.Designer.cs">
+      <DependentUpon>typeBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucCetakKartu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucCetakKartu.Designer.cs">
+      <DependentUpon>ucCetakKartu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucLoaning.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucLoaning.Designer.cs">
+      <DependentUpon>ucLoaning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucmanageMember.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucmanageMember.Designer.cs">
+      <DependentUpon>ucmanageMember.cs</DependentUpon>
+    </Compile>
     <Compile Include="userControlAbsen.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -114,8 +172,20 @@
     <EmbeddedResource Include="adminMenu.resx">
       <DependentUpon>adminMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="formofficer.resx">
+      <DependentUpon>formofficer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manageBuku.resx">
+      <DependentUpon>manageBuku.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manBook.resx">
+      <DependentUpon>manBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="masterDenda.resx">
+      <DependentUpon>masterDenda.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="memberForm.resx">
       <DependentUpon>memberForm.cs</DependentUpon>
@@ -126,8 +196,21 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Report2.rdlc" />
     <EmbeddedResource Include="Resources\manageKaryawan.resx">
       <DependentUpon>manageKaryawan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="typeBook.resx">
+      <DependentUpon>typeBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucCetakKartu.resx">
+      <DependentUpon>ucCetakKartu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucLoaning.resx">
+      <DependentUpon>ucLoaning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucmanageMember.resx">
+      <DependentUpon>ucmanageMember.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="userControlAbsen.resx">
       <DependentUpon>userControlAbsen.cs</DependentUpon>
@@ -154,6 +237,28 @@
     </None>
     <None Include="perpusDataSet.xss">
       <DependentUpon>perpusDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="perpusDataSet1.xsc">
+      <DependentUpon>perpusDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="perpusDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>perpusDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="perpusDataSet1.xss">
+      <DependentUpon>perpusDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="perpusDataSet2.xsc">
+      <DependentUpon>perpusDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="perpusDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>perpusDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="perpusDataSet2.xss">
+      <DependentUpon>perpusDataSet2.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
